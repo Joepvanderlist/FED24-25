@@ -56,11 +56,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
-  Er zaten best wat errors in de code
-  Het H1 element was niet aanwezig (voor zover ik kon vinden)
-  De alt zijn niet duidelijk over wat er op de foto te zien is
-  alle titels zijn H2
+  * Lijst met je bevindingen die in de test naar voren kwamen:
+  * Er zaten best wat errors in de code
+  * Het H1 element was niet aanwezig (voor zover ik kon vinden)
+  * De alt zijn niet duidelijk over wat er op de foto te zien is
+  * Alle titels zijn H2
 
   
   
