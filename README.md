@@ -40,10 +40,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina 
+  
   <img src="readme-images/Scherm­afbeelding 2024-09-04 om 12.01.47.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Programma's pagina 
+  
   <img src="readme-images/Scherm­afbeelding 2024-09-08 om 13.18.45.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
@@ -56,7 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  * Lijst met je bevindingen die in de test naar voren kwamen:
+  Lijst met je bevindingen die in de test naar voren kwamen:
   * Er zaten best wat errors in de code
   * Het H1 element was niet aanwezig (voor zover ik kon vinden)
   * De alt zijn niet duidelijk over wat er op de foto te zien is
