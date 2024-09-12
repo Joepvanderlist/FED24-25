@@ -19,8 +19,38 @@
 	--color-background:#eee;
 }
 
+h1{
+	display: none;
+}
 
+nav{
+	display: flex;
+	gap: 2em;
+}
 
+svg{
+	line-height: 1.15;
+text-size-adjust: 100%;
+-webkit-tap-highlight-color: transparent;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizelegibility;
+font-feature-settings: "liga", "kern";
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 1rem;
+list-style: none;
+box-sizing: border-box;
+margin: 0px;
+padding: 0px;
+overflow-clip-margin: 1px;
+width: 70px;
+color: rgb(148, 148, 148);
+display: block;
+}
+
+h2:first-of-type{
+	color: red;
+	z-index: 10;
+}
 
 
 /****************/
