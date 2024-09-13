@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Joep van der List
 
   #### Je startniveau:
-  Rood?
+  Rood
 
   #### Je focus:
   responsive
