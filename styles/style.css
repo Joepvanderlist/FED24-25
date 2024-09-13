@@ -47,10 +47,22 @@ color: rgb(148, 148, 148);
 display: block;
 }
 
-h2:first-of-type{
+section:first-of-type{
+	grid-template-columns:  1fr 1fr;
+}
+
+/*h2:first-of-type{
 	color: red;
 	z-index: 10;
+ } */
+
+section:nth-of-type(2) /* voor nu*/ {
+	display: flex;
+	overflow-x: auto;
 }
+
+
+
 
 
 /****************/
