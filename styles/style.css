@@ -48,7 +48,24 @@ display: block;
 }
 
 section:first-of-type{
-	grid-template-columns:  1fr 1fr;
+	display: grid ;
+}
+
+section:first-of-type h2{
+	grid-row-start: 1;
+	grid-column-start: 1;
+	z-index: 1;
+	justify-self: start;
+	align-self: end;
+
+	margin:  1em;
+	color: white;
+}
+
+section:first-of-type img{
+	grid-row-start: 1;
+	grid-column-start: 1;
+	width: 100%;
 }
 
 /*h2:first-of-type{
