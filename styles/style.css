@@ -19,16 +19,13 @@
 	--color-background:#eee;
 }
 
-h1{
-	display: none;
-}
 
 nav{
 	display: flex;
 	gap: 2em;
 }
 
-svg{
+h1{
 	line-height: 1.15;
 text-size-adjust: 100%;
 -webkit-tap-highlight-color: transparent;
@@ -51,6 +48,10 @@ section:first-of-type{
 	display: grid ;
 }
 
+details[open] summary{
+	font-weight: bold;
+}
+
 section:first-of-type h2{
 	grid-row-start: 1;
 	grid-column-start: 1;
@@ -60,6 +61,10 @@ section:first-of-type h2{
 
 	margin:  1em;
 	color: white;
+
+	font-weight: 700;
+    line-height: 1.5rem; /* let op rem*/
+	font-size: 1.375rem;
 }
 
 section:first-of-type img{
@@ -73,13 +78,57 @@ section:first-of-type img{
 	z-index: 10;
  } */
 
-section:nth-of-type(2) /* voor nu*/ {
-	display: flex;
-	overflow-x: auto;
+section:nth-of-type(2) /*dit is het 2e stuk*/{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
 }
 
+section:nth-of-type(2) img{
+	width: 10em;
+	border-radius: 5%;
+}
+
+section:nth-of-type(2) img:first-of-type{
+	grid-row-start: 1;
+	grid-column-start: 1;
+}
+
+section:nth-of-type(2) img:nth-of-type(2){
+	grid-row-start: 1;
+	grid-column-start: 2;
+}
+
+section:nth-of-type(2) h2{
+	font-weight: 500;
+        font-size: 0.875em;
+        line-height: 1em;
+}
+
+section:nth-of-type(3) /* 3e stuk*/{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
+
+section:nth-of-type(3) img{
+	grid-column-start: 1;
+}
+
+section:nth-of-type(3) h2{
+	grid-column-start: 2;
+}
+
+section:nth-of-type(4) /* voor nu*/ {
+	display: flex;
+	overflow-x: auto;
+} /*dit zijn de videos*/
 
 
+
+font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1rem;
 
 
 /****************/
@@ -89,3 +138,11 @@ section:nth-of-type(2) /* voor nu*/ {
 /* jouw code */
 
 /* list stype type: none */
+/*[aria-current= "page"] {
+	font-size: 2em;
+}*/
+
+
+/* transition: transform 250ms ease-in-out; */
+/* transform: perspective(1px) scale3d(1, 1, 1); */
+/* Voor groter maken van fotos? */
