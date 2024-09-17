@@ -19,6 +19,9 @@
 	--color-background:#eee;
 }
 
+body{
+	background-color: rgb(255, 255, 255);
+}
 
 nav{
 	display: flex;
@@ -113,10 +116,14 @@ section:nth-of-type(3) /* 3e stuk*/{
 
 section:nth-of-type(3) img{
 	grid-column-start: 1;
+
 }
 
 section:nth-of-type(3) h2{
 	grid-column-start: 2;
+	/* font-weight: 500;    */
+    /* font-size: 0.875rem; */
+    /* line-height: 1rem; */
 }
 
 section:nth-of-type(4) /* voor nu*/ {
@@ -124,11 +131,94 @@ section:nth-of-type(4) /* voor nu*/ {
 	overflow-x: auto;
 } /*dit zijn de videos*/
 
+section:last-of-type{
+	display: flex;
+	gap: 1em;
+}
 
 
+
+/* Voor de footer svg 1 */
+/*text-size-adjust: 100%;
+-webkit-tap-highlight-color: transparent;
+-webkit-font-smoothing: antialiased;
+font-family: inherit;
+font-size: 100%;
+line-height: 1.15;
+text-transform: none;
+text-align: left;
 font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1rem;
+cursor: pointer;
+width: 20;
+height: 18;
+fill: none;
+box-sizing: border-box;
+margin: 0px;
+padding: 0px;
+overflow-clip-margin: 1px;
+color: rgb(230, 30, 20);*/ 
+
+
+/* Voor de footer svg 2 en 3 */
+/*text-size-adjust: 100%;
+-webkit-tap-highlight-color: transparent;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizelegibility;
+font-feature-settings: "liga", "kern";
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 1rem;
+overflow-wrap: anywhere;
+font-weight: 500;
+line-height: 1.14;
+width: 24;
+height: 24;
+box-sizing: border-box;
+margin: 0px;
+padding: 0px;
+overflow-clip-margin: 1px;
+color: rgb(230, 30, 20);*/
+
+
+/* Footer NOS logo */
+/*     line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "liga", "kern";
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow-clip-margin: 1px;
+    height: 1.75rem;
+    color: rgb(148, 148, 148); */
+
+
+	/* Social media logos */
+	/*     line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "liga", "kern";
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    width: 24;
+    height: 24;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow-clip-margin: 1px;
+    transform: scale(0.8); */
+
+
+
+	
+
+
 
 
 /****************/
