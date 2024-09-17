@@ -126,7 +126,7 @@ section:nth-of-type(3) h2{
     /* line-height: 1rem; */
 }
 
-section:nth-of-type(4) /* voor nu*/ {
+section:nth-of-type(6) /* voor nu*/ {
 	display: flex;
 	overflow-x: auto;
 } /*dit zijn de videos*/
@@ -136,6 +136,52 @@ section:last-of-type{
 	gap: 1em;
 }
 
+
+/*  icoontje voor collectie paralympishe spelen */
+/*     text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "liga", "kern";
+    list-style: none;
+    cursor: pointer;
+    font-family: Effra-Bold, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 0.75em;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow-clip-margin: 1px;
+    display: inline-block;
+    flex: 1 0 auto;
+    vertical-align: middle;
+    line-height: 1;
+    fill: currentcolor;
+    width: 1em;
+    height: 1em; */
+
+
+/* Pijl icoontje paralympishe spelen */
+/*     line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "liga", "kern";
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    list-style: none;
+    cursor: pointer;
+    width: 20;
+    height: 18;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow-clip-margin: 1px;
+    position: absolute;
+    right: 1rem;
+    color: rgb(255, 255, 255); */
 
 
 /* Voor de footer svg 1 */
