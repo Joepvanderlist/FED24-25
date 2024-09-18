@@ -25,10 +25,28 @@
 	src: url("EffraBold.woff") format("woff");
 }
 
+p:first-of-type{
+    display: block;
+    font-weight: 600; 
+    width: 8.75em;
+    height: 1.75em;
+    border-radius: 3.5em;
+    background-color: #E61E14;
+    color: rgb(255, 255, 255);
+    padding: 0.35em 0.5em;
+    font-size: 0.75em;
+
+}
+
+
+
+
 body{
 	/* font-family: "EffraBold"; */
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* Let op lettertypen */
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 img {
@@ -88,7 +106,7 @@ section:first-of-type h2{
     margin: 0.8em;
     color: rgb(255, 255, 255);
 
-    font-weight: 550;
+    font-weight: 600;
     line-height: 1em;
     font-size: 1.25em;
 	background-image: linear-gradient( rgb(0 0 0 /0), rgba(0 0 0 /1));
@@ -112,7 +130,6 @@ section:nth-of-type(2) /*dit is het 2e stuk*/{
     align-items: center;
     gap: 1em;
     padding-top: 1em;
-    padding-bottom: 1em;
 
 }
 
@@ -132,7 +149,7 @@ article:nth-of-type(2){
 
 section:nth-of-type(2) img{
 	width: 10em;
-	border-radius: 5%;
+	border-radius: 3.5%;
 }
 
 section:nth-of-type(2) img:first-of-type{
@@ -171,13 +188,14 @@ section:nth-of-type(3) ul li {
 }
 
 	section:nth-of-type(3) h2{
+        color: #202020;
         font-size: 0.875em;
         font-weight: 500;
         line-height: 1.2em;
 }
 
 section:nth-of-type(3) img{
-	border-radius: 5%;
+	border-radius: 3.5%;
     order: -1;
     width: 7em;
     height: 5em;
@@ -195,14 +213,14 @@ section:nth-of-type(4) h2{
     margin: 0;
     bottom: 0%;
     background-image: linear-gradient( rgb(0 0 0 /0), rgba(0 0 0 /1));
-    border-radius: 5%;
+    border-radius: 3.5%;
     font-size: 1.3em;
 }
 
 section:nth-of-type(4) img{
     height: 5em;
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 3.5%;
 }
 
 section:nth-of-type(4) svg{
@@ -233,7 +251,7 @@ section:nth-of-type(5) ul li {
 }
 
 section:nth-of-type(5) img{
-	border-radius: 5%;
+	border-radius: 3.5%;
     order: -1;
     width: 7em;
     height: 5em;
@@ -256,7 +274,7 @@ section:nth-of-type(6) li{
 
 section:nth-of-type(6) img{
     height: 7.5em;
-    border-radius: 5%;
+    border-radius: 3.5%;
 } 
 
 
