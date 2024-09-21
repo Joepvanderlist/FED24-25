@@ -85,11 +85,17 @@ header{
 nav{
 	display: flex;
     align-items: center;
-    justify-content: center;
-	gap: 2em;
+    justify-content: space-between;
     width: 100%;
     padding-top: 16px;
+}
 
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	gap: 1em;
+    padding: 0 1em;
 }
 
 nav button{
@@ -98,27 +104,28 @@ nav button{
 }
 
 
-nav svg:nth-of-type(1){
+nav ul:nth-of-type(1) svg:nth-of-type(1){
     color: rgb(148, 148, 148);
     width: auto;
     height: 0.75em;
 }
 
-nav  svg:nth-of-type(2){
-    color: #E61E14;
-     rotate: 90deg;
-    /* color: #666666;  */
-}
-
-/* nav button{
+nav ul:nth-of-type(1) button{
     color: #666666;
     font-size: 1em;
     font-weight: 590;
-} */
-
-main{
-    /* margin: 0 1em; */
 }
+
+
+nav ul:nth-of-type(2) svg{
+    color: #666666; 
+
+}
+
+nav ul:nth-of-type(2) li:nth-of-type(1){
+    rotate: 90deg;
+}
+
 
 section:not(:first-of-type) {
     margin: 0 1em;
@@ -208,8 +215,9 @@ main section:nth-of-type(2) img:nth-of-type(2){
 
 main section:nth-of-type(2) h2{
 	font-weight: 500;
-	font-size: 0.875rem;
-	line-height: 1rem;
+	font-size: 0.875em;
+	line-height: 1.2em;
+    padding-top: 0.5em;
 }
 
 
@@ -363,6 +371,51 @@ section:nth-of-type(6) img{
 section:nth-of-type(7) li{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+section:nth-of-type(7) h3{
+    font-weight: 500;
+	font-size: 0.875em;
+	line-height: 1.2em;
+    padding-top: 0.5em;
+}
+
+section:nth-of-type(7) ul p:first-of-type{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    padding: 0.8em 0.8em;
+}
+
+section:nth-of-type(7) ul p:nth-of-type(2){
+    grid-row-start: 1;
+    grid-column-start: 2;
+    z-index: 1;
+    justify-self: start;
+    align-self: start;
+    margin: 0;
+}
+
+section:nth-of-type(7) ul h3{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    z-index: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+}
+
+section:nth-of-type(7) ul a{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    z-index: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
 }
 
 /* Reclame */
