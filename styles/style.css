@@ -87,7 +87,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-top: 16px;
+    padding-top: 0.9em;
 }
 
 nav ul{
@@ -351,6 +351,7 @@ section:nth-of-type(6) li h2{
     font-weight: 100;
     line-height: 1.2em;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    border-radius: 3.5%;
     width: 100%;
 
 }
