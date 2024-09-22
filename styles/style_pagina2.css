@@ -1,0 +1,116 @@
+ 
+main{
+    margin: 0 1em;
+}
+
+
+
+ h2{
+
+    color: #E61E14;
+    font-size: 1.2em;
+ }
+ 
+ /*dit zijn de podcasts*/
+ section:nth-of-type(3){
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+section:nth-of-type(3) h2{
+    margin: 0;
+    color: #E61E14;
+    font-size: 1.2em;
+}
+
+section:nth-of-type(3) ul {
+    padding: 0;
+    margin-top: 0.5em;
+    gap: 1em;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+} 
+
+section:nth-of-type(3) li{
+    display: grid;
+    gap: 1em;
+    min-width: 8em;
+    scroll-snap-align: center;
+}
+
+section:nth-of-type(3) li h2{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    padding: 0.8em 0.8em;
+    color: rgb(255, 255, 255);
+    font-family: EffraBold, Helvetica, Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: 100;
+    line-height: 1.2em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    border-radius: 3.5%;
+    width: 100%;
+}
+
+
+section:nth-of-type(3) li img{
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+}    
+
+section:nth-of-type(3) img{
+    border-radius: 3.5%;
+} 
+ 
+ 
+ /* Reclame */
+main section:nth-of-type(7)/* Voor nu!!! */{
+    background-color: #F3F3F0;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}   
+
+main section:nth-of-type(7) h2{
+    font-size: 1em;
+    margin: 0.7em 0;
+    color: #666666;
+}   
+
+main section:nth-of-type(7) a{
+    color: #666666;
+}   
+
+main section:nth-of-type(7) ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.875em 1.5em; 
+}
+
+
+
+/* Podcast widht:8.5em: */
+
+
+
+
+
+/* Voor footer ALLEEN OP PAGINA 2 */
+
+footer section:nth-of-type(4){
+    display: flex;
+	gap: 1em;
+    margin: 1.5em 1em 2em 1em;  
+    font-size: 0.9em;
+    color: #666666;
+    font-weight: 400;
+}
