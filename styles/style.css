@@ -261,13 +261,44 @@ footer section:nth-of-type(3){
 footer section:nth-of-type(3) > svg{
     height: 1.75em;
     color: rgb(148, 148, 148);
-    margin-bottom: 1em;
 }
 
 footer section:nth-of-type(3) ul{
     display: flex;
-    gap: 1em;
     margin: 1em 0;
+}
+
+
+footer section:nth-of-type(3) li a{
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "liga", "kern";
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: transform 150ms ease-in-out;
+    flex: 0 0 auto;
+    margin: 0.625rem;
+    background-color: rgb(230, 30, 20);
+}
+
+footer section:nth-of-type(3) li svg{
+    color: rgb(243, 243, 240);
+    width: 1.2em;
 }
 
 

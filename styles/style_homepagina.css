@@ -63,8 +63,8 @@ section:not(:first-of-type) {
   
   
   main section:nth-of-type(2) img{
-      width: 10em;
       border-radius: 3.5%;
+      flex-basis: auto;
   }
   
   main section:nth-of-type(2) img:first-of-type{
@@ -109,11 +109,13 @@ section:not(:first-of-type) {
   }
   
   main section:nth-of-type(3) img{
-      border-radius: 3.5%;
-      order: -1;
-      width: 7em;
-      height: 5em;
-      object-fit: cover;
+    border-radius: 3.5%;
+    order: -1;
+    width: 100%;
+    max-width: 6.5em;
+    height: 4.9em;
+    object-fit: cover;
+    /* Bahaa heeft mij hier mee geholpen */
   }
   
   
@@ -165,11 +167,12 @@ section:not(:first-of-type) {
   }
   
   section:nth-of-type(5) img{
-      border-radius: 3.5%;
-      order: -1;
-      width: 7em;
-      height: 5em;
-      object-fit: cover;
+    border-radius: 3.5%;
+    order: -1;
+    width: 100%;
+    max-width: 6.5em;
+    height: 4.9em;
+    object-fit: cover;
   }
   
   /*dit zijn de videos*/
