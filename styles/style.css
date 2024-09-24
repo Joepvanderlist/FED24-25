@@ -151,6 +151,8 @@ footer{
     padding: 0.9em;
 }     */
 
+
+/* Feedback en extra info */
 footer section:nth-of-type(1){
     margin-top: 2em;
     margin-bottom: 1em;   
@@ -193,19 +195,6 @@ footer section:nth-of-type(1) a{
     text-decoration: none;
 }
 
-footer section:nth-of-type(1) svg{
-    width: 3em;
-    height: 3em;
-    grid-row-start: 1;
-    grid-column-start: 1;
-    z-index: 1;
-    justify-self: start;
-    align-self: end;
-    margin: 0;
-    color: #E61E14;
-}
-
-
 
 footer section:nth-of-type(1) div{
     display: flex;
@@ -217,6 +206,22 @@ footer section:nth-of-type(1) div{
     background-color: rgb(243, 243, 240);
 }
 
+
+footer section:nth-of-type(1) svg{
+    /* width: 3em;
+    height: 3em;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0; */
+    color: #E61E14;
+}
+
+
+
+/* Nos informatie */
 footer section:nth-of-type(2){
     margin: 0;
     padding-bottom: 2em;
@@ -244,6 +249,7 @@ footer section:nth-of-type(2) a{
     color: #666666;
 }
 
+/* Nos logo en social media */
 footer section:nth-of-type(3){
     display: flex;
     align-items: center;
@@ -264,6 +270,8 @@ footer section:nth-of-type(3) ul{
     margin: 1em 0;
 }
 
+
+/* Copyright en cookies */
 footer section:nth-of-type(4){
     display: flex;
 	gap: 1em;
