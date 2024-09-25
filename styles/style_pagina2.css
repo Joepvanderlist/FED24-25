@@ -6,8 +6,7 @@ main{
 
 
  h2{
-
-    color: #E61E14;
+    color: var(--rood);
     font-size: 1.2em;
  }
 
@@ -24,7 +23,7 @@ main{
     align-self: end;
     margin: 0;
     padding: 0.8em 0.8em;
-    color: rgb(255, 255, 255);
+    color: var(--background-color);
     font-family: EffraBold, Helvetica, Arial, sans-serif;
     font-weight: 100;
     line-height: 1em;
@@ -94,7 +93,7 @@ main section:nth-of-type(2) img{
 
 main section:nth-of-type(3) h2{
     margin: 0;
-    color: #E61E14;
+    color: var(--rood);
     font-size: 1.2em;
 }
 
@@ -122,7 +121,7 @@ main section:nth-of-type(3) li h2{
     align-self: end;
     margin: 0;
     padding: 0.8em 0.8em;
-    color: rgb(255, 255, 255);
+    color: var(--background-color);
     font-family: EffraBold, Helvetica, Arial, sans-serif;
     font-size: 0.875em;
     font-weight: 100;
@@ -146,7 +145,7 @@ main section:nth-of-type(3) img{
  
  /* Reclame */
 main section:nth-of-type(7)/* Voor nu!!! */{
-    background-color: #F3F3F0;
+    background-color: var(--grijze-achtergrond);
     display: block;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -155,11 +154,11 @@ main section:nth-of-type(7)/* Voor nu!!! */{
 main section:nth-of-type(7) h2{
     font-size: 1em;
     margin: 0.7em 0;
-    color: #666666;
+    color: var(--grijze-text);
 }   
 
 main section:nth-of-type(7) a{
-    color: #666666;
+    color: var(--grijze-text);
 }   
 
 main section:nth-of-type(7) ul {
@@ -184,6 +183,6 @@ footer section:nth-of-type(4){
 	gap: 1em;
     margin: 1.5em 1em 2em 1em;  
     font-size: 0.9em;
-    color: #666666;
+    color: var(--grijze-text);
     font-weight: 400;
 }

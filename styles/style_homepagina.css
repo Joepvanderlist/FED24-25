@@ -16,7 +16,7 @@ section:not(:first-of-type) {
       align-self: end;
       margin: 0;
       padding: 0.8em 0.8em;
-      color: rgb(255, 255, 255);
+      color: var(--background-color);
       font-family: EffraBold, Helvetica, Arial, sans-serif;
       font-weight: 100;
       line-height: 1em;
@@ -78,6 +78,7 @@ section:not(:first-of-type) {
   }
   
   main section:nth-of-type(2) h2{
+      color: var(--color-text);
       font-weight: 500;
       font-size: 0.875em;
       line-height: 1.2em;
@@ -91,18 +92,18 @@ section:not(:first-of-type) {
       margin: 0;
   }
   
-  main section:nth-of-type(3) ul li {
+  main section:nth-of-type(3) li {
       display: flex;
       align-items: center;
       gap: 1em;
       padding-top: 1em;
       padding-bottom: 0.9em;
-      border-bottom: 1px solid rgb(238, 238, 238);
+      border-bottom: 1px solid var(--border-lijn);
       /* Let op 1px */
   }
   
   main section:nth-of-type(3) h2{
-          color: #202020;
+          color: var(--color-text);
           font-size: 0.875em;
           font-weight: 500;
           line-height: 1.2em;
@@ -125,7 +126,7 @@ section:not(:first-of-type) {
   
   main section:nth-of-type(4) h2{
       position: absolute;
-      color: rgb(255, 255, 255);
+      color: var(--background-color);
       margin: 0;
       bottom: 0%;
       background-image: linear-gradient( rgb(0 0 0 /0), rgba(0 0 0 /1));
@@ -157,22 +158,23 @@ section:not(:first-of-type) {
       gap: 1em;
       padding-top: 1em;
       padding-bottom: 0.9em;
-      border-bottom: 1px solid rgb(238, 238, 238);
+      border-bottom: 1px solid var(--border-lijn);
   }
   
-      section:nth-of-type(5) h2{
-      font-size: 0.875em;
-      font-weight: 500;
-      line-height: 1.2em;
+  section:nth-of-type(5) h2{
+     color: var(--color-text);
+     font-size: 0.875em;
+     font-weight: 500;
+     line-height: 1.2em;
   }
   
   section:nth-of-type(5) img{
-    border-radius: 3.5%;
-    order: -1;
-    width: 100%;
-    max-width: 6.5em;
-    height: 4.9em;
-    object-fit: cover;
+     border-radius: 3.5%;
+     order: -1;
+     width: 100%;
+     max-width: 6.5em;
+     height: 4.9em;
+     object-fit: cover;
   }
   
   /*dit zijn de videos*/
@@ -185,7 +187,7 @@ section:not(:first-of-type) {
   
   section:nth-of-type(6) h2{
       margin: 0;
-      color: #E61E14;
+      color: var(--rood);
       font-size: 1.2em;
   }
   
@@ -213,7 +215,7 @@ section:not(:first-of-type) {
       align-self: end;
       margin: 0;
       padding: 0.8em 0.8em;
-      color: rgb(255, 255, 255);
+      color: var(--background-color);
       font-family: EffraBold, Helvetica, Arial, sans-serif;
       font-size: 0.875em;
       font-weight: 100;
@@ -238,16 +240,16 @@ section:not(:first-of-type) {
       margin-top: 2em;
       margin-bottom: 2em;
       border-radius: 0.25rem;
-      background-color: rgb(255, 255, 255);
+      background-color: var(--background-color);
       box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
   }
   
   section:nth-of-type(7) ul{
-      border-bottom: 1px solid rgb(238, 238, 238);
+      border-bottom: 1px solid var(--border-lijn);
   }
   
   section:nth-of-type(7) h2{
-      color: #E61E14;
+      color: var(--rood);
       font-size: 1.2em;
       padding: 1em 0 0 1em;
   }
@@ -267,14 +269,14 @@ section:not(:first-of-type) {
       align-self: end;
       display: flex;
       align-items: center;
-      color: rgb(255, 255, 255);
+      color: var(--background-color);
       font-family: EffraBold, Helvetica, Arial, sans-serif;
       font-size: 0.9em;
       font-weight: 100;
       line-height: 1.2em;
       margin: 0;
       padding: 0.1em 0.5em;
-      background-color: #E61E14;
+      background-color: var(--rood);
       border-radius: 1.5em;
   }
   
@@ -288,7 +290,7 @@ section:not(:first-of-type) {
       font-weight: 500;
       font-size: 0.875em;
       line-height: 1.2em;
-      color: #666666;
+      color: var(--grijze-text);
   }
   
   section:nth-of-type(7) ul h3{
@@ -302,6 +304,7 @@ section:not(:first-of-type) {
       font-size: 0.875em;
       line-height: 1.2em;
       padding-bottom: 0.5em;
+      color: var(--color-text);
   }
   
   section:nth-of-type(7) ul a{
@@ -311,13 +314,13 @@ section:not(:first-of-type) {
       justify-self: start;
       align-self: end;
       margin: 0;
-      color: #E61E14;
+      color: var(--rood);
       font-weight: 500;
   }
   
   /* Reclame */
   section:nth-of-type(8){
-      background-color: #F3F3F0;
+      background-color: var(--grijze-achtergrond);
       display: block;
       margin-top: 2em;
       margin-bottom: 2em;
@@ -326,11 +329,11 @@ section:not(:first-of-type) {
   section:nth-of-type(8) h2{
       font-size: 1em;
       margin: 0.7em 0;
-      color: #666666;
+      color: var(--grijze-text);
   }   
   
   section:nth-of-type(8) a{
-      color: #666666;
+      color: var(--grijze-text);
   }   
   
   section:nth-of-type(8) ul {
@@ -346,7 +349,7 @@ section:not(:first-of-type) {
       margin-top: 2em;
       margin-bottom: 2.5em;
       border-radius: 0.25rem;
-      background-color: rgb(255, 255, 255);
+      background-color: var(--background-color);
       box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
   }
   
@@ -355,7 +358,7 @@ section:not(:first-of-type) {
       display: grid;
       grid-template-columns: 3.8em 1fr;
       padding: 1em;
-      border-bottom: 1px solid rgb(238, 238, 238);
+      border-bottom: 1px solid var(--border-lijn);
       letter-spacing: 0.01875em;
   }
   
@@ -369,7 +372,7 @@ section:not(:first-of-type) {
       font-weight: 500;
       font-size: 0.875em;
       padding-bottom: 0.5em;
-      color: #666666;
+      color: var(--grijze-text);
   }
   
   
@@ -385,7 +388,7 @@ section:not(:first-of-type) {
       font-size: 1em;
       line-height: 1.2em;
       padding-top: 0.25em;
-      color: #202020;
+      color: var(--color-text);
       text-decoration: none;
   }
   
