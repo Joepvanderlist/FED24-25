@@ -201,7 +201,6 @@ section:not(:first-of-type) {
   section:nth-of-type(6) li{
       display: grid;
       gap: 1em;
-      /* max-width: 8em; */
       min-width: 6em;
       scroll-snap-align: center;
   }
@@ -228,13 +227,11 @@ section:not(:first-of-type) {
   section:nth-of-type(6) li img{
       grid-row-start: 1;
       grid-column-start: 1;
+      max-width: 15.2em;
+      border-radius: 3.5%;
   
   }    
   
-  section:nth-of-type(6) img{
-      height: 7.5em;
-      border-radius: 3.5%;
-  } 
   
   /* Live bij de NOS */
   section:nth-of-type(7){
