@@ -42,6 +42,48 @@ main{
     
 }
 
+/* Kleine journalen */
+main section:nth-of-type(2) li{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    padding: 1em 0;
+    gap: 1em;
+}
+
+
+main section:nth-of-type(2) h3{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    z-index: 1;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.875em;
+    padding-bottom: 1.5em;
+
+}
+
+
+main section:nth-of-type(2) p{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    z-index: 1;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.875em;
+    padding-top: 2em;
+    color: #666666;
+}
+
+main section:nth-of-type(2) img{
+    min-height: 6.1em;
+    object-fit: cover;
+}
+
+
  /*dit zijn de podcasts 1*/
  main section:nth-of-type(3){
     display: flex;
