@@ -29,10 +29,11 @@
     color-scheme:light dark ;
 
 	--color-text:light-dark(#202020, #d6d6d6);
-    --grijze-text:#666666;
+    --grijze-text: light-dark(#666666, #949494);
     --grijze-achtergrond: #F3F3F0;
     --nos-logo-grijs: #949494;
     --border-lijn: #eeeeee;
+    --div_zwart: #2222224D;
 	--background-color:light-dark(#ffffff,#202020) ;
     --wit_vulling: #ffffff;
     --rood:light-dark(#E61E14,#e22f26);

@@ -353,7 +353,7 @@ section:not(:first-of-type) {
   section:nth-of-type(9){
       margin-top: 2em;
       margin-bottom: 2.5em;
-      border-radius: 0.25rem;
+      border-radius: 0.25em;
       background-color: var(--background-color);
       box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
   }
