@@ -72,6 +72,7 @@ main div svg{
  main section:nth-of-type(1) img{
     grid-row-start: 1;
     grid-column-start: 1;
+    min-width: 21.4em;
     width: 100%;
     object-fit: cover;
     min-height: 16em;
@@ -94,6 +95,7 @@ main section:nth-of-type(2) h3{
     justify-self: start;
     align-self: center;
     margin: 0;
+    color: var(--color-text);
     font-weight: 700;
     font-size: 0.875em;
     padding-bottom: 1.5em;
@@ -111,7 +113,7 @@ main section:nth-of-type(2) p{
     font-weight: 500;
     font-size: 0.875em;
     padding-top: 2em;
-    color: #666666;
+    color: var(--grijze-text);
 }
 
 main section:nth-of-type(2) div{
@@ -164,6 +166,15 @@ main section:nth-of-type(3) li{
     scroll-snap-align: center;
 }
 
+main section:nth-of-type(3) li div{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: end;
+    align-self: start;
+    margin: 0.5em;
+}
+
 main section:nth-of-type(3) img{
     grid-row-start: 1;
     grid-column-start: 1;
@@ -183,24 +194,44 @@ main section:nth-of-type(4){
     justify-self: start;
     align-self: end;
     margin: 0;
-    padding: 0.8em 0.8em;
+    padding: 1.5em 0.7em;
     color: var(--wit_vulling);
     font-family: EffraBold, Helvetica, Arial, sans-serif;
     font-weight: 100;
-    line-height: 1em;
     font-size: 1.25em;
-    width: 100%;
  }
 
+
+ main section:nth-of-type(4) p{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    padding: 0 1em 1.3em 1em;
+    color: var(--wit_vulling);
+    font-weight: 400;
+    font-size: 0.875em;
+ }
+
+ main section:nth-of-type(4) div{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: end;
+    align-self: start;
+    margin: 0.5em;
+ }
 
  main section:nth-of-type(4) img{
     grid-row-start: 1;
     grid-column-start: 1;
+    min-width: 21.4em;
     width: 100%;
     object-fit: cover;
     min-height: 16em;
-    
-}
+ }    
 
 
 /* Kleine journalen 2 */
@@ -219,6 +250,7 @@ main section:nth-of-type(5) h3{
     justify-self: start;
     align-self: center;
     margin: 0;
+    color: var(--color-text);
     font-weight: 700;
     font-size: 0.875em;
     padding-bottom: 1.5em;
@@ -236,15 +268,27 @@ main section:nth-of-type(5) p{
     font-weight: 500;
     font-size: 0.875em;
     padding-top: 2em;
-    color: #666666;
+    color: var(--grijze-text);
 }
 
+main section:nth-of-type(5) div{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: end;
+    align-self: end;
+    margin: 0.5em;
+ }
+
 main section:nth-of-type(5) img{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100%;
     min-height: 6.1em;
+    min-width: 8.1em;
     object-fit: cover;
     border-radius: 3.5%;
 }
-
 
 
  /*dit zijn de podcasts 2*/
@@ -275,6 +319,15 @@ main section:nth-of-type(6) li{
     gap: 1em;
     min-width: 8em;
     scroll-snap-align: center;
+}
+
+main section:nth-of-type(6) li div{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    justify-self: end;
+    align-self: start;
+    margin: 0.5em;
 }
 
 
