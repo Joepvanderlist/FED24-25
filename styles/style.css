@@ -33,8 +33,9 @@
     --grijze-achtergrond: #F3F3F0;
     --nos-logo-grijs: #949494;
     --border-lijn: #eeeeee;
-	--background-color: #ffffff;
-    --rood:#E61E14;
+	--background-color:light-dark(#ffffff,#202020) ;
+    --wit_vulling: #ffffff;
+    --rood:light-dark(#E61E14,#e22f26);
 	--font-body-family: "EffraBold"
 }
 
@@ -71,6 +72,7 @@ body{
     /* Let op lettertypen */
     padding: 0;
     margin: 0;
+    background-color: var(--background-color);
 }
 
 
@@ -286,14 +288,14 @@ footer section:nth-of-type(3) li a{
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    color: var(--background-color);
+    color: var(--wit_vulling);
     flex: 0 0 auto;
     margin: 0.625em;
     background-color: var(--rood);
 }
 
 footer section:nth-of-type(3) li svg{
-    color: var(--background-color);
+    color: var(--wit_vulling);
     width: 1.2em;
 }
 

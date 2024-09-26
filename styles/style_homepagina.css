@@ -16,7 +16,7 @@ section:not(:first-of-type) {
       align-self: end;
       margin: 0;
       padding: 0.8em 0.8em;
-      color: var(--background-color);
+      color: var(--wit_vulling);
       font-family: EffraBold, Helvetica, Arial, sans-serif;
       font-weight: 100;
       line-height: 1em;
@@ -29,8 +29,13 @@ section:not(:first-of-type) {
       grid-row-start: 1;
       grid-column-start: 1;
       width: 100%;
-      
   }
+
+
+
+  /* @media screen and (min-width: 47.50em;) {
+    
+  } */
   
   
   main section:nth-of-type(2) /*dit is het 2e stuk*/{
@@ -126,7 +131,7 @@ section:not(:first-of-type) {
   
   main section:nth-of-type(4) h2{
       position: absolute;
-      color: var(--background-color);
+      color: var(--wit_vulling);
       margin: 0;
       bottom: 0%;
       background-image: linear-gradient( rgb(0 0 0 /0), rgba(0 0 0 /1));
@@ -215,7 +220,7 @@ section:not(:first-of-type) {
       align-self: end;
       margin: 0;
       padding: 0.8em 0.8em;
-      color: var(--background-color);
+      color: var(--wit_vulling);
       font-family: EffraBold, Helvetica, Arial, sans-serif;
       font-size: 0.875em;
       font-weight: 100;
@@ -269,7 +274,7 @@ section:not(:first-of-type) {
       align-self: end;
       display: flex;
       align-items: center;
-      color: var(--background-color);
+      color: var(--wit_vulling);
       font-family: EffraBold, Helvetica, Arial, sans-serif;
       font-size: 0.9em;
       font-weight: 100;
