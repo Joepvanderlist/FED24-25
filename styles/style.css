@@ -316,7 +316,7 @@ footer section:nth-of-type(4) a{
 }
 
 
-
+/*  */
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
