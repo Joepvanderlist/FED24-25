@@ -27,7 +27,8 @@
 :root {
 	/* startje */
     color-scheme:light dark ;
-	--color-text:#202020;
+
+	--color-text:light-dark(#202020, #d6d6d6);
     --grijze-text:#666666;
     --grijze-achtergrond: #F3F3F0;
     --nos-logo-grijs: #949494;
