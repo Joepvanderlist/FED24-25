@@ -89,13 +89,22 @@ section:not(:first-of-type) {
       line-height: 1.2em;
       padding-top: 0.5em;
   }
-  
-  main section:nth-of-type(2) p{
+
+  main section:nth-of-type(2) article{
+    display: grid;
+  } 
+
+  main section:nth-of-type(2) article img{
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+   main section:nth-of-type(2) article p{
     grid-row-start: 1;
     grid-column-start: 1;
     z-index: 1;
     justify-self: start;
-    align-self: center;
+    align-self: end;
     display: flex;
     align-items: center;
     color: var(--wit_vulling);
@@ -103,11 +112,12 @@ section:not(:first-of-type) {
     font-size: 0.9em;
     font-weight: 100;
     line-height: 1.2em;
-    margin:0;
+    margin: 0.8em;
     padding: 0.1em 0.5em;
     background-color: var(--rood);
     border-radius: 1.5em;
 }
+  
   
   main section:nth-of-type(3) ul {
       padding: 0;
