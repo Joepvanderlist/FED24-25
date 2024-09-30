@@ -24,6 +24,7 @@ li img {
 	width:100%;
 }
 
+/* De 1e grote foto */
 li:nth-of-type(1) {
 	grid-column:span 6;
 	
@@ -41,6 +42,7 @@ li:nth-of-type(1) h2 {
 	color:white;
 }
 
+/* De 2 middelgrote fotos */
 li:nth-of-type(2),
 li:nth-of-type(3) {
 	grid-column:span 3;
@@ -51,27 +53,47 @@ li:nth-of-type(3) {
 li:nth-of-type(2) img,
 li:nth-of-type(3) img {
 	grid-area:1/1;
+	border-radius: 3.5%;
 }
 
 li:nth-of-type(2) h2,
 li:nth-of-type(3) h2 {
 	/* grid-area:1/1; */
-	
-	place-self:end start;
+	color: var(--color-text);
+	font-weight: 500;
+	font-size: 0.875em;
+	line-height: 1.2em;
+	padding-top: 0.5em;
+	/* place-self:end start; */
 	/* color:white; */
 }
 
 
-
+/* De kleine fotos */
 li:nth-of-type(n + 4) {
 	grid-column:span 6;
-	
 	display:grid;
 	grid-template-columns:20% 1fr;
 	gap:.5em;
 }
 
+/* li:nth-of-type(n + 4) img{
+border-radius: 3.5%;
+
+    width: 100%;
+    max-width: 6.5em;
+    height: 4.9em;
+    object-fit: cover;
+} */
+
+
+
 @media (width > 47.5em) {
+	/* body{
+		margin: 0 9em;
+	} */
+
+
 	li:nth-of-type(1),
 	li:nth-of-type(2) {
 		grid-column:span 3;
