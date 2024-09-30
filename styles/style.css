@@ -26,39 +26,19 @@
     --grijze-achtergrond: #F3F3F0;
     --nos-logo-grijs: #949494;
     --border-lijn: #eeeeee;
-    --div_zwart: #2222224D;
+    --div-zwart: #2222224D;
 	--background-color:light-dark(#ffffff,#202020) ;
-    --wit_vulling: #ffffff;
+    --wit-vulling: #ffffff;
     --rood:light-dark(#E61E14,#e22f26);
 	--font-body-family: "EffraBold"
 }
-
-/* @media (prefers-color-scheme: dark) {
-} */
-
-
-
-
-/* Tag/rode */
-/* main p:first-of-type{
-    display: block;
-    font-weight: 600; 
-    width: 8.75em;
-    height: 1.75em;
-    border-radius: 3.5em;
-    background-color: #E61E14;
-    color: rgb(255, 255, 255);
-    padding: 0.35em 0.5em;
-    font-size: 0.75em;
-
-} */
 
 
 
 
 body{
-	/* font-family: "EffraBold"; */
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "EffraBold"; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* Let op lettertypen */
     padding: 0;
     margin: 0;
@@ -67,7 +47,7 @@ body{
 
 
 img {
-	width: 100%;
+    width: 100%;
 }
 
 header{
@@ -77,237 +57,474 @@ header{
     padding: 0.5em;
     background-color: var(--background-color);
     position: sticky;
-	top: 0%;
+    top: 0%;
     z-index: 10;
     margin: 0;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 0.125rem 0.25rem 0px;
 }
 
-nav{
-	display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 0.9em;
+
+
+@media (width < 47.5em) {
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0.9em;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    nav button{
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        color: var(--grijze-text);
+        font-size: 1em;
+        font-weight: 590;
+    }
+
+    nav button svg{
+        height: 0.4em;
+        padding-left: 0.2em;
+    }
+
+
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg{
+        color: var(--nos-logo-grijs);
+        width: auto;
+        height: 0.85em;
+    }
+
+    nav ul:nth-of-type(2) svg{
+        color: var(--grijze-text);
+        width: 1.5em;
+    }
+
+    nav ul:nth-of-type(2) li:nth-of-type(1){
+        rotate: 90deg;
+    }
+
+    footer{
+        margin: 0 1em;
+    }
+
+    ul{
+        padding: 0;
+        list-style-type: none;
+    }
+
+
+    /**********/
+    /* FOOTER */
+    /**********/
+
+    footer{
+        margin: 0;
+    }
+
+
+    /* Feedback en extra info */
+    footer section:nth-of-type(1) ul:nth-of-type(1){
+        margin-top: 2em;
+        margin-bottom: 1em;   
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) li{
+        display: grid;
+        grid-template-columns: 3.8em 1fr;
+        padding: 1em;
+        border-bottom: 1px solid var(--border-lijn);
+        letter-spacing: 0.01875em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) h2{
+        grid-row-start: 1;
+        grid-column-start: 2;
+        z-index: 1;
+        justify-self: start;
+        align-self: end;
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.875em;
+        padding-bottom: 0.5em;
+        color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a{
+        grid-row-start: 1;
+        grid-column-start: 2;
+        z-index: 1;
+        justify-self: start;
+        align-self: start;
+        margin: 0;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1.2em;
+        padding-top: 0.25em;
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1)  div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: var(--grijze-achtergrond);
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) svg{
+        /* width: 3em;
+        height: 3em;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        z-index: 1;
+        justify-self: start;
+        align-self: end;
+        margin: 0; */
+        color: var(--rood);
+    }
+
+
+
+    /* Nos informatie */
+    footer section:nth-of-type(1) ul:nth-of-type(4){
+        margin: 0;
+        padding-bottom: 2em;
+    }
+
+    footer section:nth-of-type(1) h2{
+        color: var(--rood);
+        font-size: 1.125em;
+        margin: 0.9em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2){
+        margin: 0 1em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li{
+        margin-bottom: 1em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a{
+        text-decoration: none;
+        letter-spacing: 0.01875em;
+        font-weight: 500;
+        color: var(--grijze-text);
+    }
+
+    /* Nos logo social media  */
+    footer section:nth-of-type(2) {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 2em 0 0 0;
+        border-bottom: 1px solid var(--border-lijn);
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    footer section:nth-of-type(2) > svg{
+        height: 1.75em;
+        color: var(--nos-logo-grijs);
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1){
+        display: flex;
+        margin: 1em 0;
+        justify-content: center;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid var(--border-lijn);
+    }
+
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a{
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        color: var(--wit-vulling);
+        flex: 0 0 auto;
+        margin: 0.625em;
+        background-color: var(--rood);
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li svg{
+        color: var(--wit-vulling);
+        width: 1.2em;
+    }
+
+
+    /* Copyright en cookies */
+    footer section:nth-of-type(2) ul:nth-of-type(2){
+        display: flex;
+        gap: 1em;
+        padding-left: 1.1em;
+        margin-top: 0.5em;
+        margin-bottom: 2em;   
+        font-size: 0.9em;
+        color: var(--grijze-text);
+        font-weight: 400;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) a{
+        color: var(--grijze-text);
+    }
+
 }
 
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	gap: 1em;
-    padding: 0 1em;
+
+@media (width > 47.5em) {
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0.9em;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    nav button{
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        color: var(--grijze-text);
+        font-size: 1em;
+        font-weight: 590;
+        transition: 150ms ease-in-out;
+    }
+
+    nav button:hover{
+        color: var(--rood);
+    }
+
+    nav button svg{
+        height: 0.4em;
+        padding-left: 0.2em;
+    }
+
+
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg{
+        color: var(--nos-logo-grijs);
+        width: auto;
+        height: 1.4em;
+    }
+
+
+
+    nav ul:nth-of-type(2) svg{
+        color: var(--grijze-text);
+        width: 1.5em;
+    }
+
+    nav ul:nth-of-type(2) li:nth-of-type(1){
+        rotate: 90deg;
+    }
+
+    footer{
+        margin: 0 1em;
+    }
+
+    ul{
+        padding: 0;
+        list-style-type: none;
+    }
+
+
+    /**********/
+    /* FOOTER */
+    /**********/
+
+    footer{
+        margin: 0;
+    }
+
+
+    /* Feedback en extra info */
+    /* footer section:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } */
+
+    footer section:nth-of-type(1) ul:nth-of-type(1){
+        margin-top: 2em;
+        margin-bottom: 1em;   
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) li{
+        display: grid;
+        grid-template-columns: 3.8em 1fr;
+        padding: 1em;
+        border-bottom: 1px solid var(--border-lijn);
+        letter-spacing: 0.01875em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) h2{
+        grid-row-start: 1;
+        grid-column-start: 2;
+        z-index: 1;
+        justify-self: start;
+        align-self: end;
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.875em;
+        padding-bottom: 0.5em;
+        color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a{
+        grid-row-start: 1;
+        grid-column-start: 2;
+        z-index: 1;
+        justify-self: start;
+        align-self: start;
+        margin: 0;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1.2em;
+        padding-top: 0.25em;
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1)  div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: var(--grijze-achtergrond);
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) svg{
+        color: var(--rood);
+    }
+
+
+
+    /* Nos informatie */
+    footer section:nth-of-type(1) h2{
+        color: var(--rood);
+        font-size: 1.125em;
+        margin: 0.9em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2){
+        margin: 0 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li{
+        margin-bottom: 1em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a{
+        text-decoration: none;
+        letter-spacing: 0.01875em;
+        font-weight: 500;
+        color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(4){
+        padding-bottom: 2em;
+    }
+
+    /* Nos logo social media  */
+    footer section:nth-of-type(2) {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 2em 0 0 0;
+        border-bottom: 1px solid var(--border-lijn);
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    footer section:nth-of-type(2) > svg{
+        height: 1.75em;
+        color: var(--nos-logo-grijs);
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1){
+        display: flex;
+        margin: 1em 0;
+        justify-content: center;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid var(--border-lijn);
+    }
+
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a{
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        color: var(--wit-vulling);
+        flex: 0 0 auto;
+        margin: 0.625em;
+        background-color: var(--rood);
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li svg{
+        color: var(--wit-vulling);
+        width: 1.2em;
+    }
+
+
+    /* Copyright en cookies */
+    footer section:nth-of-type(2) ul:nth-of-type(2){
+        display: flex;
+        gap: 1em;
+        padding-left: 1.1em;
+        margin-top: 0.5em;
+        margin-bottom: 2em;   
+        font-size: 0.9em;
+        color: var(--grijze-text);
+        font-weight: 400;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) a{
+        color: var(--grijze-text);
+    }
+ 
 }
 
-nav button{
-    border: none;
-    background-color: transparent;
-}
-
-nav button svg{
-    height: 1em;
-}
-
-
-nav ul:nth-of-type(1) li:nth-of-type(1) svg{
-    color: var(--nos-logo-grijs);
-    width: auto;
-    height: 0.75em;
-}
-
-nav ul:nth-of-type(1) button{
-    color: var(--grijze-text);
-    font-size: 1em;
-    font-weight: 590;
-}
-
-
-nav ul:nth-of-type(2) svg{
-    color: var(--grijze-text);
-    width: 1.5em;
-}
-
-nav ul:nth-of-type(2) li:nth-of-type(1){
-    rotate: 90deg;
-}
-
-footer{
-    margin: 0 1em;
-}
-
-ul{
-    padding: 0;
-    list-style-type: none;
-}
-
-/**********/
- /* FOOTER */
-/**********/
-
-footer{
-    margin: 0;
-}
-
-/* footer section:nth-of-type(1) svg{
-    width: 3em;
-    height: 3em;
-    background-color: #666666;
-    border-radius: 100%;
-    padding: 0.9em;
-}     */
-
-
-/* Feedback en extra info */
-footer section:nth-of-type(1){
-    margin-top: 2em;
-    margin-bottom: 1em;   
-    border-top: 1px solid var(--border-lijn);
-}
-
-footer section:nth-of-type(1) li{
-    display: grid;
-    grid-template-columns: 3.8em 1fr;
-    padding: 1em;
-    border-bottom: 1px solid var(--border-lijn);
-    letter-spacing: 0.01875em;
-}
-
-footer section:nth-of-type(1) h2{
-    grid-row-start: 1;
-    grid-column-start: 2;
-    z-index: 1;
-    justify-self: start;
-    align-self: end;
-    margin: 0;
-    font-weight: 500;
-    font-size: 0.875em;
-    padding-bottom: 0.5em;
-    color: var(--grijze-text);
-}
-
-footer section:nth-of-type(1) a{
-    grid-row-start: 1;
-    grid-column-start: 2;
-    z-index: 1;
-    justify-self: start;
-    align-self: start;
-    margin: 0;
-    font-weight: 500;
-	font-size: 1em;
-	line-height: 1.2em;
-    padding-top: 0.25em;
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-
-footer section:nth-of-type(1) div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    background-color: var(--grijze-achtergrond);
-}
-
-
-footer section:nth-of-type(1) svg{
-    /* width: 3em;
-    height: 3em;
-    grid-row-start: 1;
-    grid-column-start: 1;
-    z-index: 1;
-    justify-self: start;
-    align-self: end;
-    margin: 0; */
-    color: var(--rood);
-}
 
 
 
-/* Nos informatie */
-footer section:nth-of-type(2){
-    margin: 0;
-    padding-bottom: 2em;
-    border-bottom: 1px solid var(--border-lijn);
-}
-
-footer section:nth-of-type(2) h2{
-    color: var(--rood);
-    font-size: 1.125em;
-    margin: 0.9em;
-}
-
-footer section:nth-of-type(2) ul{
-    margin: 0 1em;
-}
-
-footer section:nth-of-type(2) li{
-    margin-bottom: 1em;
-}
-
-footer section:nth-of-type(2) a{
-    text-decoration: none;
-    letter-spacing: 0.01875em;
-    font-weight: 500;
-    color: var(--grijze-text);
-}
-
-/* Nos logo en social media */
-footer section:nth-of-type(3){
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 2em 0 0 0;
-    border-bottom: 1px solid var(--border-lijn);
-}
-
-footer section:nth-of-type(3) > svg{
-    height: 1.75em;
-    color: var(--nos-logo-grijs);
-}
-
-footer section:nth-of-type(3) ul{
-    display: flex;
-    margin: 1em 0;
-}
-
-
-footer section:nth-of-type(3) li a{
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    color: var(--wit_vulling);
-    flex: 0 0 auto;
-    margin: 0.625em;
-    background-color: var(--rood);
-}
-
-footer section:nth-of-type(3) li svg{
-    color: var(--wit_vulling);
-    width: 1.2em;
-}
-
-
-/* Copyright en cookies */
-footer section:nth-of-type(4){
-    display: flex;
-	gap: 1em;
-	margin-top: 1.5em;
-    margin-bottom: 2em;   
-    font-size: 0.9em;
-    color: var(--grijze-text);
-    font-weight: 400;
-}
-
-footer section:nth-of-type(4) a{
-    color: var(--grijze-text);
-}
 
 
 /*  */
@@ -322,72 +539,6 @@ footer section:nth-of-type(4) a{
 }
 
 
-/*  icoontje voor collectie paralympishe spelen */
-/*     text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    font-feature-settings: "liga", "kern";
-    list-style: none;
-    cursor: pointer;
-    font-family: Effra-Bold, Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    font-size: 0.75em;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    overflow-clip-margin: 1px;
-    display: inline-block;
-    flex: 1 0 auto;
-    vertical-align: middle;
-    line-height: 1;
-    fill: currentcolor;
-    width: 1em;
-    height: 1em; */
-
-
-/* Pijl icoontje paralympishe spelen */
-/*     line-height: 1.15;
-    text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    font-feature-settings: "liga", "kern";
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    list-style: none;
-    cursor: pointer;
-    width: 20;
-    height: 18;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    overflow-clip-margin: 1px;
-    position: absolute;
-    right: 1rem;
-    color: rgb(255, 255, 255); */
-
-
-/* Voor de footer svg 1 */
-/*text-size-adjust: 100%;
--webkit-tap-highlight-color: transparent;
--webkit-font-smoothing: antialiased;
-font-family: inherit;
-font-size: 100%;
-line-height: 1.15;
-text-transform: none;
-text-align: left;
-font-weight: 500;
-cursor: pointer;
-width: 20;
-height: 18;
-fill: none;
-box-sizing: border-box;
-margin: 0px;
-padding: 0px;
-overflow-clip-margin: 1px;
-color: rgb(230, 30, 20);*/ 
 
 
 /* Voor de footer svg 2 en 3 */

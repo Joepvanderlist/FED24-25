@@ -11,7 +11,7 @@ main{
  }
 
 main div{
-    background-color: var(--div_zwart);
+    background-color: var(--div-zwart);
     padding: 0px;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ main div{
 }
 
 main div svg{
-    color: var(--wit_vulling);
+    color: var(--wit-vulling);
     width: 0.7em;
 }
 
@@ -40,7 +40,7 @@ main div svg{
     align-self: end;
     margin: 0;
     padding: 1.5em 0.7em;
-    color: var(--wit_vulling);
+    color: var(--wit-vulling);
     font-family: EffraBold, Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 1.25em;
@@ -55,7 +55,7 @@ main div svg{
     align-self: end;
     margin: 0;
     padding: 0 1em 1.3em 1em;
-    color: var(--wit_vulling);
+    color: var(--wit-vulling);
     font-weight: 400;
     font-size: 0.875em;
  }
@@ -196,7 +196,7 @@ main section:nth-of-type(4){
     align-self: end;
     margin: 0;
     padding: 1.5em 0.7em;
-    color: var(--wit_vulling);
+    color: var(--wit-vulling);
     font-family: EffraBold, Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 1.25em;
@@ -211,7 +211,7 @@ main section:nth-of-type(4){
     align-self: end;
     margin: 0;
     padding: 0 1em 1.3em 1em;
-    color: var(--wit_vulling);
+    color: var(--wit-vulling);
     font-weight: 400;
     font-size: 0.875em;
  }
