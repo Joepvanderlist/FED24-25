@@ -81,10 +81,38 @@ main section:nth-of-type(1) li img {
 		font-size: 0.875em;
 		line-height: 1.2em;
 		padding-top: 0.5em;
+	}
 
-		/* grid-area:1/1; */
-		/* place-self:end start; */
-		/* color:white; */
+	main section:nth-of-type(1) li:nth-of-type(3){
+		display: grid;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3) img{
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type{
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		display: flex;
+		align-items: center;
+		gap: 0.2em;
+		color: var(--wit-vulling);
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		font-size: 0.9em;
+		font-weight: 100;
+		line-height: 1em;
+		margin: 0.8em;
+		padding: 0.25em 0.5em;
+		background-color: var(--rood);
+		border-radius: 1.5em;
+	}
+	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type svg{
+		height: 0.9em;
 	}
 
 
@@ -372,9 +400,9 @@ main section:nth-of-type(1) li img {
 	/* MIDDEL SCHERM */
 	/*****************/
 
-	
 
-@media (width > 47.5em) {
+/* ">=" is gelijk aan of groter dan 47.5em */
+@media (width >= 47.5em) {
 
 	main section{
 		margin: 0 1em;
@@ -413,6 +441,38 @@ main section:nth-of-type(1) li img {
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 		border-radius: 0.3em;
 		width: 100%;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3){
+		display: grid;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3) img{
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type{
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: center;
+		display: flex;
+		align-items: center;
+		gap: 0.2em;
+		color: var(--wit-vulling);
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		font-size: 0.9em;
+		font-weight: 100;
+		line-height: 1em;
+        margin: 9em 0 0 0.8em;
+		padding: 0.25em 0.5em;
+		background-color: var(--rood);
+		border-radius: 1.5em;
+	}
+	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type svg{
+		height: 0.9em;
 	}
 	
 	

@@ -104,6 +104,8 @@ header{
         width: auto;
         height: 0.85em;
     }
+    
+
 
     nav ul:nth-of-type(2) svg{
         color: var(--grijze-text);
@@ -292,7 +294,7 @@ header{
 }
 
 
-@media (width > 47.5em) {
+@media (width >= 47.5em) {
     nav{
         display: flex;
         align-items: center;
@@ -334,7 +336,13 @@ header{
         color: var(--nos-logo-grijs);
         width: auto;
         height: 1.4em;
+        transition: 150ms ease-in-out;
     }
+    
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg:hover{
+        scale: 1.05;
+    }
+    
 
 
 
@@ -367,13 +375,13 @@ header{
 
 
     /* Feedback en extra info */
-    /* footer section:nth-of-type(1) {
+    footer section:nth-of-type(1) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    } */
+    }
 
     footer section:nth-of-type(1) ul:nth-of-type(1){
-        margin-top: 2em;
+        grid-column-start: 4;
         margin-bottom: 1em;   
         border-top: 1px solid var(--border-lijn);
     }
@@ -412,6 +420,12 @@ header{
         padding-top: 0.25em;
         color: var(--color-text);
         text-decoration: none;
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a:hover{
+        color: var(--rood);
+        text-decoration: underline;
     }
 
 
@@ -434,13 +448,29 @@ header{
 
     /* Nos informatie */
     footer section:nth-of-type(1) h2{
+        /* justify-self: start;
+        align-self: start; */
         color: var(--rood);
         font-size: 1.125em;
-        margin: 0.9em;
+        margin: 0 0.9em;
+    }
+
+    footer section:nth-of-type(1) h2:nth-of-type(1){
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) h2:nth-of-type(2){
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    footer section:nth-of-type(1) h2:nth-of-type(3){
+        grid-column-start: 3;
+        grid-row-start: 1;
     }
 
     footer section:nth-of-type(1) ul:nth-of-type(n+ 2){
-        margin: 0 1em;
+        margin: 2em 1em;
         display: flex;
         flex-direction: column;
     }
@@ -454,33 +484,63 @@ header{
         letter-spacing: 0.01875em;
         font-weight: 500;
         color: var(--grijze-text);
+        transition: 150ms ease-in-out;
+    }
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a:hover{
+        color: var(--rood);
+        text-decoration: underline;
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(2){
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(3){
+        grid-column-start: 2;
+        grid-row-start: 1;
     }
 
     footer section:nth-of-type(1) ul:nth-of-type(4){
         padding-bottom: 2em;
+        grid-column-start: 3;
+        grid-row-start: 1;
     }
 
-    /* Nos logo social media  */
-    footer section:nth-of-type(2) {
-        margin: 0;
+    /* Nos logo social media  EN  Copyright en cookies */
+
+    footer section:nth-of-type(2){
+        padding: 0 1em;
         display: flex;
-        flex-direction: column;
-        padding: 2em 0 0 0;
+        align-items: center;
+
+        max-width: 75em;
         border-bottom: 1px solid var(--border-lijn);
         border-top: 1px solid var(--border-lijn);
+    }
+
+    footer section:nth-of-type(2) ul{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 3em;
     }
 
     footer section:nth-of-type(2) > svg{
         height: 1.75em;
         color: var(--nos-logo-grijs);
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(2) > svg:hover{
+        scale: 1.05;
     }
 
     footer section:nth-of-type(2) ul:nth-of-type(1){
         display: flex;
-        margin: 1em 0;
+        /* margin: 1em 0; */
         justify-content: center;
         padding-bottom: 0.5em;
-        border-bottom: 1px solid var(--border-lijn);
     }
 
 
@@ -496,11 +556,17 @@ header{
         flex: 0 0 auto;
         margin: 0.625em;
         background-color: var(--rood);
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a:hover{
+        scale: 1.1;
     }
 
     footer section:nth-of-type(2) ul:nth-of-type(1) li svg{
         color: var(--wit-vulling);
         width: 1.2em;
+        transition: 150ms ease-in-out;
     }
 
 
