@@ -348,8 +348,10 @@ main section:nth-of-type(7)/* Voor nu!!! */{
 }   
 
 main section:nth-of-type(7) h2{
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 0.7em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.0625em;
     color: var(--grijze-text);
 }   
 

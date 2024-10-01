@@ -12,6 +12,9 @@
   margin: 0;
 }
 
+:focus{
+    outline: var(--rood) solid 2px;
+}
 
 
 /*********************/
@@ -134,8 +137,9 @@ header{
         margin: 0;
     }
 
+    /* Samengevoegde section */
 
-    /* Feedback en extra info */
+    /* Feedback en extra info  */
     footer section:nth-of-type(1) ul:nth-of-type(1){
         margin-top: 2em;
         margin-bottom: 1em;   
@@ -149,6 +153,8 @@ header{
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
     }
+    /* Docent had hier gezegd dat ik 2 rows moest gebruiken, maar na er met 
+    Bahaa naar gekekn tehebben zei Bahaa dat in dit geval de code zo goed was */
 
     footer section:nth-of-type(1) ul:nth-of-type(1) h2{
         grid-row-start: 1;
@@ -205,7 +211,7 @@ header{
 
 
     /* Nos informatie */
-    footer section:nth-of-type(1) ul:nth-of-type(4){
+    footer section:nth-of-type(1) ul:nth-of-type(2){
         margin: 0;
         padding-bottom: 2em;
     }
@@ -229,6 +235,11 @@ header{
         letter-spacing: 0.01875em;
         font-weight: 500;
         color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 3){
+        position: absolute;
+        left: -999em;
     }
 
     /* Nos logo social media  */
@@ -293,6 +304,10 @@ header{
 
 }
 
+	/**********************************************************************************/
+									/* MIDDEL SCHERM */
+	/**********************************************************************************/
+
 
 @media (width >= 47.5em) {
     nav{
@@ -319,7 +334,7 @@ header{
         color: var(--grijze-text);
         font-size: 1em;
         font-weight: 590;
-        transition: 150ms ease-in-out;
+        transition: color 150ms ease-in-out;
     }
 
     nav button:hover{
@@ -355,9 +370,6 @@ header{
         rotate: 90deg;
     }
 
-    footer{
-        margin: 0 1em;
-    }
 
     ul{
         padding: 0;
@@ -368,11 +380,9 @@ header{
     /**********/
     /* FOOTER */
     /**********/
-
     footer{
-        margin: 0;
+        margin: 0 1em;
     }
-
 
     /* Feedback en extra info */
     footer section:nth-of-type(1) {
@@ -383,7 +393,6 @@ header{
     footer section:nth-of-type(1) ul:nth-of-type(1){
         grid-column-start: 4;
         margin-bottom: 1em;   
-        border-top: 1px solid var(--border-lijn);
     }
 
     footer section:nth-of-type(1) ul:nth-of-type(1) li{
@@ -392,6 +401,12 @@ header{
         padding: 1em;
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
+    }
+    /* Docent had hier gezegd dat ik 2 rows moest gebruiken, maar na er met 
+    Bahaa naar gekekn tehebben zei Bahaa dat in dit geval de code zo goed was */
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1){
+        padding:  0 1em 1em 1em;
     }
 
     footer section:nth-of-type(1) ul:nth-of-type(1) h2{
@@ -403,7 +418,8 @@ header{
         margin: 0;
         font-weight: 500;
         font-size: 0.875em;
-        padding-bottom: 0.5em;
+        padding-top: 1.4em;
+        /* padding-bottom: 0.5em; */
         color: var(--grijze-text);
     }
 
@@ -417,10 +433,10 @@ header{
         font-weight: 500;
         font-size: 1em;
         line-height: 1.2em;
-        padding-top: 0.25em;
+        /* padding-top: 0.25em; */
         color: var(--color-text);
         text-decoration: none;
-        transition: 150ms ease-in-out;
+        transition: color 150ms ease-in-out;
     }
 
     footer section:nth-of-type(1) ul:nth-of-type(1) a:hover{
@@ -439,7 +455,6 @@ header{
         background-color: var(--grijze-achtergrond);
     }
 
-
     footer section:nth-of-type(1) ul:nth-of-type(1) svg{
         color: var(--rood);
     }
@@ -448,8 +463,6 @@ header{
 
     /* Nos informatie */
     footer section:nth-of-type(1) h2{
-        /* justify-self: start;
-        align-self: start; */
         color: var(--rood);
         font-size: 1.125em;
         margin: 0 0.9em;
@@ -470,7 +483,7 @@ header{
     }
 
     footer section:nth-of-type(1) ul:nth-of-type(n+ 2){
-        margin: 2em 1em;
+        margin: 2.5em 1em 2em 1em;
         display: flex;
         flex-direction: column;
     }
@@ -508,8 +521,8 @@ header{
         grid-row-start: 1;
     }
 
-    /* Nos logo social media  EN  Copyright en cookies */
 
+    /* Nos logo social media  EN  Copyright en cookies */
     footer section:nth-of-type(2){
         padding: 0 1em;
         display: flex;
@@ -566,9 +579,9 @@ header{
     footer section:nth-of-type(2) ul:nth-of-type(1) li svg{
         color: var(--wit-vulling);
         width: 1.2em;
-        transition: 150ms ease-in-out;
     }
 
+    
 
     /* Copyright en cookies */
     footer section:nth-of-type(2) ul:nth-of-type(2){
@@ -584,6 +597,12 @@ header{
 
     footer section:nth-of-type(2) ul:nth-of-type(2) a{
         color: var(--grijze-text);
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) a:hover{
+        color: var(--rood);
+        text-decoration: none;
     }
  
 }

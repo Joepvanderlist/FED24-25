@@ -33,6 +33,11 @@ main section:nth-of-type(1) li img {
 		margin: 0 1em;
 	}
 
+	main section:nth-of-type(1) li p:first-of-type{
+		position: absolute;
+		left: -999em;
+	}
+
 	/* main section:nth-of-type(1) ul:not(li:first-of-type){
 		margin: 0 1em;
 	} */
@@ -92,7 +97,7 @@ main section:nth-of-type(1) li img {
 		grid-column-start: 1;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type{
+	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -111,7 +116,7 @@ main section:nth-of-type(1) li img {
 		background-color: var(--rood);
 		border-radius: 1.5em;
 	}
-	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type svg{
+	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2) svg{
 		height: 0.9em;
 	}
 
@@ -143,21 +148,45 @@ main section:nth-of-type(1) li img {
 		line-height: 1.2em;
 	}
 
-	/*dit zijn de videos*/
+	/* Laatste nieuws */
 	main section:nth-of-type(2){
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-radius: 0.25rem;
+		background-color: var(--background-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+	}
+
+	main section:nth-of-type(2) li{
+		display: flex;
+		flex-direction: column-reverse;
+		border-bottom: 1px solid var(--border-lijn);
+		padding: 1.5em 1em;
+	}
+
+	main section:nth-of-type(2) h2{
+		color: var(--rood);
+		font-size: 1.25em;
+		padding: 1.5em 1em 0 1em;
+	}
+	
+
+
+	/*dit zijn de videos*/
+	main section:nth-of-type(3){
 		display: flex;
 		flex-direction: column;
 		margin-top: 1.5em;
 		margin-bottom: 1.5em;
 	}
 
-	main section:nth-of-type(2) h2{
+	main section:nth-of-type(3) h2{
 		margin: 0;
 		color: var(--rood);
 		font-size: 1.125em;
 	}
 
-	main section:nth-of-type(2) ul {
+	main section:nth-of-type(3) ul {
 		padding: 0;
 		margin-top: 0.5em;
 		gap: 1em;
@@ -166,14 +195,14 @@ main section:nth-of-type(1) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(2) li{
+	main section:nth-of-type(3) li{
 		display: grid;
 		gap: 1em;
 		min-width: 6em;
 		scroll-snap-align: center;
 	}
 
-	main section:nth-of-type(2) li h2{
+	main section:nth-of-type(3) li h2{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -191,7 +220,7 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(2) li p{
+	main section:nth-of-type(3) li p{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -211,12 +240,12 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 
-	main section:nth-of-type(2) li svg{
+	main section:nth-of-type(3) li svg{
 		height: 0.9em;
 	}
 
 
-	main section:nth-of-type(2) li img{
+	main section:nth-of-type(3) li img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		max-width: 15.2em;
@@ -224,7 +253,7 @@ main section:nth-of-type(1) li img {
 	}    
 
 	/* Live bij de NOS */
-	main section:nth-of-type(3){
+	main section:nth-of-type(4){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
@@ -232,24 +261,24 @@ main section:nth-of-type(1) li img {
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 	}
 	
-	main section:nth-of-type(3) ul{
+	main section:nth-of-type(4) ul{
 		border-bottom: 1px solid var(--border-lijn);
 	}
 	
-	main section:nth-of-type(3) h2{
+	main section:nth-of-type(4) h2{
 		color: var(--rood);
 		font-size: 1.125em;
 		padding: 1em 0 0 1em;
 	}
 	
 	
-	main section:nth-of-type(3) li{
+	main section:nth-of-type(4) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
 	}
 	
-	main section:nth-of-type(3) ul p:first-of-type{
+	main section:nth-of-type(4) ul p:first-of-type{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -268,7 +297,7 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 	
-	main section:nth-of-type(3) ul p:nth-of-type(2){
+	main section:nth-of-type(4) ul p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -281,7 +310,7 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	main section:nth-of-type(3) ul h3{
+	main section:nth-of-type(4) ul h3{
 		grid-row-start: 2;
 		grid-column-start: 2;
 		z-index: 1;
@@ -295,7 +324,7 @@ main section:nth-of-type(1) li img {
 		color: var(--color-text);
 	}
 	
-	main section:nth-of-type(3) ul a{
+	main section:nth-of-type(4) ul a{
 		grid-row-start: 3;
 		grid-column-start: 2;
 		z-index: 1;
@@ -307,24 +336,26 @@ main section:nth-of-type(1) li img {
 	}
 
 	  /* Reclame */
-	main section:nth-of-type(4){
+	main section:nth-of-type(5){
 		background-color: var(--grijze-achtergrond);
 		display: block;
 		margin-top: 2em;
 		margin-bottom: 2em;
 	}   
 	
-	main section:nth-of-type(4) h2{
-		font-size: 1em;
+	main section:nth-of-type(5) h2{
+		font-size: 0.9em;
 		margin: 0.7em 0;
+		text-transform: uppercase;
+		letter-spacing: 0.0625em;
 		color: var(--grijze-text);
 	}   
 	
-	main section:nth-of-type(4) a{
+	main section:nth-of-type(5) a{
 		color: var(--grijze-text);
 	}   
 	
-	main section:nth-of-type(4) ul {
+	main section:nth-of-type(5) ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -333,7 +364,7 @@ main section:nth-of-type(1) li img {
 	
 	
 	/* Andere nieuws kanalen */
-	main section:nth-of-type(5){
+	main section:nth-of-type(6){
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
@@ -342,7 +373,7 @@ main section:nth-of-type(1) li img {
 	}
 	
 	
-	main section:nth-of-type(5) li{
+	main section:nth-of-type(6) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
@@ -350,7 +381,7 @@ main section:nth-of-type(1) li img {
 		letter-spacing: 0.01875em;
 	}
 	
-	main section:nth-of-type(5) h2{
+	main section:nth-of-type(6) h2{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -365,7 +396,7 @@ main section:nth-of-type(1) li img {
 	
 	
 	
-	main section:nth-of-type(5) a{
+	main section:nth-of-type(6) a{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -381,7 +412,7 @@ main section:nth-of-type(1) li img {
 	}
 	
 	
-	main section:nth-of-type(5) svg{
+	main section:nth-of-type(6) svg{
 		width: 3em;
 		height: 3em;
 		grid-row-start: 1;
@@ -396,9 +427,9 @@ main section:nth-of-type(1) li img {
 }
 
 
-	/*****************/
-	/* MIDDEL SCHERM */
-	/*****************/
+	/**********************************************************************************/
+									/* MIDDEL SCHERM */
+	/**********************************************************************************/
 
 
 /* ">=" is gelijk aan of groter dan 47.5em */
@@ -452,7 +483,7 @@ main section:nth-of-type(1) li img {
 		grid-column-start: 1;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type{
+	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -471,7 +502,7 @@ main section:nth-of-type(1) li img {
 		background-color: var(--rood);
 		border-radius: 1.5em;
 	}
-	main section:nth-of-type(1) li:nth-of-type(3) p:first-of-type svg{
+	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2) svg{
 		height: 0.9em;
 	}
 	
@@ -506,20 +537,20 @@ main section:nth-of-type(1) li img {
 	/***********************/
 	/* DIT ZIJN DE VIDEO'S */
 	/***********************/
-	main section:nth-of-type(2){
+	main section:nth-of-type(3){
 		display: flex;
 		flex-direction: column;
 		margin-top: 2.5em;
 		margin-bottom: 2.5em;
 	}
 
-	main section:nth-of-type(2) h2{
+	main section:nth-of-type(3) h2{
 		margin: 0;
 		color: var(--rood);
 		font-size: 1.35em;
 	}
 
-	main section:nth-of-type(2) ul {
+	main section:nth-of-type(3) ul {
 		padding: 0;
 		margin-top: 0.5em;
 		gap: 1.5em;
@@ -528,7 +559,7 @@ main section:nth-of-type(1) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(2) li{
+	main section:nth-of-type(3) li{
 		display: grid;
 		gap: 1em;
 		min-height: 12.2em;
@@ -536,7 +567,7 @@ main section:nth-of-type(1) li img {
 		scroll-snap-align: center;
 	}
 
-	main section:nth-of-type(2) li h2{
+	main section:nth-of-type(3) li h2{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -554,7 +585,7 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(2) li p{
+	main section:nth-of-type(3) li p{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -574,12 +605,12 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 
-	main section:nth-of-type(2) li svg{
+	main section:nth-of-type(3) li svg{
 		height: 0.9em;
 	}
 
 
-	main section:nth-of-type(2) li img{
+	main section:nth-of-type(3) li img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		max-width: 15.2em;
@@ -587,7 +618,7 @@ main section:nth-of-type(1) li img {
 	}    
 
 		/* Live bij de NOS */
-	main section:nth-of-type(3){
+	main section:nth-of-type(4){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
@@ -595,24 +626,24 @@ main section:nth-of-type(1) li img {
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 	}
 	
-	main section:nth-of-type(3) ul{
+	main section:nth-of-type(4) ul{
 		border-bottom: 1px solid var(--border-lijn);
 	}
 	
-	main section:nth-of-type(3) h2{
+	main section:nth-of-type(4) h2{
 		color: var(--rood);
-		font-size: 1.125em;
+		font-size: 1.25em;
 		padding: 1em 0 0 1em;
 	}
 	
 	
-	main section:nth-of-type(3) li{
+	main section:nth-of-type(4) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
 	}
 	
-	main section:nth-of-type(3) ul p:first-of-type{
+	main section:nth-of-type(4) ul p:first-of-type{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -631,7 +662,7 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 	
-	main section:nth-of-type(3) ul p:nth-of-type(2){
+	main section:nth-of-type(4) ul p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -644,7 +675,7 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	main section:nth-of-type(3) ul h3{
+	main section:nth-of-type(4) ul h3{
 		grid-row-start: 2;
 		grid-column-start: 2;
 		z-index: 1;
@@ -658,7 +689,7 @@ main section:nth-of-type(1) li img {
 		color: var(--color-text);
 	}
 	
-	main section:nth-of-type(3) ul a{
+	main section:nth-of-type(4) ul a{
 		grid-row-start: 3;
 		grid-column-start: 2;
 		z-index: 1;
@@ -669,204 +700,46 @@ main section:nth-of-type(1) li img {
 		font-weight: 500;
 	}
 
+
+
+
 	  /* Reclame */
-	main section:nth-of-type(4){
+	main section:nth-of-type(5){
 		background-color: var(--grijze-achtergrond);
 		display: block;
 		margin-top: 2em;
 		margin-bottom: 2em;
 	}   
 	
-	main section:nth-of-type(4) h2{
-		font-size: 1em;
-		margin: 0.7em 0;
-		color: var(--grijze-text);
-	}   
-	
-	main section:nth-of-type(4) a{
-		color: var(--grijze-text);
-	}   
-	
-	main section:nth-of-type(4) ul {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 0 0.875em 1.5em; 
-	}
-	
-	
-	/* Andere nieuws kanalen */
-	main section:nth-of-type(5){
-		margin-top: 2em;
-		margin-bottom: 2.5em;
-		border-radius: 0.25em;
-		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
-	}
-	
-	
-	main section:nth-of-type(5) li{
-		display: grid;
-		grid-template-columns: 3.8em 1fr;
-		padding: 1em;
-		border-bottom: 1px solid var(--border-lijn);
-		letter-spacing: 0.01875em;
-	}
-	
 	main section:nth-of-type(5) h2{
-		grid-row-start: 1;
-		grid-column-start: 2;
-		z-index: 1;
-		justify-self: start;
-		align-self: end;
-		margin: 0;
-		font-weight: 500;
-		font-size: 0.875em;
-		padding-bottom: 0.5em;
+		font-size: 0.9em;
+		margin: 0.7em 0;
+		text-transform: uppercase;
+		letter-spacing: 0.0625em;
 		color: var(--grijze-text);
-	}
-	
-	
+	}   
 	
 	main section:nth-of-type(5) a{
-		grid-row-start: 1;
-		grid-column-start: 2;
-		z-index: 1;
-		justify-self: start;
-		align-self: start;
-		margin: 0;
-		font-weight: 500;
-		font-size: 1em;
-		line-height: 1.2em;
-		padding-top: 0.25em;
-		color: var(--color-text);
-		text-decoration: none;
-	}
-	
-	
-	main section:nth-of-type(5) svg{
-		width: 3em;
-		height: 3em;
-		grid-row-start: 1;
-		grid-column-start: 1;
-		z-index: 1;
-		justify-self: start;
-		align-self: end;
-		margin: 0;
+		color: var(--grijze-text);
+		transition: 150ms ease-in-out;
 	} 
 
-
-	/* Live bij de NOS */
-	main section:nth-of-type(3){
-		margin-top: 2em;
-		margin-bottom: 2em;
-		border-radius: 0.25rem;
-		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
-	}
-	
-	main section:nth-of-type(3) ul{
-		border-bottom: 1px solid var(--border-lijn);
-	}
-	
-	main section:nth-of-type(3) h2{
+	main section:nth-of-type(5) a:hover{
 		color: var(--rood);
-		font-size: 1.125em;
-		padding: 1em 0 0 1em;
+		text-decoration: underline;
 	}
 	
-	
-	main section:nth-of-type(3) li{
-		display: grid;
-		grid-template-columns: 3.8em 1fr;
-		padding: 1em;
-	}
-	
-	main section:nth-of-type(3) ul p:first-of-type{
-		grid-row-start: 1;
-		grid-column-start: 1;
-		z-index: 1;
-		justify-self: start;
-		align-self: end;
-		display: flex;
-		align-items: center;
-		color: var(--wit-vulling);
-		font-family: EffraBold, Helvetica, Arial, sans-serif;
-		font-size: 0.9em;
-		font-weight: 100;
-		line-height: 1.2em;
-		margin: 0;
-		padding: 0.1em 0.5em;
-		background-color: var(--rood);
-		border-radius: 1.5em;
-	}
-	
-	main section:nth-of-type(3) ul p:nth-of-type(2){
-		grid-row-start: 1;
-		grid-column-start: 2;
-		z-index: 1;
-		justify-self: start;
-		align-self: start;
-		margin: 0;
-		font-weight: 500;
-		font-size: 0.875em;
-		line-height: 1.2em;
-		color: var(--grijze-text);
-	}
-	
-	main section:nth-of-type(3) ul h3{
-		grid-row-start: 2;
-		grid-column-start: 2;
-		z-index: 1;
-		justify-self: start;
-		align-self: end;
-		margin: 0;
-		font-weight: 500;
-		font-size: 0.875em;
-		line-height: 1.2em;
-		padding-bottom: 0.5em;
-		color: var(--color-text);
-	}
-	
-	main section:nth-of-type(3) ul a{
-		grid-row-start: 3;
-		grid-column-start: 2;
-		z-index: 1;
-		justify-self: start;
-		align-self: end;
-		margin: 0;
-		color: var(--rood);
-		font-weight: 500;
-	}
-
-	  /* Reclame */
-	main section:nth-of-type(4){
-		background-color: var(--grijze-achtergrond);
-		display: block;
-		margin-top: 2em;
-		margin-bottom: 2em;
-	}   
-	
-	main section:nth-of-type(4) h2{
-		font-size: 1em;
-		margin: 0.7em 0;
-		color: var(--grijze-text);
-	}   
-	
-	main section:nth-of-type(4) a{
-		color: var(--grijze-text);
-	}   
-	
-	main section:nth-of-type(4) ul {
+	main section:nth-of-type(5) ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 0 0.875em 1.5em; 
 	}
+
 	
 	
 	/* Andere nieuws kanalen */
-	main section:nth-of-type(5){
+	main section:nth-of-type(6){
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
@@ -875,7 +748,7 @@ main section:nth-of-type(1) li img {
 	}
 	
 	
-	main section:nth-of-type(5) li{
+	main section:nth-of-type(6) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
@@ -883,7 +756,7 @@ main section:nth-of-type(1) li img {
 		letter-spacing: 0.01875em;
 	}
 	
-	main section:nth-of-type(5) h2{
+	main section:nth-of-type(6) h2{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -898,7 +771,7 @@ main section:nth-of-type(1) li img {
 	
 	
 	
-	main section:nth-of-type(5) a{
+	main section:nth-of-type(6) a{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -914,13 +787,13 @@ main section:nth-of-type(1) li img {
 		transition: 150ms ease-in-out;
 	}
 
-	main section:nth-of-type(5) a:hover{
+	main section:nth-of-type(6) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 	
 	
-	main section:nth-of-type(5) svg{
+	main section:nth-of-type(6) svg{
 		width: 3em;
 		height: 3em;
 		grid-row-start: 1;
@@ -929,6 +802,6 @@ main section:nth-of-type(1) li img {
 		justify-self: start;
 		align-self: end;
 		margin: 0;
-	}  
+	} 
 
 }
