@@ -1,9 +1,9 @@
 
-main section:nth-of-type(1) a {
+/* main section:nth-of-type(1) a {
 	position:absolute;
 	left:-9999em;
 	
-}
+} */
 
 main section:nth-of-type(1) a:focus-visible {
 	left:0em;
@@ -120,7 +120,7 @@ main section:nth-of-type(1) li img {
 		font-size: 0.9em;
 		font-weight: 100;
 		line-height: 1em;
-		margin: 0.8em;
+		margin: 0.8em 0.5em;
 		padding: 0.25em 0.5em;
 		background-color: var(--rood);
 		border-radius: 1.5em;
@@ -162,20 +162,17 @@ main section:nth-of-type(1) li img {
 		line-height: 1.2em;
 	}
 
+	/******************/
 	/* Laatste nieuws */
+	/******************/
 	main section:nth-of-type(2){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
-	}
-
-	main section:nth-of-type(2) li{
-		display: flex;
-		flex-direction: column-reverse;
-		border-bottom: 1px solid var(--border-lijn);
-		padding: 1.5em 1em;
+		position: absolute;
+		left: -999em;
 	}
 
 	main section:nth-of-type(2) h2{
@@ -183,10 +180,39 @@ main section:nth-of-type(1) li img {
 		font-size: 1.25em;
 		padding: 1.5em 1em 0 1em;
 	}
+
+	/* Om de tekst omder elkaar te krijgen (met de p eerst)*/
+	main section:nth-of-type(2) li{
+		display: flex;
+		flex-direction: column-reverse;
+		border-bottom: 1px solid var(--border-lijn);
+		padding: 1.5em 1em;
+	}
+
+	main section:nth-of-type(2) a{
+		color: var(--color-text);
+		text-decoration: none;
+	}
+
+
+	main section:nth-of-type(2) a h3{
+		font-weight: 500;
+        font-size: 1em;
+        line-height: 1.2em;
+        padding-top: 0.25em;
+	}
+
+	main section:nth-of-type(2) p{
+		font-weight: 500;
+        font-size: 0.875em;
+		line-height: 1.2em;
+        color: var(--grijze-text);
+		padding-bottom: 0.25em;
+	}
 	
-
-
+	/********************/
 	/*dit zijn de videos*/
+	/********************/
 	main section:nth-of-type(3){
 		display: flex;
 		flex-direction: column;
@@ -526,7 +552,7 @@ main section:nth-of-type(1) li img {
 		font-size: 0.9em;
 		font-weight: 100;
 		line-height: 1em;
-        margin: 9em 0 0 0.8em;
+        margin: 9em 0 0 0.5em;
 		padding: 0.25em 0.5em;
 		background-color: var(--rood);
 		border-radius: 1.5em;
@@ -562,6 +588,59 @@ main section:nth-of-type(1) li img {
 		/* color:white; */
 	}
 
+		/******************/
+	/* Laatste nieuws */
+	/******************/
+	main section:nth-of-type(2){
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-radius: 0.25rem;
+		background-color: var(--background-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		position: absolute;
+		left: -999em;
+	}
+
+	main section:nth-of-type(2) h2{
+		color: var(--rood);
+		font-size: 1.25em;
+		padding: 1.5em 1em 0 1em;
+	}
+
+	/* Om de tekst omder elkaar te krijgen (met de p eerst)*/
+	main section:nth-of-type(2) li{
+		display: flex;
+		flex-direction: column-reverse;
+		border-bottom: 1px solid var(--border-lijn);
+		padding: 1.5em 1em;
+	}
+
+	main section:nth-of-type(2) a{
+		color: var(--color-text);
+		text-decoration: none;
+		transition: 150ms ease-in-out;
+	}
+
+	/* Vanaf middel scherm wel hover */
+	main section:nth-of-type(2) a:hover{
+		color: var(--rood);
+		text-decoration: underline;
+	}
+
+	main section:nth-of-type(2) a h3{
+		font-weight: 500;
+        font-size: 1em;
+        line-height: 1.2em;
+        padding-top: 0.25em;
+	}
+
+	main section:nth-of-type(2) p{
+		font-weight: 500;
+        font-size: 0.875em;
+		line-height: 1.2em;
+        color: var(--grijze-text);
+		padding-bottom: 0.25em;
+	}
 
 	/***********************/
 	/* DIT ZIJN DE VIDEO'S */
@@ -832,5 +911,493 @@ main section:nth-of-type(1) li img {
 		align-self: end;
 		margin: 0;
 	} 
+
+}
+
+
+	/**********************************************************************************/
+									/* GROOT SCHERM */
+	/**********************************************************************************/
+@media (min-width: 56.25em) {
+
+	main{
+		display: grid;
+		gap: 2.5rem;
+        grid-template-rows: auto auto;
+        grid-template-columns: minmax(0px, 50rem) minmax(15.625rem, 1fr);
+		/* Grid template van de NOS website overgenomen */
+
+		/* Om ruimte te maken (voor nu) */
+		/* margin-top: 25em; */
+	}
+
+
+	main section{
+		margin: 0 1em;
+	}
+
+	main section:nth-of-type(1) ul{
+		/* margin: 0 1em; */
+		gap: 2.5em
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(1),
+	main section:nth-of-type(1) li:nth-of-type(2) {
+		grid-column:span 3;
+		display:grid;
+		margin-top: 2em;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(1) img,
+	main section:nth-of-type(1) li:nth-of-type(2) img {
+		grid-area:1/1;
+		border-radius: 0.3em;
+	}
+
+	/* Voor de foto groter maken */
+	/* main section:nth-of-type(1) li:nth-of-type(1) img:hover,
+	main section:nth-of-type(1) li:nth-of-type(2) img:hover {
+		transform: perspective(1px) scale3d(1.04, 1.04, 1.04);
+		overflow: hidden;
+	} */
+
+
+	main section:nth-of-type(1) li:nth-of-type(1) h2,
+	main section:nth-of-type(1) li:nth-of-type(2) h2 {
+		grid-area:1/1;
+		z-index: 1;
+		place-self:end start;
+		color:var(--wit-vulling);
+		margin: 0;
+		padding: 0.8em 0.8em;
+		/* font-family: EffraBold, Helvetica, Arial, sans-serif; */
+		line-height: 1em;
+		font-size: 1.45em;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+		border-radius: 0.3em;
+		width: 100%;
+	}
+
+	main section:nth-of-type(1) li p:first-of-type{
+		padding-top: 0.5em;
+		font-size: 1em;
+		font-weight: 350;
+        line-height: 1.2em;
+		color: var(--grijze-text);
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3){
+		display: grid;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3) img{
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2){
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: center;
+		/* Goede versie */
+		/* align-self: end; */
+		display: flex;
+		align-items: center;
+		gap: 0.2em;
+		color: var(--wit-vulling);
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		font-size: 0.9em;
+		font-weight: 100;
+		line-height: 1em;
+        margin: 9em 0 0 0.5em;
+		/* Goede versie */
+		/* margin: 0.5em; */
+		padding: 0.25em 0.5em;
+		background-color: var(--rood);
+		border-radius: 1.5em;
+	}
+	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2) svg{
+		height: 0.9em;
+	}
+	
+	
+	main section:nth-of-type(1) li:nth-of-type(n+ 3){
+		grid-column:span 2;
+		display:grid;
+		grid-template-columns:none;
+		/* margin: 0.8em; */
+	}
+
+
+	main section:nth-of-type(1) li:nth-of-type(n+ 3) img{
+		grid-area:1/1;
+		border-radius: 0.3em;
+	}
+
+	main section:nth-of-type(1) li:nth-of-type(n+ 3) h2{
+		color: var(--color-text);
+		font-size: 1.1em;
+		font-weight: 500;
+		line-height: 1.2em;
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		padding-top: 0.5em;
+
+		/* grid-area:1/1; */
+		/* place-self:end start; */
+		/* color:white; */
+	}
+
+	/******************/
+	/* Laatste nieuws */
+	/******************/
+	main section:nth-of-type(2){
+		margin-top: 2em;
+		margin-bottom: 2em;
+		/* Margin bottom en top kunnen weg */
+		border-radius: 0.25rem;
+		background-color: var(--background-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		position: absolute;
+		left: -999em;
+
+		/* grid-row-start: 1;
+        grid-column-start: 2;
+        align-self: end; */
+		/* 2 LI KUNNEN WEG!!!!!!!!! */
+	}
+
+	main section:nth-of-type(2) h2{
+		color: var(--rood);
+		font-size: 1.25em;
+		padding: 1.5em 1em 0 1em;
+	}
+
+	/* Om de tekst omder elkaar te krijgen (met de p eerst)*/
+	main section:nth-of-type(2) li{
+		display: flex;
+		flex-direction: column-reverse;
+		border-bottom: 1px solid var(--border-lijn);
+		padding: 1.5em 1em;
+	}
+
+	main section:nth-of-type(2) a{
+		color: var(--color-text);
+		text-decoration: none;
+		transition: 150ms ease-in-out;
+	}
+
+	/* Vanaf middel scherm wel hover */
+	main section:nth-of-type(2) a:hover{
+		color: var(--rood);
+		text-decoration: underline;
+	}
+
+	main section:nth-of-type(2) a h3{
+		font-weight: 500;
+        font-size: 1em;
+        line-height: 1.2em;
+        padding-top: 0.25em;
+	}
+
+	main section:nth-of-type(2) p{
+		font-weight: 500;
+        font-size: 0.875em;
+		line-height: 1.2em;
+        color: var(--grijze-text);
+		padding-bottom: 0.25em;
+	}
+
+	/***********************/
+	/* DIT ZIJN DE VIDEO'S */
+	/***********************/
+	main section:nth-of-type(3){
+		display: flex;
+		flex-direction: column;
+		margin-top: 2.5em;
+		margin-bottom: 2.5em;
+	}
+
+	main section:nth-of-type(3) h2{
+		margin: 0;
+		color: var(--rood);
+		font-size: 1.35em;
+	}
+
+	main section:nth-of-type(3) ul {
+		padding: 0;
+		margin-top: 0.5em;
+		gap: 1.5em;
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	} 
+
+	main section:nth-of-type(3) li{
+		display: grid;
+		gap: 1em;
+		min-height: 12.2em;
+		min-width: 9.1em;
+		scroll-snap-align: center;
+	}
+
+	main section:nth-of-type(3) li h2{
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+		padding: 0.8em 0.8em;
+		color: var(--wit-vulling);
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		font-size: 1.1em;
+		font-weight: 100;
+		line-height: 1.2em;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+		border-radius: 3.5%;
+		width: 100%;
+	}
+
+	main section:nth-of-type(3) li p{
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		display: flex;
+		align-items: center;
+		gap: 0.2em;
+		color: var(--wit-vulling);
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		font-size: 0.9em;
+		font-weight: 100;
+		line-height: 1.2em;
+		margin: 1em 0.8em 4em 0.8em;
+		padding: 0.1em 0.5em;
+		background-color: var(--rood);
+		border-radius: 1.5em;
+	}
+
+	main section:nth-of-type(3) li svg{
+		height: 0.9em;
+	}
+
+
+	main section:nth-of-type(3) li img{
+		grid-row-start: 1;
+		grid-column-start: 1;
+		max-width: 15.2em;
+		border-radius: 3.5%;
+	}    
+
+	/*******************/
+	/* Live bij de NOS */
+	/*******************/
+	main section:nth-of-type(4){
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-radius: 0.25rem;
+		background-color: var(--background-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+
+		/* grid-row-start: 1;
+        grid-column-start: 2;
+        align-self: start; */
+
+
+		/* Als eerste 2 fotos NIET!!!! weg zijn */
+		/* margin-top: 17.7em; */
+	}
+	
+	main section:nth-of-type(4) ul{
+		border-bottom: 1px solid var(--border-lijn);
+	}
+	
+	main section:nth-of-type(4) h2{
+		color: var(--rood);
+		font-size: 1.25em;
+		padding: 1em 0 0 1em;
+	}
+	
+	
+	main section:nth-of-type(4) li{
+		display: grid;
+		grid-template-columns: 3.8em 1fr;
+		padding: 1em;
+	}
+	
+	main section:nth-of-type(4) ul p:first-of-type{
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		display: flex;
+		align-items: center;
+		color: var(--wit-vulling);
+		font-family: EffraBold, Helvetica, Arial, sans-serif;
+		font-size: 0.9em;
+		font-weight: 100;
+		line-height: 1.2em;
+		margin: 0;
+		padding: 0.1em 0.5em;
+		background-color: var(--rood);
+		border-radius: 1.5em;
+	}
+	
+	main section:nth-of-type(4) ul p:nth-of-type(2){
+		grid-row-start: 1;
+		grid-column-start: 2;
+		z-index: 1;
+		justify-self: start;
+		align-self: start;
+		margin: 0;
+		font-weight: 500;
+		font-size: 0.875em;
+		line-height: 1.2em;
+		color: var(--grijze-text);
+	}
+	
+	main section:nth-of-type(4) ul h3{
+		grid-row-start: 2;
+		grid-column-start: 2;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+		font-weight: 500;
+		font-size: 0.875em;
+		line-height: 1.2em;
+		padding-bottom: 0.5em;
+		color: var(--color-text);
+	}
+	
+	main section:nth-of-type(4) ul a{
+		grid-row-start: 3;
+		grid-column-start: 2;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+		color: var(--rood);
+		font-weight: 500;
+	}
+
+
+
+	/***********/
+	/* Reclame */
+	/***********/
+	main section:nth-of-type(5){
+		background-color: var(--grijze-achtergrond);
+		display: block;
+		margin-top: 2em;
+		margin-bottom: 2em;
+
+		/* grid-row-start: 1;
+        grid-column-start: 2;
+        align-self: center; */
+		/* margin-top: 3em; */
+
+		/* Als eerste 2 fotos weg zijn */
+		/* margin-bottom: 14.4em; */
+	}   
+	
+	main section:nth-of-type(5) h2{
+		font-size: 0.9em;
+		margin: 0.7em 0;
+		text-transform: uppercase;
+		letter-spacing: 0.0625em;
+		color: var(--grijze-text);
+	}   
+	
+	main section:nth-of-type(5) a{
+		color: var(--grijze-text);
+		transition: 150ms ease-in-out;
+	} 
+
+	main section:nth-of-type(5) a:hover{
+		color: var(--rood);
+		text-decoration: underline;
+	}
+	
+	main section:nth-of-type(5) ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 0.875em 1.5em; 
+	}
+
+	
+	
+	/* Andere nieuws kanalen */
+	main section:nth-of-type(6){
+		margin-top: 2em;
+		margin-bottom: 2.5em;
+		border-radius: 0.25em;
+		background-color: var(--background-color);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+	}
+	
+	
+	main section:nth-of-type(6) li{
+		display: grid;
+		grid-template-columns: 3.8em 1fr;
+		padding: 1em;
+		border-bottom: 1px solid var(--border-lijn);
+		letter-spacing: 0.01875em;
+	}
+	
+	main section:nth-of-type(6) h2{
+		grid-row-start: 1;
+		grid-column-start: 2;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+		font-weight: 500;
+		font-size: 0.875em;
+		padding-bottom: 0.5em;
+		color: var(--grijze-text);
+	}
+	
+	
+	
+	main section:nth-of-type(6) a{
+		grid-row-start: 1;
+		grid-column-start: 2;
+		z-index: 1;
+		justify-self: start;
+		align-self: start;
+		margin: 0;
+		font-weight: 500;
+		font-size: 1em;
+		line-height: 1.2em;
+		padding-top: 0.25em;
+		color: var(--color-text);
+		text-decoration: none;
+		transition: 150ms ease-in-out;
+	}
+
+	main section:nth-of-type(6) a:hover{
+		color: var(--rood);
+		text-decoration: underline;
+	}
+	
+	
+	main section:nth-of-type(6) svg{
+		width: 3em;
+		height: 3em;
+		grid-row-start: 1;
+		grid-column-start: 1;
+		z-index: 1;
+		justify-self: start;
+		align-self: end;
+		margin: 0;
+	} 
+
+
 
 }
