@@ -119,14 +119,12 @@ header{
         rotate: 90deg;
     }
 
-    footer{
-        margin: 0 1em;
-    }
-
     ul{
         padding: 0;
         list-style-type: none;
     }
+
+
 
 
     /**********/
@@ -351,7 +349,7 @@ header{
         color: var(--nos-logo-grijs);
         width: auto;
         height: 1.4em;
-        transition: 150ms ease-in-out;
+        transition:  150ms ease-in-out;
     }
     
     nav ul:nth-of-type(1) li:nth-of-type(1) svg:hover{
