@@ -225,7 +225,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.12.47.png" width="375px" alt="bummer">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.18" width="375px" alt="bummer">
 </details>
 
 
