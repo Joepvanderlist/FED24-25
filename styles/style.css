@@ -99,6 +99,13 @@ header{
         font-weight: 590;
     }
 
+    /* Button 2 en 3 (Li nr3 en 4) weg halen */
+    nav ul:nth-of-type(1) li:nth-of-type(n+ 4){
+        position: absolute;
+        left: -999em;
+    }
+
+
     /* Pijl icoontje */
     nav button svg{
         height: 0.4em;
@@ -258,6 +265,12 @@ header{
         color: var(--grijze-text);
     }
 
+    /* Laatste 2 titels (van de lijstjes) buiten beeld zetten */
+    footer section:nth-of-type(1) h2:nth-of-type(n +2){
+        position: absolute;
+        left: -999em;
+    }
+
     /* Laatste 2 lijstjes buiten beeld zetten */
     footer section:nth-of-type(1) ul:nth-of-type(n+ 3){
         position: absolute;
@@ -366,6 +379,12 @@ header{
 
     nav button:hover{
         color: var(--rood);
+    }
+
+    /* Button 2 en 3 (Li nr3 en 4) weg halen */
+    nav ul:nth-of-type(1) li:nth-of-type(n+ 4){
+        position: absolute;
+        left: -999em;
     }
 
     nav button svg{

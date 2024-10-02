@@ -5,50 +5,57 @@
 	
 } */
 
-main section:nth-of-type(1) a:focus-visible {
+
+li{
+	list-style-type:none;
+}
+
+main section:nth-of-type(2) a:focus-visible {
 	left:0em;
 }
 
-main section:nth-of-type(1) ul {
-	margin:0;
-	padding:0;
-	list-style-type:none;
-	
+main section:nth-of-type(2) ul {
 	display:grid;
 	grid-template-columns:repeat(6, 1fr);
 	gap:1em;
 }
 
 
-main section:nth-of-type(1) li img {
+main section:nth-of-type(2) li img {
 	grid-area:1/1;
 	width:100%;
 }
 
 
 
-@media (width < 47.5em) {
+@media (max-width: 759px) {
+	/* width < 47.5em */
 
-	section:not(:first-of-type) {
+	main section:not(:nth-of-type(2)) {
 		margin: 0 1em;
 	}
 
+	/* Section van het scherm halen */
+	main section:nth-of-type(1){
+		position: absolute;
+		left: -999em;
+	}
 
 	/* main section:nth-of-type(1) ul:not(li:first-of-type){
 		margin: 0 1em;
 	} */
 
 	/* De 1e grote foto */
-	main section:nth-of-type(1) li:nth-of-type(1) {
+	main section:nth-of-type(2) li:nth-of-type(1) {
 		grid-column:span 6;
 		display:grid;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(1) img {
+	main section:nth-of-type(2) li:nth-of-type(1) img {
 		grid-area:1/1;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(1) h2 {
+	main section:nth-of-type(2) li:nth-of-type(1) h2 {
 		grid-area:1/1;
 		z-index: 1;
 		place-self:end start;
@@ -62,27 +69,27 @@ main section:nth-of-type(1) li img {
 	}
 
 	/* voor het verstoppen van de tekst op kleinscherm */
-	main section:nth-of-type(1) li p:first-of-type{
+	main section:nth-of-type(2) li p:first-of-type{
 		position: absolute;
 		left: -999em;
 	}
 
 	/* De 2 middelgrote fotos */
-	main section:nth-of-type(1) li:nth-of-type(2),
-	main section:nth-of-type(1) li:nth-of-type(3) {
+	main section:nth-of-type(2) li:nth-of-type(2),
+	main section:nth-of-type(2) li:nth-of-type(3) {
 		grid-column:span 3;
 		display:grid;
 		padding-bottom: 1em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(2) img,
-	main section:nth-of-type(1) li:nth-of-type(3) img {
+	main section:nth-of-type(2) li:nth-of-type(2) img,
+	main section:nth-of-type(2) li:nth-of-type(3) img {
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(2) h2,
-	main section:nth-of-type(1) li:nth-of-type(3) h2 {
+	main section:nth-of-type(2) li:nth-of-type(2) h2,
+	main section:nth-of-type(2) li:nth-of-type(3) h2 {
 		color: var(--color-text);
 		font-weight: 500;
 		font-size: 0.875em;
@@ -91,22 +98,22 @@ main section:nth-of-type(1) li img {
 	}
 
 	/* Margin op beide zodat er tussen geen extra ruimte komt */
-	main section:nth-of-type(1) li:nth-of-type(2){
+	main section:nth-of-type(2) li:nth-of-type(2){
 		margin-left: 1em;
 	}
 
 	/* Grid voor rode tag */
-	main section:nth-of-type(1) li:nth-of-type(3){
+	main section:nth-of-type(2) li:nth-of-type(3){
 		display: grid;
 		margin-right: 1em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) img{
+	main section:nth-of-type(2) li:nth-of-type(3) img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2){
+	main section:nth-of-type(2) li:nth-of-type(3) p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -126,13 +133,13 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2) svg{
+	main section:nth-of-type(2) li:nth-of-type(3) p:nth-of-type(2) svg{
 		height: 0.9em;
 	}
 
 
 	/* De kleine fotos */
-	main section:nth-of-type(1) li:nth-of-type(n + 4) {
+	main section:nth-of-type(2) li:nth-of-type(n + 4) {
         grid-column: span 6;
         /* display: grid; */
         display: flex;
@@ -146,7 +153,7 @@ main section:nth-of-type(1) li img {
 		justify-content: flex-end;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(n + 4) img{
+	main section:nth-of-type(2) li:nth-of-type(n + 4) img{
 		border-radius: 3.5%;
 		width: 100%;
 		max-width: 6.5em;
@@ -155,7 +162,7 @@ main section:nth-of-type(1) li img {
 		/* min-width: 6.5em; */
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(n + 4) h2{
+	main section:nth-of-type(2) li:nth-of-type(n + 4) h2{
 		color: var(--color-text);
 		font-size: 0.875em;
 		font-weight: 500;
@@ -165,7 +172,7 @@ main section:nth-of-type(1) li img {
 	/******************/
 	/* Laatste nieuws */
 	/******************/
-	main section:nth-of-type(2){
+	main section:nth-of-type(3){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
@@ -175,34 +182,34 @@ main section:nth-of-type(1) li img {
 		left: -999em;
 	}
 
-	main section:nth-of-type(2) h2{
+	main section:nth-of-type(3) h2{
 		color: var(--rood);
 		font-size: 1.25em;
 		padding: 1.5em 1em 0 1em;
 	}
 
 	/* Om de tekst omder elkaar te krijgen (met de p eerst)*/
-	main section:nth-of-type(2) li{
+	main section:nth-of-type(3) li{
 		display: flex;
 		flex-direction: column-reverse;
 		border-bottom: 1px solid var(--border-lijn);
 		padding: 1.5em 1em;
 	}
 
-	main section:nth-of-type(2) a{
+	main section:nth-of-type(3) a{
 		color: var(--color-text);
 		text-decoration: none;
 	}
 
 
-	main section:nth-of-type(2) a h3{
+	main section:nth-of-type(3) a h3{
 		font-weight: 500;
         font-size: 1em;
         line-height: 1.2em;
         padding-top: 0.25em;
 	}
 
-	main section:nth-of-type(2) p{
+	main section:nth-of-type(3) p{
 		font-weight: 500;
         font-size: 0.875em;
 		line-height: 1.2em;
@@ -213,20 +220,20 @@ main section:nth-of-type(1) li img {
 	/********************/
 	/*dit zijn de videos*/
 	/********************/
-	main section:nth-of-type(3){
+	main section:nth-of-type(4){
 		display: flex;
 		flex-direction: column;
 		margin-top: 1.5em;
 		margin-bottom: 1.5em;
 	}
 
-	main section:nth-of-type(3) h2{
+	main section:nth-of-type(4) h2{
 		margin: 0;
 		color: var(--rood);
 		font-size: 1.125em;
 	}
 
-	main section:nth-of-type(3) ul {
+	main section:nth-of-type(4) ul {
 		padding: 0;
 		margin-top: 0.5em;
 		gap: 1em;
@@ -235,14 +242,14 @@ main section:nth-of-type(1) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(3) li{
+	main section:nth-of-type(4) li{
 		display: grid;
 		gap: 1em;
 		min-width: 6em;
 		scroll-snap-align: center;
 	}
 
-	main section:nth-of-type(3) li h2{
+	main section:nth-of-type(4) li h2{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -260,7 +267,7 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(3) li p{
+	main section:nth-of-type(4) li p{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -280,20 +287,22 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 
-	main section:nth-of-type(3) li svg{
+	main section:nth-of-type(4) li svg{
 		height: 0.9em;
 	}
 
 
-	main section:nth-of-type(3) li img{
+	main section:nth-of-type(4) li img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		max-width: 15.2em;
 		border-radius: 3.5%;
 	}    
 
+	/*******************/
 	/* Live bij de NOS */
-	main section:nth-of-type(4){
+	/*******************/
+	main section:nth-of-type(5){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
@@ -301,24 +310,24 @@ main section:nth-of-type(1) li img {
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 	}
 	
-	main section:nth-of-type(4) ul{
+	main section:nth-of-type(5) ul{
 		border-bottom: 1px solid var(--border-lijn);
 	}
 	
-	main section:nth-of-type(4) h2{
+	main section:nth-of-type(5) h2{
 		color: var(--rood);
 		font-size: 1.125em;
 		padding: 1em 0 0 1em;
 	}
 	
 	
-	main section:nth-of-type(4) li{
+	main section:nth-of-type(5) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
 	}
 	
-	main section:nth-of-type(4) ul p:first-of-type{
+	main section:nth-of-type(5) ul p:first-of-type{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -337,7 +346,7 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 	
-	main section:nth-of-type(4) ul p:nth-of-type(2){
+	main section:nth-of-type(5) ul p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -350,7 +359,7 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	main section:nth-of-type(4) ul h3{
+	main section:nth-of-type(5) ul h3{
 		grid-row-start: 2;
 		grid-column-start: 2;
 		z-index: 1;
@@ -364,7 +373,7 @@ main section:nth-of-type(1) li img {
 		color: var(--color-text);
 	}
 	
-	main section:nth-of-type(4) ul a{
+	main section:nth-of-type(5) ul a{
 		grid-row-start: 3;
 		grid-column-start: 2;
 		z-index: 1;
@@ -375,15 +384,17 @@ main section:nth-of-type(1) li img {
 		font-weight: 500;
 	}
 
-	  /* Reclame */
-	main section:nth-of-type(5){
+	/***********/
+	/* Reclame */
+	/***********/
+	main section:nth-of-type(6){
 		background-color: var(--grijze-achtergrond);
 		display: block;
 		margin-top: 2em;
 		margin-bottom: 2em;
 	}   
 	
-	main section:nth-of-type(5) h2{
+	main section:nth-of-type(6) h2{
 		font-size: 0.9em;
 		margin: 0.7em 0;
 		text-transform: uppercase;
@@ -391,20 +402,21 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}   
 	
-	main section:nth-of-type(5) a{
+	main section:nth-of-type(6) a{
 		color: var(--grijze-text);
 	}   
 	
-	main section:nth-of-type(5) ul {
+	main section:nth-of-type(6) ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 0 0.875em 1.5em; 
 	}
 	
-	
+	/*************************/
 	/* Andere nieuws kanalen */
-	main section:nth-of-type(6){
+	/*************************/
+	main section:nth-of-type(7){
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
@@ -413,7 +425,7 @@ main section:nth-of-type(1) li img {
 	}
 	
 	
-	main section:nth-of-type(6) li{
+	main section:nth-of-type(7) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
@@ -421,7 +433,7 @@ main section:nth-of-type(1) li img {
 		letter-spacing: 0.01875em;
 	}
 	
-	main section:nth-of-type(6) h2{
+	main section:nth-of-type(7) h2{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -434,9 +446,8 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	
-	
-	main section:nth-of-type(6) a{
+
+	main section:nth-of-type(7) a{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -451,8 +462,7 @@ main section:nth-of-type(1) li img {
 		text-decoration: none;
 	}
 	
-	
-	main section:nth-of-type(6) svg{
+	main section:nth-of-type(7) svg{
 		width: 3em;
 		height: 3em;
 		grid-row-start: 1;
@@ -473,26 +483,33 @@ main section:nth-of-type(1) li img {
 
 
 /* ">=" is gelijk aan of groter dan 47.5em */
-@media (width >= 47.5em) {
+@media only screen and (min-width: 760px) and (max-width: 899px) {
+	/* 47.5em 56.25em */
 
 	main section{
 		margin: 0 1em;
 	}
 
-	main section:nth-of-type(1) ul{
+	/* Section van het scherm halen */
+	main section:nth-of-type(1){
+		position: absolute;
+		left: -999em;
+	}
+
+	main section:nth-of-type(2) ul{
 		/* margin: 0 1em; */
 		gap: 2.5em
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(1),
-	main section:nth-of-type(1) li:nth-of-type(2) {
+	main section:nth-of-type(2) li:nth-of-type(1),
+	main section:nth-of-type(2) li:nth-of-type(2) {
 		grid-column:span 3;
 		display:grid;
 		margin-top: 2em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(1) img,
-	main section:nth-of-type(1) li:nth-of-type(2) img {
+	main section:nth-of-type(2) li:nth-of-type(1) img,
+	main section:nth-of-type(2) li:nth-of-type(2) img {
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
@@ -505,8 +522,8 @@ main section:nth-of-type(1) li img {
 	} */
 
 
-	main section:nth-of-type(1) li:nth-of-type(1) h2,
-	main section:nth-of-type(1) li:nth-of-type(2) h2 {
+	main section:nth-of-type(2) li:nth-of-type(1) h2,
+	main section:nth-of-type(2) li:nth-of-type(2) h2 {
 		grid-area:1/1;
 		z-index: 1;
 		place-self:end start;
@@ -521,7 +538,7 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(1) li p:first-of-type{
+	main section:nth-of-type(2) li p:first-of-type{
 		padding-top: 0.5em;
 		font-size: 1em;
 		font-weight: 350;
@@ -529,16 +546,16 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3){
+	main section:nth-of-type(2) li:nth-of-type(3){
 		display: grid;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) img{
+	main section:nth-of-type(2) li:nth-of-type(3) img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2){
+	main section:nth-of-type(2) li:nth-of-type(3) p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -557,12 +574,12 @@ main section:nth-of-type(1) li img {
 		background-color: var(--rood);
 		border-radius: 1.5em;
 	}
-	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2) svg{
+	main section:nth-of-type(2) li:nth-of-type(3) p:nth-of-type(2) svg{
 		height: 0.9em;
 	}
 	
 	
-	main section:nth-of-type(1) li:nth-of-type(n+ 3){
+	main section:nth-of-type(2) li:nth-of-type(n+ 3){
 		grid-column:span 2;
 		display:grid;
 		grid-template-columns:none;
@@ -570,12 +587,12 @@ main section:nth-of-type(1) li img {
 	}
 
 
-	main section:nth-of-type(1) li:nth-of-type(n+ 3) img{
+	main section:nth-of-type(2) li:nth-of-type(n+ 3) img{
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(n+ 3) h2{
+	main section:nth-of-type(2) li:nth-of-type(n+ 3) h2{
 		color: var(--color-text);
 		font-size: 1.1em;
 		font-weight: 500;
@@ -588,10 +605,10 @@ main section:nth-of-type(1) li img {
 		/* color:white; */
 	}
 
-		/******************/
+	/******************/
 	/* Laatste nieuws */
 	/******************/
-	main section:nth-of-type(2){
+	main section:nth-of-type(3){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
@@ -601,40 +618,40 @@ main section:nth-of-type(1) li img {
 		left: -999em;
 	}
 
-	main section:nth-of-type(2) h2{
+	main section:nth-of-type(3) h2{
 		color: var(--rood);
 		font-size: 1.25em;
 		padding: 1.5em 1em 0 1em;
 	}
 
 	/* Om de tekst omder elkaar te krijgen (met de p eerst)*/
-	main section:nth-of-type(2) li{
+	main section:nth-of-type(3) li{
 		display: flex;
 		flex-direction: column-reverse;
 		border-bottom: 1px solid var(--border-lijn);
 		padding: 1.5em 1em;
 	}
 
-	main section:nth-of-type(2) a{
+	main section:nth-of-type(3) a{
 		color: var(--color-text);
 		text-decoration: none;
 		transition: 150ms ease-in-out;
 	}
 
 	/* Vanaf middel scherm wel hover */
-	main section:nth-of-type(2) a:hover{
+	main section:nth-of-type(3) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 
-	main section:nth-of-type(2) a h3{
+	main section:nth-of-type(3) a h3{
 		font-weight: 500;
         font-size: 1em;
         line-height: 1.2em;
         padding-top: 0.25em;
 	}
 
-	main section:nth-of-type(2) p{
+	main section:nth-of-type(3) p{
 		font-weight: 500;
         font-size: 0.875em;
 		line-height: 1.2em;
@@ -645,20 +662,20 @@ main section:nth-of-type(1) li img {
 	/***********************/
 	/* DIT ZIJN DE VIDEO'S */
 	/***********************/
-	main section:nth-of-type(3){
+	main section:nth-of-type(4){
 		display: flex;
 		flex-direction: column;
 		margin-top: 2.5em;
 		margin-bottom: 2.5em;
 	}
 
-	main section:nth-of-type(3) h2{
+	main section:nth-of-type(4) h2{
 		margin: 0;
 		color: var(--rood);
 		font-size: 1.35em;
 	}
 
-	main section:nth-of-type(3) ul {
+	main section:nth-of-type(4) ul {
 		padding: 0;
 		margin-top: 0.5em;
 		gap: 1.5em;
@@ -667,7 +684,7 @@ main section:nth-of-type(1) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(3) li{
+	main section:nth-of-type(4) li{
 		display: grid;
 		gap: 1em;
 		min-height: 12.2em;
@@ -675,7 +692,7 @@ main section:nth-of-type(1) li img {
 		scroll-snap-align: center;
 	}
 
-	main section:nth-of-type(3) li h2{
+	main section:nth-of-type(4) li h2{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -693,7 +710,7 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(3) li p{
+	main section:nth-of-type(4) li p{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -713,20 +730,22 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 
-	main section:nth-of-type(3) li svg{
+	main section:nth-of-type(4) li svg{
 		height: 0.9em;
 	}
 
 
-	main section:nth-of-type(3) li img{
+	main section:nth-of-type(4) li img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		max-width: 15.2em;
 		border-radius: 3.5%;
 	}    
 
-		/* Live bij de NOS */
-	main section:nth-of-type(4){
+	/*******************/
+	/* Live bij de NOS */
+	/*******************/
+	main section:nth-of-type(5){
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
@@ -734,24 +753,24 @@ main section:nth-of-type(1) li img {
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 	}
 	
-	main section:nth-of-type(4) ul{
+	main section:nth-of-type(5) ul{
 		border-bottom: 1px solid var(--border-lijn);
 	}
 	
-	main section:nth-of-type(4) h2{
+	main section:nth-of-type(5) h2{
 		color: var(--rood);
 		font-size: 1.25em;
 		padding: 1em 0 0 1em;
 	}
 	
 	
-	main section:nth-of-type(4) li{
+	main section:nth-of-type(5) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
 	}
 	
-	main section:nth-of-type(4) ul p:first-of-type{
+	main section:nth-of-type(5) ul p:first-of-type{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -770,7 +789,7 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 	
-	main section:nth-of-type(4) ul p:nth-of-type(2){
+	main section:nth-of-type(5) ul p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -783,7 +802,7 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	main section:nth-of-type(4) ul h3{
+	main section:nth-of-type(5) ul h3{
 		grid-row-start: 2;
 		grid-column-start: 2;
 		z-index: 1;
@@ -797,7 +816,7 @@ main section:nth-of-type(1) li img {
 		color: var(--color-text);
 	}
 	
-	main section:nth-of-type(4) ul a{
+	main section:nth-of-type(5) ul a{
 		grid-row-start: 3;
 		grid-column-start: 2;
 		z-index: 1;
@@ -810,16 +829,17 @@ main section:nth-of-type(1) li img {
 
 
 
-
-	  /* Reclame */
-	main section:nth-of-type(5){
+	/***********/
+	/* Reclame */
+	/***********/
+	main section:nth-of-type(6){
 		background-color: var(--grijze-achtergrond);
 		display: block;
 		margin-top: 2em;
 		margin-bottom: 2em;
 	}   
 	
-	main section:nth-of-type(5) h2{
+	main section:nth-of-type(6) h2{
 		font-size: 0.9em;
 		margin: 0.7em 0;
 		text-transform: uppercase;
@@ -827,17 +847,17 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}   
 	
-	main section:nth-of-type(5) a{
+	main section:nth-of-type(6) a{
 		color: var(--grijze-text);
 		transition: 150ms ease-in-out;
 	} 
 
-	main section:nth-of-type(5) a:hover{
+	main section:nth-of-type(6) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 	
-	main section:nth-of-type(5) ul {
+	main section:nth-of-type(6) ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -845,9 +865,10 @@ main section:nth-of-type(1) li img {
 	}
 
 	
-	
+	/*************************/
 	/* Andere nieuws kanalen */
-	main section:nth-of-type(6){
+	/*************************/
+	main section:nth-of-type(7){
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
@@ -856,7 +877,7 @@ main section:nth-of-type(1) li img {
 	}
 	
 	
-	main section:nth-of-type(6) li{
+	main section:nth-of-type(7) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
@@ -864,7 +885,7 @@ main section:nth-of-type(1) li img {
 		letter-spacing: 0.01875em;
 	}
 	
-	main section:nth-of-type(6) h2{
+	main section:nth-of-type(7) h2{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -877,9 +898,8 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	
-	
-	main section:nth-of-type(6) a{
+
+	main section:nth-of-type(7) a{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -895,13 +915,13 @@ main section:nth-of-type(1) li img {
 		transition: 150ms ease-in-out;
 	}
 
-	main section:nth-of-type(6) a:hover{
+	main section:nth-of-type(7) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 	
 	
-	main section:nth-of-type(6) svg{
+	main section:nth-of-type(7) svg{
 		width: 3em;
 		height: 3em;
 		grid-row-start: 1;
@@ -918,17 +938,17 @@ main section:nth-of-type(1) li img {
 	/**********************************************************************************/
 									/* GROOT SCHERM */
 	/**********************************************************************************/
-@media (min-width: 56.25em) {
+@media (min-width: 900px) {
+	/* 56.25em */
 
-	main{
+	main {
 		display: grid;
-		gap: 2.5rem;
+		/* gap: 2.5rem; */
         grid-template-rows: auto auto;
         grid-template-columns: minmax(0px, 50rem) minmax(15.625rem, 1fr);
 		/* Grid template van de NOS website overgenomen */
-
-		/* Om ruimte te maken (voor nu) */
-		/* margin-top: 25em; */
+		/* max-width: 1190px;
+		justify-content: center; */
 	}
 
 
@@ -936,34 +956,25 @@ main section:nth-of-type(1) li img {
 		margin: 0 1em;
 	}
 
-	main section:nth-of-type(1) ul{
-		/* margin: 0 1em; */
-		gap: 2.5em
+	/* Om de foto's op de juiste plet te zetten */
+	main section:nth-of-type(1) {
+		display: flex;
+        grid-column-start: 1;
+        grid-column-end: 3;
+		gap: 2.5em;
+		margin: 2em 1em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(1),
-	main section:nth-of-type(1) li:nth-of-type(2) {
-		grid-column:span 3;
-		display:grid;
-		margin-top: 2em;
+	main section:nth-of-type(1) li{
+		display: grid;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(1) img,
-	main section:nth-of-type(1) li:nth-of-type(2) img {
+	main section:nth-of-type(1) img{
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
 
-	/* Voor de foto groter maken */
-	/* main section:nth-of-type(1) li:nth-of-type(1) img:hover,
-	main section:nth-of-type(1) li:nth-of-type(2) img:hover {
-		transform: perspective(1px) scale3d(1.04, 1.04, 1.04);
-		overflow: hidden;
-	} */
-
-
-	main section:nth-of-type(1) li:nth-of-type(1) h2,
-	main section:nth-of-type(1) li:nth-of-type(2) h2 {
+	main section:nth-of-type(1) h2{
 		grid-area:1/1;
 		z-index: 1;
 		place-self:end start;
@@ -978,7 +989,52 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(1) li p:first-of-type{
+
+	main section:nth-of-type(2) ul{
+		/* margin: 0 1em; */
+		gap: 2.5em
+	}
+
+	main section:nth-of-type(2) li:nth-of-type(1),
+	main section:nth-of-type(2) li:nth-of-type(2) {
+		grid-column:span 3;
+		display:grid;
+		margin-top: 2em;
+		position: absolute;
+		left: -999em;
+	}
+
+	main section:nth-of-type(2) li:nth-of-type(1) img,
+	main section:nth-of-type(2) li:nth-of-type(2) img {
+		grid-area:1/1;
+		border-radius: 0.3em;
+	}
+
+	/* Voor de foto groter maken */
+	/* main section:nth-of-type(1) li:nth-of-type(1) img:hover,
+	main section:nth-of-type(1) li:nth-of-type(2) img:hover {
+		transform: perspective(1px) scale3d(1.04, 1.04, 1.04);
+		overflow: hidden;
+	} */
+
+
+	main section:nth-of-type(2) li:nth-of-type(1) h2,
+	main section:nth-of-type(2) li:nth-of-type(2) h2 {
+		grid-area:1/1;
+		z-index: 1;
+		place-self:end start;
+		color:var(--wit-vulling);
+		margin: 0;
+		padding: 0.8em 0.8em;
+		/* font-family: EffraBold, Helvetica, Arial, sans-serif; */
+		line-height: 1em;
+		font-size: 1.45em;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+		border-radius: 0.3em;
+		width: 100%;
+	}
+
+	main section:nth-of-type(2) li p:first-of-type{
 		padding-top: 0.5em;
 		font-size: 1em;
 		font-weight: 350;
@@ -986,23 +1042,22 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3){
+	main section:nth-of-type(2) li:nth-of-type(3){
 		display: grid;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) img{
+	main section:nth-of-type(2) li:nth-of-type(3) img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2){
+	main section:nth-of-type(2) li:nth-of-type(3) p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
 		justify-self: start;
-		align-self: center;
-		/* Goede versie */
-		/* align-self: end; */
+		/* align-self: center; */
+		align-self: end;
 		display: flex;
 		align-items: center;
 		gap: 0.2em;
@@ -1011,19 +1066,18 @@ main section:nth-of-type(1) li img {
 		font-size: 0.9em;
 		font-weight: 100;
 		line-height: 1em;
-        margin: 9em 0 0 0.5em;
-		/* Goede versie */
-		/* margin: 0.5em; */
+        /* margin: 9em 0 0 0.5em; */
+		margin: 0.5em;
 		padding: 0.25em 0.5em;
 		background-color: var(--rood);
 		border-radius: 1.5em;
 	}
-	main section:nth-of-type(1) li:nth-of-type(3) p:nth-of-type(2) svg{
+	main section:nth-of-type(2) li:nth-of-type(3) p:nth-of-type(2) svg{
 		height: 0.9em;
 	}
 	
 	
-	main section:nth-of-type(1) li:nth-of-type(n+ 3){
+	main section:nth-of-type(2) li:nth-of-type(n+ 3){
 		grid-column:span 2;
 		display:grid;
 		grid-template-columns:none;
@@ -1031,77 +1085,71 @@ main section:nth-of-type(1) li img {
 	}
 
 
-	main section:nth-of-type(1) li:nth-of-type(n+ 3) img{
+	main section:nth-of-type(2) li:nth-of-type(n+ 3) img{
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
 
-	main section:nth-of-type(1) li:nth-of-type(n+ 3) h2{
+	main section:nth-of-type(2) li:nth-of-type(n+ 3) h2{
 		color: var(--color-text);
 		font-size: 1.1em;
 		font-weight: 500;
 		line-height: 1.2em;
 		font-family: EffraBold, Helvetica, Arial, sans-serif;
 		padding-top: 0.5em;
-
-		/* grid-area:1/1; */
-		/* place-self:end start; */
-		/* color:white; */
 	}
+
 
 	/******************/
 	/* Laatste nieuws */
 	/******************/
-	main section:nth-of-type(2){
-		margin-top: 2em;
-		margin-bottom: 2em;
-		/* Margin bottom en top kunnen weg */
+	main section:nth-of-type(3){
+		/* margin-top: 2em; */
+		/* margin-bottom: 2em; */
+		/* Margin bottom en top kunnen weg HEB IK NU */
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
-		position: absolute;
-		left: -999em;
-
-		/* grid-row-start: 1;
+		grid-row-start: 2;
         grid-column-start: 2;
-        align-self: end; */
+        align-self: end; 
 		/* 2 LI KUNNEN WEG!!!!!!!!! */
 	}
 
-	main section:nth-of-type(2) h2{
+	main section:nth-of-type(3) h2{
 		color: var(--rood);
 		font-size: 1.25em;
 		padding: 1.5em 1em 0 1em;
 	}
 
 	/* Om de tekst omder elkaar te krijgen (met de p eerst)*/
-	main section:nth-of-type(2) li{
+	main section:nth-of-type(3) li{
 		display: flex;
 		flex-direction: column-reverse;
 		border-bottom: 1px solid var(--border-lijn);
 		padding: 1.5em 1em;
 	}
 
-	main section:nth-of-type(2) a{
+	main section:nth-of-type(3) a{
 		color: var(--color-text);
 		text-decoration: none;
 		transition: 150ms ease-in-out;
 	}
 
 	/* Vanaf middel scherm wel hover */
-	main section:nth-of-type(2) a:hover{
+	main section:nth-of-type(3) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 
-	main section:nth-of-type(2) a h3{
+	main section:nth-of-type(3) a h3{
 		font-weight: 500;
         font-size: 1em;
         line-height: 1.2em;
         padding-top: 0.25em;
 	}
 
-	main section:nth-of-type(2) p{
+	main section:nth-of-type(3) p{
 		font-weight: 500;
         font-size: 0.875em;
 		line-height: 1.2em;
@@ -1112,20 +1160,20 @@ main section:nth-of-type(1) li img {
 	/***********************/
 	/* DIT ZIJN DE VIDEO'S */
 	/***********************/
-	main section:nth-of-type(3){
+	main section:nth-of-type(4){
 		display: flex;
 		flex-direction: column;
 		margin-top: 2.5em;
 		margin-bottom: 2.5em;
 	}
 
-	main section:nth-of-type(3) h2{
+	main section:nth-of-type(4) h2{
 		margin: 0;
 		color: var(--rood);
 		font-size: 1.35em;
 	}
 
-	main section:nth-of-type(3) ul {
+	main section:nth-of-type(4) ul {
 		padding: 0;
 		margin-top: 0.5em;
 		gap: 1.5em;
@@ -1134,7 +1182,7 @@ main section:nth-of-type(1) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(3) li{
+	main section:nth-of-type(4) li{
 		display: grid;
 		gap: 1em;
 		min-height: 12.2em;
@@ -1142,7 +1190,7 @@ main section:nth-of-type(1) li img {
 		scroll-snap-align: center;
 	}
 
-	main section:nth-of-type(3) li h2{
+	main section:nth-of-type(4) li h2{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -1160,7 +1208,7 @@ main section:nth-of-type(1) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(3) li p{
+	main section:nth-of-type(4) li p{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -1180,12 +1228,12 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 
-	main section:nth-of-type(3) li svg{
+	main section:nth-of-type(4) li svg{
 		height: 0.9em;
 	}
 
 
-	main section:nth-of-type(3) li img{
+	main section:nth-of-type(4) li img{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		max-width: 15.2em;
@@ -1195,40 +1243,35 @@ main section:nth-of-type(1) li img {
 	/*******************/
 	/* Live bij de NOS */
 	/*******************/
-	main section:nth-of-type(4){
-		margin-top: 2em;
-		margin-bottom: 2em;
+	main section:nth-of-type(5){
+		/* margin-top: 2em; */
+		/* margin-bottom: 2em; */
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
-
-		/* grid-row-start: 1;
+		grid-row-start: 2;
         grid-column-start: 2;
-        align-self: start; */
-
-
-		/* Als eerste 2 fotos NIET!!!! weg zijn */
-		/* margin-top: 17.7em; */
+        align-self: start;
 	}
 	
-	main section:nth-of-type(4) ul{
+	main section:nth-of-type(5) ul{
 		border-bottom: 1px solid var(--border-lijn);
 	}
 	
-	main section:nth-of-type(4) h2{
+	main section:nth-of-type(5) h2{
 		color: var(--rood);
 		font-size: 1.25em;
 		padding: 1em 0 0 1em;
 	}
 	
 	
-	main section:nth-of-type(4) li{
+	main section:nth-of-type(5) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
 	}
 	
-	main section:nth-of-type(4) ul p:first-of-type{
+	main section:nth-of-type(5) ul p:first-of-type{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -1247,7 +1290,7 @@ main section:nth-of-type(1) li img {
 		border-radius: 1.5em;
 	}
 	
-	main section:nth-of-type(4) ul p:nth-of-type(2){
+	main section:nth-of-type(5) ul p:nth-of-type(2){
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -1260,7 +1303,7 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}
 	
-	main section:nth-of-type(4) ul h3{
+	main section:nth-of-type(5) ul h3{
 		grid-row-start: 2;
 		grid-column-start: 2;
 		z-index: 1;
@@ -1274,7 +1317,7 @@ main section:nth-of-type(1) li img {
 		color: var(--color-text);
 	}
 	
-	main section:nth-of-type(4) ul a{
+	main section:nth-of-type(5) ul a{
 		grid-row-start: 3;
 		grid-column-start: 2;
 		z-index: 1;
@@ -1290,22 +1333,21 @@ main section:nth-of-type(1) li img {
 	/***********/
 	/* Reclame */
 	/***********/
-	main section:nth-of-type(5){
+	main section:nth-of-type(6){
 		background-color: var(--grijze-achtergrond);
 		display: block;
-		margin-top: 2em;
-		margin-bottom: 2em;
+		margin-bottom: 7.65em;
 
-		/* grid-row-start: 1;
+		grid-row-start: 2;
         grid-column-start: 2;
-        align-self: center; */
-		/* margin-top: 3em; */
+        align-self: center; 
+		/* margin-top: 3em;
 
 		/* Als eerste 2 fotos weg zijn */
 		/* margin-bottom: 14.4em; */
 	}   
 	
-	main section:nth-of-type(5) h2{
+	main section:nth-of-type(6) h2{
 		font-size: 0.9em;
 		margin: 0.7em 0;
 		text-transform: uppercase;
@@ -1313,17 +1355,17 @@ main section:nth-of-type(1) li img {
 		color: var(--grijze-text);
 	}   
 	
-	main section:nth-of-type(5) a{
+	main section:nth-of-type(6) a{
 		color: var(--grijze-text);
 		transition: 150ms ease-in-out;
 	} 
 
-	main section:nth-of-type(5) a:hover{
+	main section:nth-of-type(6) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 	
-	main section:nth-of-type(5) ul {
+	main section:nth-of-type(6) ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -1331,9 +1373,10 @@ main section:nth-of-type(1) li img {
 	}
 
 	
-	
+	/*************************/
 	/* Andere nieuws kanalen */
-	main section:nth-of-type(6){
+	/*************************/
+	main section:nth-of-type(7){
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
@@ -1342,7 +1385,7 @@ main section:nth-of-type(1) li img {
 	}
 	
 	
-	main section:nth-of-type(6) li{
+	main section:nth-of-type(7) li{
 		display: grid;
 		grid-template-columns: 3.8em 1fr;
 		padding: 1em;
@@ -1350,7 +1393,7 @@ main section:nth-of-type(1) li img {
 		letter-spacing: 0.01875em;
 	}
 	
-	main section:nth-of-type(6) h2{
+	main section:nth-of-type(7) h2{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -1359,13 +1402,12 @@ main section:nth-of-type(1) li img {
 		margin: 0;
 		font-weight: 500;
 		font-size: 0.875em;
-		padding-bottom: 0.5em;
+		padding-top: 1.3em;
 		color: var(--grijze-text);
 	}
 	
-	
-	
-	main section:nth-of-type(6) a{
+
+	main section:nth-of-type(7) a{
 		grid-row-start: 1;
 		grid-column-start: 2;
 		z-index: 1;
@@ -1375,19 +1417,19 @@ main section:nth-of-type(1) li img {
 		font-weight: 500;
 		font-size: 1em;
 		line-height: 1.2em;
-		padding-top: 0.25em;
+		/* padding-top: 0.25em; */
 		color: var(--color-text);
 		text-decoration: none;
 		transition: 150ms ease-in-out;
 	}
 
-	main section:nth-of-type(6) a:hover{
+	main section:nth-of-type(7) a:hover{
 		color: var(--rood);
 		text-decoration: underline;
 	}
 	
 	
-	main section:nth-of-type(6) svg{
+	main section:nth-of-type(7) svg{
 		width: 3em;
 		height: 3em;
 		grid-row-start: 1;
