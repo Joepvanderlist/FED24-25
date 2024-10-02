@@ -187,20 +187,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  || Randi          | Lois               | Nienke       | Joep        |
+  | ---            | ---                 | ---          | ---              |
+  | Het toevoegen  | Animatie op svg     | Audio bestand| Grid/responsiveness maken   |
+  | van items in de| een voor toevoegen  | invoegen op  | rode p tag gefixed |
+  | Nav op groot scherm|                 |  site        |               |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - (deels) Geleerd hoe je een responsive website maakt 
+  - Geleerd hoe je items pas op bepaalde schermgrotes tevoorschijn laat komen
+  - (deels) animaties (opnieuw, was het vergeten) leren toevoegen
 
 </details>
 
