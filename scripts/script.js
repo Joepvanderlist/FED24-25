@@ -41,9 +41,20 @@ function laatMenuZien (){
 const lijst2 = document.querySelector("nav ul:nth-of-type(4)");
 const sportButton = document.querySelector("nav ul:nth-of-type(1) li:nth-of-type(3) button:nth-of-type(1)");
 
-nieuwsButton.onclick = laatMenuZien2;
+sportButton.onclick = laatMenuZien2;
 
 function laatMenuZien2 (){
 //   class toevoegen aan lijstje (toggle is aan en uit met klik, anders kan je add gebruiken)
   lijst2.classList.toggle("lijstLatenZien");
+}
+
+
+const lijst3 = document.querySelector("nav ul:nth-of-type(5)");
+const SvgButton = document.querySelector("nav ul:nth-of-type(2) li:nth-of-type(2) button:nth-of-type(1)");
+
+SvgButton.onclick = laatMenuZien3;
+
+function laatMenuZien3 (){
+//   class toevoegen aan lijstje (toggle is aan en uit met klik, anders kan je add gebruiken)
+  lijst3.classList.toggle("lijstLatenZien3");
 }
