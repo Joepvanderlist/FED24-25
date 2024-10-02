@@ -241,8 +241,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Nos.nl 
+  2. Docent
+  3. Bahaa (+andere student assistent)
+  4. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (Geen code overgenomen, maar wel naar gekeken hoe flexbox alweer werkte)
+  5. Nienke (JS code)
 
 </details>
