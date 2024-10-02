@@ -164,7 +164,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  * Bij de meeste vragen/eisen had ik als "ja" als antwoord
+  * De Focus state en Skip link had ik nog niet
+  * De "high contrast" mode had ik niet, maar hoefde ik van de docent ook niet toe te voegen
 
+  
 </details>
 
 
@@ -183,20 +187,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  || Randi          | Lois               | Nienke       | Joep        |
+  | ---            | ---                 | ---          | ---              |
+  | Het toevoegen  | Animatie op svg     | Audio bestand| Grid/responsiveness maken   |
+  | van items in de| een voor toevoegen  | invoegen op  | rode p tag gefixed |
+  | Nav op groot scherm|                 |  site        |               |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - (deels) Geleerd hoe je een responsive website maakt 
+  - Geleerd hoe je items pas op bepaalde schermgrotes tevoorschijn laat komen
+  - (deels) animaties (opnieuw, was het vergeten) leren toevoegen
 
 </details>
 
@@ -210,19 +213,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.46.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb dit vak heeel veel gelerd. Zoals het maken en opstellen van een grid, Maar ook how je een responsive website maakt.
+  De eerste pagina (foto1) is uiteindelijk best goed gelukt, ookal moest ik er veel veel voor veranderen om hem goed te krijgen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.37.png" width="375px" alt="top">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.22.04.png" width="375px" alt="responsive">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.22.24.png" width="375px" alt="responsive2">
+  
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  (Voor nu) is het mij niet geulukt om de 2e pagina voledig responsive te maken. Ook zijn sommige kleine dingen zoals de 
+  volgorde van de lijst in de footer mij niet gelukt. Voor dignen zoals high contrast mode en animaties heb ik ook geen tijd
+  gehad.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.18.png" width="375px" alt="bummer">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.25.29.png" width="375px" alt="footer">
+  
 </details>
 
 
@@ -238,8 +249,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Nos.nl 
+  2. Docent
+  3. Bahaa (+andere student assistent)
+  4. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (Geen code overgenomen, maar wel naar gekeken hoe flexbox alweer werkte)
+  5. https://www.w3schools.com/accessibility/accessibility_skip_links.php (Voor het maken van een Skip Link)
+  6. Nienke (JS code)
 
 </details>
