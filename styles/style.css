@@ -358,7 +358,16 @@ header{
         padding-top: 0.9em;
     }
 
-    nav ul{
+    /* Staan appart, omdat hij anders ook in de footer dingen veranderd */
+    nav ul:nth-of-type(1){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    nav ul:nth-of-type(2){
         display: flex;
         align-items: center;
         justify-content: center;
@@ -432,6 +441,48 @@ header{
         list-style-type: none;
     }
 
+    nav ul:nth-of-type(n+ 3){
+        position: absolute;
+        top: -999em;
+        left: -999em;
+        background-color: var(--background-color);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+        width: 11em;
+    }
+
+    nav ul:nth-of-type(n+ 3) li{
+        padding: 1em;
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    nav ul:nth-of-type(n+ 3) li a{
+        font-weight: 500;
+        font-size: 0.875em;
+        line-height: 1.2em;
+        color: var(--grijze-text);
+        text-decoration: none;
+        transition: 150ms ease-in-out;
+    }
+
+    nav ul:nth-of-type(n+ 3) li a:hover{
+        color: var(--rood);
+        text-decoration: underline;   
+    }
+
+    nav ul:nth-of-type(3).lijstjeLatenZien {
+        position: absolute;
+        top: 4em;
+        left: 6em;
+    }
+
+    nav ul:nth-of-type(4).lijstLatenZien {
+        position: absolute;
+        top: 4em;
+        left: 14em;
+    }
+
+
+
 
     /**********/
     /* FOOTER */
@@ -439,6 +490,8 @@ header{
 
     footer{
         margin: 0 1em;
+        padding-top: 4em;
+        border-top: 1px solid var(--border-lijn);
     }
 
     /**************************/
