@@ -245,6 +245,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. Docent
   3. Bahaa (+andere student assistent)
   4. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (Geen code overgenomen, maar wel naar gekeken hoe flexbox alweer werkte)
-  5. Nienke (JS code)
+  5. https://www.w3schools.com/accessibility/accessibility_skip_links.php (Voor het maken van een Skip Link)
+  6. Nienke (JS code)
 
 </details>
