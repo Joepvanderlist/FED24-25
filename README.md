@@ -213,19 +213,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.10.53.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.46.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb dit vak heeel veel gelerd. Zoals het maken en opstellen van een grid, Maar ook how je een responsive website maakt.
+  De eerste pagina (foto1) is uiteindelijk best goed gelukt, ookal moest ik er veel veel voor veranderen om hem goed te krijgen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.37.png" width="375px" alt="top">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.22.04.png" width="375px" alt="responsive">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.22.24.png" width="375px" alt="responsive2">
+  
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  (Voor nu) is het mij niet geulukt om de 2e pagina voledig responsive te maken. Ook zijn sommige kleine dingen zoals de 
+  volgorde van de lijst in de footer mij niet gelukt. Voor dignen zoals high contrast mode en animaties heb ik ook geen tijd
+  gehad.
 
-  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.18" width="375px" alt="bummer">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.18.png" width="375px" alt="bummer">
+  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.25.29.png" width="375px" alt="footer">
+  
 </details>
 
 
