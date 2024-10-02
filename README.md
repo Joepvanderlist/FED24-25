@@ -164,7 +164,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  * Bij de meeste vragen/eisen had ik als "ja" als antwoord
+  * De Focus state en Skip link had ik nog niet
+  * De "high contrast" mode had ik niet, maar hoefde ik van de docent ook niet toe te voegen
 
+  
 </details>
 
 
