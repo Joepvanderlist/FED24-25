@@ -227,12 +227,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  (Voor nu) is het mij niet geulukt om de 2e pagina voledig responsive te maken. Ook zijn sommige kleine dingen zoals de 
-  volgorde van de lijst in de footer mij niet gelukt. Voor dignen zoals high contrast mode en animaties heb ik ook geen tijd
-  gehad.
+  (Voor nu) is het mij niet geulukt om de 2e pagina voledig responsive te maken. Voor dignen zoals high contrast mode en animaties     heb ik geen tijd gehad. Iets wat lastig was, was de layout van pagina 1. Deze heb ik meerdere keren moeten veranderen en ook aan het eind nog een hele section moeten verplaatsten met position absolute (dit mocht van de docent). 
 
   <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.18.png" width="375px" alt="bummer">
-  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.25.29.png" width="375px" alt="footer">
   
 </details>
 
