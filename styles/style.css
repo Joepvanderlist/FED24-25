@@ -32,11 +32,12 @@
     --nos-logo-grijs: #949494;
     --border-lijn: #eeeeee;
     --div-zwart: #2222224D;
+    --drop-shadow: #0000001a;
     --background-color: light-dark(#ffffff, #202020);
     --wit-vulling: #ffffff;
     --rood: light-dark(#E61E14, #e22f26);
     --font-body-family: "EffraBold"
-}
+} 
 
 
 
@@ -64,7 +65,7 @@ header {
     top: 0%;
     z-index: 10;
     margin: 0;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 0.125rem 0.25rem 0px;
+    box-shadow: var(--drop-shadow) 0px 0.125rem 0.25rem 0px;
 }
 
     /* Geen puntjes op Li */
@@ -175,7 +176,7 @@ header {
         position: absolute;
         top: -999em;
         background-color: var(--background-color);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+        box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
         width: 11em;
     }
 
@@ -524,7 +525,7 @@ header {
         position: absolute;
         top: -999em;
         background-color: var(--background-color);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+        box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
         width: 11em;
     }
 
@@ -919,7 +920,7 @@ header {
         position: absolute;
         top: -999em;
         background-color: var(--background-color);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+        box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
         width: 11em;
     }
 

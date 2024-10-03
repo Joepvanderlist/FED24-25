@@ -41,9 +41,11 @@ main section:nth-of-type(2) li img {
 		left: -999em;
 	}
 
-	/* main section:nth-of-type(1) ul:not(li:first-of-type){
-		margin: 0 1em;
-	} */
+    /* Voor het goed krijgen van de tekst en foto +lijnen weghalen */
+    main section:nth-of-type(2) a{
+        display: grid;
+        text-decoration: none;
+    }
 
 	/* De 1e grote foto */
 	main section:nth-of-type(2) li:nth-of-type(1) {
@@ -73,6 +75,12 @@ main section:nth-of-type(2) li img {
 		position: absolute;
 		left: -999em;
 	}
+
+    /* Zodat de tekst bovenaan begint */
+    main section:nth-of-type(2) ul{
+        align-items: flex-start;
+    }
+
 
 	/* De 2 middelgrote fotos */
 	main section:nth-of-type(2) li:nth-of-type(2),
@@ -159,7 +167,6 @@ main section:nth-of-type(2) li img {
 		max-width: 6.5em;
 		height: 4.9em;
 		object-fit: cover;
-		/* min-width: 6.5em; */
 	}
 
 	main section:nth-of-type(2) li:nth-of-type(n + 4) h2{
@@ -169,6 +176,14 @@ main section:nth-of-type(2) li img {
 		line-height: 1.2em;
 	}
 
+    /* Om de tekst naast de fotos te krijgen */
+    main section:nth-of-type(2) li:nth-of-type(n+ 4) a{
+        display: grid;
+        grid-template-columns: 8em 1fr;
+        text-decoration: none;
+        align-items: center;
+    }
+
 	/******************/
 	/* Laatste nieuws */
 	/******************/
@@ -177,7 +192,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		position: absolute;
 		left: -999em;
 	}
@@ -242,11 +257,12 @@ main section:nth-of-type(2) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(4) li{
+	main section:nth-of-type(4) li a{
 		display: grid;
 		gap: 1em;
 		min-width: 6em;
 		scroll-snap-align: center;
+        text-decoration: none;
 	}
 
 	main section:nth-of-type(4) li h2{
@@ -307,7 +323,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
 	main section:nth-of-type(5) ul{
@@ -421,7 +437,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
 	
@@ -494,9 +510,16 @@ main section:nth-of-type(2) li img {
 	}
 
 	main section:nth-of-type(2) ul{
-		/* margin: 0 1em; */
-		gap: 2.5em
+		gap: 2.5em ; 
+        align-items: flex-start; 
 	}
+
+    /* Om de fotos en tekst normaal te krijgen + lijnen weg te halen */
+    main section:nth-of-type(2) a{
+        display: grid;
+        text-decoration: none;
+    }
+
 
 	main section:nth-of-type(2) li:nth-of-type(1) ,
 	main section:nth-of-type(2) li:nth-of-type(2) {
@@ -590,11 +613,9 @@ main section:nth-of-type(2) li img {
 		line-height: 1.2em;
 		font-family: EffraBold, Helvetica, Arial, sans-serif;
 		padding-top: 0.5em;
-
-		/* grid-area:1/1; */
-		/* place-self:end start; */
-		/* color:white; */
+        transition: 150ms ease-in-out;
 	}
+
 
 	/******************/
 	/* Laatste nieuws */
@@ -604,7 +625,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		position: absolute;
 		left: -999em;
 	}
@@ -675,15 +696,16 @@ main section:nth-of-type(2) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(4) li{
+	main section:nth-of-type(4) li a{
 		display: grid;
 		gap: 1em;
 		min-height: 12.2em;
 		min-width: 9.1em;
 		scroll-snap-align: center;
+        text-decoration: none;
 	}
 
-	main section:nth-of-type(4) li h2{
+	main section:nth-of-type(4) li  h2{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -701,7 +723,7 @@ main section:nth-of-type(2) li img {
 		width: 100%;
 	}
 
-	main section:nth-of-type(4) li p{
+	main section:nth-of-type(4) li  p{
 		grid-row-start: 1;
 		grid-column-start: 1;
 		z-index: 1;
@@ -741,7 +763,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
 	main section:nth-of-type(5) ul{
@@ -864,7 +886,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
 	
@@ -929,27 +951,27 @@ main section:nth-of-type(2) li img {
 
 	main {
 		display: grid;
-		/* gap: 2.5rem; */
         grid-template-rows: auto auto;
         grid-template-columns: minmax(0px, 50rem) minmax(15.625rem, 1fr);
-		/* Grid template van de NOS website overgenomen */
-		/* max-width: 1190px;
-		justify-content: center; */
 	}
 
 
-	main section{
+	main section {
 		margin: 0 1em;
 	}
 
 	/* Om de foto's op de juiste plet te zetten */
-	main section:nth-of-type(1) {
-		display: flex;
-        grid-column-start: 1;
-        grid-column-end: 3;
-		gap: 2.5em;
+	main section:nth-of-type(1)  {
+        grid-column: 1/ 3;
 		margin: 2em 1em;
 	}
+
+    main section:nth-of-type(1) ul {
+        display: flex;
+        gap: 2.5em;
+
+    }
+    
 
 	main section:nth-of-type(1) li a {
 		display: grid;
@@ -976,14 +998,25 @@ main section:nth-of-type(2) li img {
 		width: 100%;
 	}
 
+    main section:nth-of-type(2){
+        grid-column-start: 1;
+    }
+
+    /* Om de fotos en tekst normaal te krijgen + lijnen weg te halen */
+    main section:nth-of-type(2) a{
+        display: grid;
+        text-decoration: none;
+    }
+
 
 	main section:nth-of-type(2) ul{
 		/* margin: 0 1em; */
-		gap: 2.5em
+		gap: 2.5em;
+        align-items: flex-start;
 	}
 
 	main section:nth-of-type(2) li:nth-of-type(1),
-	main section:nth-of-type(2) li:nth-of-type(2) {
+	main section:nth-of-type(2) li:nth-of-type(2)  {
 		grid-column:span 3;
 		display:grid;
 		margin-top: 2em;
@@ -996,13 +1029,6 @@ main section:nth-of-type(2) li img {
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
-
-	/* Voor de foto groter maken */
-	/* main section:nth-of-type(1) li:nth-of-type(1) img:hover,
-	main section:nth-of-type(1) li:nth-of-type(2) img:hover {
-		transform: perspective(1px) scale3d(1.04, 1.04, 1.04);
-		overflow: hidden;
-	} */
 
 
 	main section:nth-of-type(2) li:nth-of-type(1) h2,
@@ -1029,7 +1055,7 @@ main section:nth-of-type(2) li img {
 		color: var(--grijze-text);
 	}
 
-	main section:nth-of-type(2) li:nth-of-type(3){
+	main section:nth-of-type(2) li:nth-of-type(3) a {
 		display: grid;
 	}
 
@@ -1064,7 +1090,7 @@ main section:nth-of-type(2) li img {
 	}
 	
 	
-	main section:nth-of-type(2) li:nth-of-type(n+ 3){
+	main section:nth-of-type(2) li:nth-of-type(n+ 3) {
 		grid-column:span 2;
 		display:grid;
 		grid-template-columns:none;
@@ -1096,11 +1122,10 @@ main section:nth-of-type(2) li img {
 		/* Margin bottom en top kunnen weg HEB IK NU */
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		grid-row-start: 2;
         grid-column-start: 2;
         align-self: end; 
-		/* 2 LI KUNNEN WEG!!!!!!!!! */
 	}
 
 	main section:nth-of-type(3) h2{
@@ -1169,12 +1194,13 @@ main section:nth-of-type(2) li img {
 		scroll-snap-type: x mandatory;
 	} 
 
-	main section:nth-of-type(4) li{
+	main section:nth-of-type(4) li a{
 		display: grid;
 		gap: 1em;
 		min-height: 12.2em;
 		min-width: 9.1em;
 		scroll-snap-align: center;
+        text-decoration: none;
 	}
 
 	main section:nth-of-type(4) li h2{
@@ -1235,7 +1261,7 @@ main section:nth-of-type(2) li img {
 		/* margin-bottom: 2em; */
 		border-radius: 0.25rem;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		grid-row-start: 2;
         grid-column-start: 2;
         align-self: start;
@@ -1368,7 +1394,7 @@ main section:nth-of-type(2) li img {
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
 		background-color: var(--background-color);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
 	
