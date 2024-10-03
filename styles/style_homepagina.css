@@ -428,7 +428,7 @@ main section:nth-of-type(2) li img {
 	main section:nth-of-type(7) li{
 		display: grid;
         grid-template-columns: 3.8em 1fr;
-        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
         padding: 1em;
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
@@ -498,7 +498,7 @@ main section:nth-of-type(2) li img {
 		gap: 2.5em
 	}
 
-	main section:nth-of-type(2) li:nth-of-type(1),
+	main section:nth-of-type(2) li:nth-of-type(1) ,
 	main section:nth-of-type(2) li:nth-of-type(2) {
 		grid-column:span 3;
 		display:grid;
@@ -511,12 +511,6 @@ main section:nth-of-type(2) li img {
 		border-radius: 0.3em;
 	}
 
-	/* Voor de foto groter maken */
-	/* main section:nth-of-type(1) li:nth-of-type(1) img:hover,
-	main section:nth-of-type(1) li:nth-of-type(2) img:hover {
-		transform: perspective(1px) scale3d(1.04, 1.04, 1.04);
-		overflow: hidden;
-	} */
 
 
 	main section:nth-of-type(2) li:nth-of-type(1) h2,
@@ -877,7 +871,7 @@ main section:nth-of-type(2) li img {
 	main section:nth-of-type(7) li{
 		display: grid;
         grid-template-columns: 3.8em 1fr;
-        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
         padding: 1em;
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
@@ -957,16 +951,17 @@ main section:nth-of-type(2) li img {
 		margin: 2em 1em;
 	}
 
-	main section:nth-of-type(1) li{
+	main section:nth-of-type(1) li a {
 		display: grid;
+        text-decoration: none;
 	}
 
-	main section:nth-of-type(1) img{
+	main section:nth-of-type(1) a img{
 		grid-area:1/1;
 		border-radius: 0.3em;
 	}
 
-	main section:nth-of-type(1) h2{
+	main section:nth-of-type(1) a h2{
 		grid-area:1/1;
 		z-index: 1;
 		place-self:end start;
@@ -1380,7 +1375,7 @@ main section:nth-of-type(2) li img {
 	main section:nth-of-type(7) li{
 		display: grid;
         grid-template-columns: 3.8em 1fr;
-        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
         padding: 1em;
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
