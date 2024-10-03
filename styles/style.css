@@ -1,18 +1,20 @@
 @font-face {
-	font-family: EffraBold;
-	src: url("../fonts/EffraBold.woff") format("woff");
+    font-family: EffraBold;
+    src: url("../fonts/EffraBold.woff") format("woff");
 }
 
 /**************/
 /* CSS REMEDY */
 /**************/
 
-*, *::after, *::before {
-  box-sizing:border-box;  
-  margin: 0;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-:focus{
+:focus {
     outline: var(--rood) solid 2px;
 }
 
@@ -21,28 +23,26 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-    color-scheme:light dark ;
+    /* startje */
+    color-scheme: light dark;
 
-	--color-text:light-dark(#202020, #d6d6d6);
+    --color-text: light-dark(#202020, #d6d6d6);
     --grijze-text: light-dark(#666666, #949494);
     --grijze-achtergrond: #F3F3F0;
     --nos-logo-grijs: #949494;
     --border-lijn: #eeeeee;
     --div-zwart: #2222224D;
-	--background-color:light-dark(#ffffff,#202020) ;
+    --background-color: light-dark(#ffffff, #202020);
     --wit-vulling: #ffffff;
-    --rood:light-dark(#E61E14,#e22f26);
-	--font-body-family: "EffraBold"
+    --rood: light-dark(#E61E14, #e22f26);
+    --font-body-family: "EffraBold"
 }
 
 
 
 
-body{
-    /* font-family: "EffraBold"; */
+body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* Let op lettertypen */
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
@@ -54,7 +54,7 @@ img {
 }
 
 /* Header/havigatie blok */
-header{
+header {
     display: block;
     height: 4.375em;
     width: 100%;
@@ -67,12 +67,18 @@ header{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 0.125rem 0.25rem 0px;
 }
 
+    /* Geen puntjes op Li */
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
 
 
-@media (width < 47.5em) {
+
+@media (max-width: 759px) {
 
     /* Hele nav bar */
-    nav{
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -81,7 +87,7 @@ header{
     }
 
     /* Onder elkaar zodat de dropdown het nog doet */
-    nav ul:nth-of-type(1){
+    nav ul:nth-of-type(1) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -89,7 +95,7 @@ header{
         padding: 0 0.5em;
     }
 
-    nav ul:nth-of-type(2){
+    nav ul:nth-of-type(2) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,7 +104,7 @@ header{
     }
 
     /* Knop op normale tekst laten lijken */
-    nav button{
+    nav button {
         border: none;
         background-color: transparent;
         display: flex;
@@ -109,14 +115,14 @@ header{
     }
 
     /* Button 2 en 3 (Li nr3 en 4) weg halen */
-    nav ul:nth-of-type(1) li:nth-of-type(n+ 4){
+    nav ul:nth-of-type(1) li:nth-of-type(n+ 4) {
         position: absolute;
         left: -999em;
     }
 
 
     /* Pijl icoontje */
-    nav button svg{
+    nav button svg {
         height: 0.4em;
         padding-left: 0.2em;
     }
@@ -124,64 +130,63 @@ header{
     /************/
     /* NOS logo */
     /************/
-    nav ul:nth-of-type(1) li:nth-of-type(1) svg{
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg {
         color: var(--nos-logo-grijs);
         width: auto;
         height: 0.85em;
     }
-    
+
     /* Alle svg's in de 2e lijst */
-    nav ul:nth-of-type(2) svg{
+    nav ul:nth-of-type(2) svg {
         color: var(--grijze-text);
         width: 1.5em;
         height: 1.5em;
     }
 
     /* 3 puntjes rechtop zetten */
-    nav ul:nth-of-type(2) li:nth-of-type(2){
+    nav ul:nth-of-type(2) li:nth-of-type(2) {
         rotate: 90deg;
         width: 1.5em;
         height: 1.5em;
     }
 
     /* Zodat de knop niet fout staat */
-    nav ul:nth-of-type(2) li:nth-of-type(2) button{
+    nav ul:nth-of-type(2) li:nth-of-type(2) button {
         padding: 0;
     }
-    
+
     /* Zodat de knop niet fout staat */
-    nav ul:nth-of-type(2) li:nth-of-type(2) svg{
+    nav ul:nth-of-type(2) li:nth-of-type(2) svg {
         padding: 0;
     }
 
     /* Als ik 1 EN 3 samen zetten zetten hij ook absolute op de 3e button */
-    nav ul:nth-of-type(2) li:nth-of-type(1){
+    nav ul:nth-of-type(2) li:nth-of-type(1) {
         position: absolute;
         left: -999em;
     }
 
-    nav ul:nth-of-type(2) li:nth-of-type(3){
+    nav ul:nth-of-type(2) li:nth-of-type(3) {
         position: absolute;
         left: -999em;
     }
 
-    nav ul:nth-of-type(n+ 3){
+    nav ul:nth-of-type(n+ 3) {
         position: absolute;
         top: -999em;
-        left: -999em;
         background-color: var(--background-color);
         box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
         width: 11em;
     }
 
-    nav ul:nth-of-type(n+ 3) li{
+    nav ul:nth-of-type(n+ 3) li {
         display: flex;
         flex-direction: column;
         padding: 1em;
         border-top: 1px solid var(--border-lijn);
     }
 
-    nav ul:nth-of-type(n+ 3) li a{
+    nav ul:nth-of-type(n+ 3) li a {
         font-weight: 500;
         font-size: 0.875em;
         line-height: 1.2em;
@@ -205,16 +210,11 @@ header{
     nav ul:nth-of-type(5).lijstLatenZien3 {
         position: absolute;
         top: 4em;
-        left: 9em;
+        right: 3em;
     }
 
-    /* Geen puntjes op Li */
-    ul{
-        padding: 0;
-        list-style-type: none;
-    }
 
-    
+
 
 
 
@@ -223,7 +223,7 @@ header{
     /* FOOTER */
     /**********/
 
-    footer{
+    footer {
         margin: 0;
     }
 
@@ -232,71 +232,64 @@ header{
     /***************************/
     /* Feedback en extra info  */
     /***************************/
-    footer section:nth-of-type(1) ul:nth-of-type(1){
+    footer section:nth-of-type(1) ul:nth-of-type(1) {
         margin-top: 2em;
-        margin-bottom: 1em;   
+        margin-bottom: 1em;
         border-top: 1px solid var(--border-lijn);
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) li{
+    footer section:nth-of-type(1) ul:nth-of-type(1) li {
         display: grid;
         grid-template-columns: 3.8em 1fr;
+        grid-template-rows: 1fr 1fr;
         padding: 1em;
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
-    }
-    /* Docent had hier gezegd dat ik 2 rows moest gebruiken, maar na er met 
-    Bahaa naar gekekn tehebben zei Bahaa dat in dit geval de code zo goed was */
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) h2{
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) h2 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        justify-self: start;
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.875em;
+        padding-top: 0.25em;
+        color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a {
         grid-row-start: 1;
         grid-column-start: 2;
-        z-index: 1;
         justify-self: start;
         align-self: end;
         margin: 0;
         font-weight: 500;
-        font-size: 0.875em;
-        padding-bottom: 0.5em;
-        color: var(--grijze-text);
-    }
-
-    footer section:nth-of-type(1) ul:nth-of-type(1) a{
-        grid-row-start: 1;
-        grid-column-start: 2;
-        z-index: 1;
-        justify-self: start;
-        align-self: start;
-        margin: 0;
-        font-weight: 500;
         font-size: 1em;
         line-height: 1.2em;
-        padding-top: 0.25em;
         color: var(--color-text);
         text-decoration: none;
     }
 
     /* Grijze achtergrond voor de iconen */
-    footer section:nth-of-type(1) ul:nth-of-type(1)  div{
+    footer section:nth-of-type(1) ul:nth-of-type(1) div {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 3em;
         height: 3em;
+        grid-row: 1 / 3;
+        grid-column-start: 1;
+        justify-self: start;
+        align-self: center;
+        margin: 0;
         border-radius: 50%;
         background-color: var(--grijze-achtergrond);
     }
 
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) svg{
-        /* width: 3em;
-        height: 3em;
-        grid-row-start: 1;
-        grid-column-start: 1;
-        z-index: 1;
-        justify-self: start;
-        align-self: end;
-        margin: 0; */
+    footer section:nth-of-type(1) ul:nth-of-type(1) svg {
         color: var(--rood);
     }
 
@@ -304,27 +297,27 @@ header{
     /******************/
     /* Nos informatie */
     /******************/
-    footer section:nth-of-type(1) ul:nth-of-type(2){
+    footer section:nth-of-type(1) ul:nth-of-type(2) {
         margin: 0;
         padding-bottom: 2em;
     }
 
-    footer section:nth-of-type(1) h2{
+    footer section:nth-of-type(1) h2 {
         color: var(--rood);
         font-size: 1.125em;
         margin: 0.9em;
     }
 
     /* Alle lijstjes aanspreken */
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2){
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) {
         margin: 0 1em;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li{
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li {
         margin-bottom: 1em;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a{
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a {
         text-decoration: none;
         letter-spacing: 0.01875em;
         font-weight: 500;
@@ -332,13 +325,13 @@ header{
     }
 
     /* Laatste 2 titels (van de lijstjes) buiten beeld zetten */
-    footer section:nth-of-type(1) h2:nth-of-type(n +2){
+    footer section:nth-of-type(1) h2:nth-of-type(n +2) {
         position: absolute;
         left: -999em;
     }
 
     /* Laatste 2 lijstjes buiten beeld zetten */
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 3){
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 3) {
         position: absolute;
         left: -999em;
     }
@@ -356,13 +349,13 @@ header{
     }
 
     /* Direct het NOS logo aanspreken */
-    footer section:nth-of-type(2) > svg{
+    footer section:nth-of-type(2)>svg {
         height: 1.75em;
         color: var(--nos-logo-grijs);
     }
 
 
-    footer section:nth-of-type(2) ul:nth-of-type(1){
+    footer section:nth-of-type(2) ul:nth-of-type(1) {
         display: flex;
         margin: 1em 0;
         justify-content: center;
@@ -371,7 +364,7 @@ header{
     }
 
 
-    footer section:nth-of-type(2) ul:nth-of-type(1) li a{
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a {
         padding: 0px;
         display: flex;
         justify-content: center;
@@ -385,38 +378,46 @@ header{
         background-color: var(--rood);
     }
 
-    footer section:nth-of-type(2) ul:nth-of-type(1) li svg{
+    footer section:nth-of-type(2) ul:nth-of-type(1) li svg {
         color: var(--wit-vulling);
         width: 1.2em;
     }
 
+
     /************************/
     /* Copyright en cookies */
     /************************/
-    footer section:nth-of-type(2) ul:nth-of-type(2){
+    footer section:nth-of-type(2) ul:nth-of-type(2) {
         display: flex;
         gap: 1em;
-        padding-left: 1.1em;
         margin-top: 0.5em;
-        margin-bottom: 2em;   
+        margin-bottom: 2em;
         font-size: 0.9em;
         color: var(--grijze-text);
         font-weight: 400;
     }
 
-    footer section:nth-of-type(2) ul:nth-of-type(2) a{
+    footer section:nth-of-type(2) ul:nth-of-type(2) a {
         color: var(--grijze-text);
+    }
+
+    /* Om het 2e NOS logo op mobile te verstoppen */
+    footer section:nth-of-type(2) ul:nth-of-type(2) svg {
+        position: absolute;
+        left: -999em;
+        height: 1.75em;
+        color: var(--nos-logo-grijs);
     }
 
 }
 
-	/**********************************************************************************/
-									/* MIDDEL SCHERM */
-	/**********************************************************************************/
+/**********************************************************************************/
+                                /* MIDDEL SCHERM */
+/**********************************************************************************/
 
 
-@media (width >= 47.5em) {
-    nav{
+@media only screen and (min-width: 760px) and (max-width: 899px) {
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -425,7 +426,7 @@ header{
     }
 
     /* Staan appart, omdat hij anders ook in de footer dingen veranderd */
-    nav ul:nth-of-type(1){
+    nav ul:nth-of-type(1) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -433,7 +434,7 @@ header{
         padding: 0 1em;
     }
 
-    nav ul:nth-of-type(2){
+    nav ul:nth-of-type(2) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -441,7 +442,7 @@ header{
         padding: 0 1em;
     }
 
-    nav button{
+    nav button {
         border: none;
         background-color: transparent;
         display: flex;
@@ -452,88 +453,87 @@ header{
         transition: color 150ms ease-in-out;
     }
 
-    nav button:hover{
+    nav button:hover {
         color: var(--rood);
     }
 
     /* Button 2 en 3 (Li nr3 en 4) weg halen */
-    nav ul:nth-of-type(1) li:nth-of-type(n+ 4){
+    nav ul:nth-of-type(1) li:nth-of-type(n+ 4) {
         position: absolute;
         left: -999em;
     }
 
-    nav button svg{
+    nav button svg {
         height: 0.4em;
         padding-left: 0.2em;
     }
 
 
-    nav ul:nth-of-type(1) li:nth-of-type(1) svg{
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg {
         color: var(--nos-logo-grijs);
         width: auto;
         height: 1.4em;
-        transition:  150ms ease-in-out;
+        transition: 150ms ease-in-out;
     }
-    
-    nav ul:nth-of-type(1) li:nth-of-type(1) svg:hover{
+
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg:hover {
         scale: 1.05;
     }
-    
+
     /* Alle svg's in de 2e lijst */
-    nav ul:nth-of-type(2) svg{
+    nav ul:nth-of-type(2) svg {
         color: var(--grijze-text);
         width: 1.5em;
         height: 1.5em;
     }
 
     /* 3 puntjes rechtop zetten */
-    nav ul:nth-of-type(2) li:nth-of-type(2){
+    nav ul:nth-of-type(2) li:nth-of-type(2) {
         rotate: 90deg;
         width: 1.5em;
         height: 1.5em;
     }
 
     /* Zodat de knop niet fout staat */
-    nav ul:nth-of-type(2) li:nth-of-type(2) button{
+    nav ul:nth-of-type(2) li:nth-of-type(2) button {
         padding: 0;
     }
 
     /* Zodat de knop niet fout staat */
-    nav ul:nth-of-type(2) li:nth-of-type(2) svg{
+    nav ul:nth-of-type(2) li:nth-of-type(2) svg {
         padding: 0;
     }
 
     /* Als ik 1 EN 3 samen zetten zetten hij ook absolute op de 3e button */
-    nav ul:nth-of-type(2) li:nth-of-type(1){
+    nav ul:nth-of-type(2) li:nth-of-type(1) {
         position: absolute;
         left: -999em;
     }
 
-    nav ul:nth-of-type(2) li:nth-of-type(3){
+    nav ul:nth-of-type(2) li:nth-of-type(3) {
         position: absolute;
         left: -999em;
     }
 
-    ul{
+    ul {
         padding: 0;
         list-style-type: none;
     }
 
-    nav ul:nth-of-type(n+ 3){
+    nav ul:nth-of-type(n+ 3) {
         position: absolute;
         top: -999em;
-        left: -999em;
         background-color: var(--background-color);
         box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
         width: 11em;
     }
 
-    nav ul:nth-of-type(n+ 3) li{
+    nav ul:nth-of-type(n+ 3) li {
         padding: 1em;
         border-top: 1px solid var(--border-lijn);
     }
 
-    nav ul:nth-of-type(n+ 3) li a{
+    nav ul:nth-of-type(n+ 3) li a {
         font-weight: 500;
         font-size: 0.875em;
         line-height: 1.2em;
@@ -542,10 +542,11 @@ header{
         transition: 150ms ease-in-out;
     }
 
-    nav ul:nth-of-type(n+ 3) li a:hover{
+    nav ul:nth-of-type(n+ 3) li a:hover {
         color: var(--rood);
-        text-decoration: underline;   
+        text-decoration: underline;
     }
+
 
     nav ul:nth-of-type(3).lijstjeLatenZien {
         position: absolute;
@@ -562,7 +563,7 @@ header{
     nav ul:nth-of-type(5).lijstLatenZien3 {
         position: absolute;
         top: 4em;
-        left: 36em;
+        right: 4em;
     }
 
 
@@ -572,7 +573,7 @@ header{
     /* FOOTER */
     /**********/
 
-    footer{
+    footer {
         margin: 0 1em;
         padding-top: 4em;
         border-top: 1px solid var(--border-lijn);
@@ -586,72 +587,74 @@ header{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(1){
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) {
         grid-column-start: 4;
-        margin-bottom: 1em;   
+        margin-bottom: 1em;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) li{
+    footer section:nth-of-type(1) ul:nth-of-type(1) li {
         display: grid;
         grid-template-columns: 3.8em 1fr;
+        grid-template-rows: 1fr 1fr;
         padding: 1em;
         border-bottom: 1px solid var(--border-lijn);
         letter-spacing: 0.01875em;
     }
-    /* Docent had hier gezegd dat ik 2 rows moest gebruiken, maar na er met 
-    Bahaa naar gekekn tehebben zei Bahaa dat in dit geval de code zo goed was */
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1){
-        padding:  0 1em 1em 1em;
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) {
+        padding: 0 1em 1em 1em;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) h2{
+    footer section:nth-of-type(1) ul:nth-of-type(1) h2 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        justify-self: start;
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.875em;
+        padding-top: 0.25em;
+        color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a {
         grid-row-start: 1;
         grid-column-start: 2;
-        z-index: 1;
         justify-self: start;
         align-self: end;
         margin: 0;
         font-weight: 500;
-        font-size: 0.875em;
-        padding-top: 1.4em;
-        /* padding-bottom: 0.5em; */
-        color: var(--grijze-text);
-    }
-
-    footer section:nth-of-type(1) ul:nth-of-type(1) a{
-        grid-row-start: 1;
-        grid-column-start: 2;
-        z-index: 1;
-        justify-self: start;
-        align-self: start;
-        margin: 0;
-        font-weight: 500;
         font-size: 1em;
         line-height: 1.2em;
-        /* padding-top: 0.25em; */
         color: var(--color-text);
         text-decoration: none;
         transition: color 150ms ease-in-out;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) a:hover{
+    footer section:nth-of-type(1) ul:nth-of-type(1) a:hover {
         color: var(--rood);
         text-decoration: underline;
     }
 
-
-    footer section:nth-of-type(1) ul:nth-of-type(1)  div{
+    /* Grijze achtergrond voor de iconen */
+    footer section:nth-of-type(1) ul:nth-of-type(1) div {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 3em;
         height: 3em;
+        grid-row: 1 / 3;
+        grid-column-start: 1;
+        justify-self: start;
+        align-self: center;
+        margin: 0;
         border-radius: 50%;
         background-color: var(--grijze-achtergrond);
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(1) svg{
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) svg {
         color: var(--rood);
     }
 
@@ -659,60 +662,62 @@ header{
     /******************/
     /* Nos informatie */
     /******************/
-    footer section:nth-of-type(1) h2{
+    footer section:nth-of-type(1) h2 {
         color: var(--rood);
         font-size: 1.125em;
         margin: 0 0.9em;
     }
 
-    footer section:nth-of-type(1) h2:nth-of-type(1){
+    footer section:nth-of-type(1) h2:nth-of-type(1) {
         grid-column-start: 1;
         grid-row-start: 1;
     }
 
-    footer section:nth-of-type(1) h2:nth-of-type(2){
+    footer section:nth-of-type(1) h2:nth-of-type(2) {
         grid-column-start: 2;
         grid-row-start: 1;
     }
-    footer section:nth-of-type(1) h2:nth-of-type(3){
+
+    footer section:nth-of-type(1) h2:nth-of-type(3) {
         grid-column-start: 3;
         grid-row-start: 1;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2){
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) {
         margin: 2.5em 1em 2em 1em;
         display: flex;
         flex-direction: column;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li{
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li {
         margin-bottom: 1em;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a{
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a {
         text-decoration: none;
         letter-spacing: 0.01875em;
         font-weight: 500;
         color: var(--grijze-text);
         transition: 150ms ease-in-out;
     }
-    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a:hover{
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a:hover {
         color: var(--rood);
         text-decoration: underline;
     }
 
 
-    footer section:nth-of-type(1) ul:nth-of-type(2){
+    footer section:nth-of-type(1) ul:nth-of-type(2) {
         grid-column-start: 1;
         grid-row-start: 1;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(3){
+    footer section:nth-of-type(1) ul:nth-of-type(3) {
         grid-column-start: 2;
         grid-row-start: 1;
     }
 
-    footer section:nth-of-type(1) ul:nth-of-type(4){
+    footer section:nth-of-type(1) ul:nth-of-type(4) {
         padding-bottom: 2em;
         grid-column-start: 3;
         grid-row-start: 1;
@@ -721,41 +726,37 @@ header{
     /***************************************************/
     /* Nos logo social media  EN  Copyright en cookies */
     /***************************************************/
-    footer section:nth-of-type(2){
-        padding: 0 1em;
+    footer section:nth-of-type(2) {
+        padding: 1em;
         display: flex;
-        align-items: center;
-
         max-width: 75em;
         border-bottom: 1px solid var(--border-lijn);
         border-top: 1px solid var(--border-lijn);
+        justify-content: space-between;
+        flex-direction: row-reverse;
     }
 
-    footer section:nth-of-type(2) ul{
+    footer section:nth-of-type(2) ul {
         display: flex;
         justify-content: space-between;
-        margin-left: 3em;
     }
 
-    footer section:nth-of-type(2) > svg{
+    /* Omdat de SVG in een Ul staan moet ik deze vervangen */
+    footer section:nth-of-type(2)>svg {
         height: 1.75em;
         color: var(--nos-logo-grijs);
-        transition: 150ms ease-in-out;
+        position: absolute;
+        left: -999em;
     }
 
-    footer section:nth-of-type(2) > svg:hover{
-        scale: 1.05;
-    }
 
-    footer section:nth-of-type(2) ul:nth-of-type(1){
+    footer section:nth-of-type(2) ul:nth-of-type(1) {
         display: flex;
-        /* margin: 1em 0; */
         justify-content: center;
-        padding-bottom: 0.5em;
     }
 
 
-    footer section:nth-of-type(2) ul:nth-of-type(1) li a{
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a {
         padding: 0px;
         display: flex;
         justify-content: center;
@@ -770,59 +771,473 @@ header{
         transition: 150ms ease-in-out;
     }
 
-    footer section:nth-of-type(2) ul:nth-of-type(1) li a:hover{
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a:hover {
         scale: 1.1;
     }
 
-    footer section:nth-of-type(2) ul:nth-of-type(1) li svg{
+    footer section:nth-of-type(2) ul:nth-of-type(1) li svg {
         color: var(--wit-vulling);
         width: 1.2em;
     }
 
-    
+
     /************************/
     /* Copyright en cookies */
     /************************/
-    footer section:nth-of-type(2) ul:nth-of-type(2){
+    footer section:nth-of-type(2) ul:nth-of-type(2) {
         display: flex;
+        align-items: center;
         gap: 1em;
-        padding-left: 1.1em;
-        margin-top: 0.5em;
-        margin-bottom: 2em;   
         font-size: 0.9em;
         color: var(--grijze-text);
         font-weight: 400;
     }
 
-    footer section:nth-of-type(2) ul:nth-of-type(2) a{
+    /* 2e SVG in de lijst zelf */
+    footer section:nth-of-type(2) ul:nth-of-type(2) svg {
+        height: 1.75em;
+        color: var(--nos-logo-grijs);
+        transition: 150ms ease-in-out;
+        padding-right: 1em;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) svg:hover {
+        scale: 1.05;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) a {
         color: var(--grijze-text);
         transition: 150ms ease-in-out;
     }
 
-    footer section:nth-of-type(2) ul:nth-of-type(2) a:hover{
+    footer section:nth-of-type(2) ul:nth-of-type(2) a:hover {
         color: var(--rood);
         text-decoration: none;
     }
- 
+
 }
-    /* voor groot scherm */
-    /* nav ul{
+
+
+
+
+
+
+
+/**********************************************************************************/
+                                /* GROOT SCHERM */
+/**********************************************************************************/
+
+
+@media (min-width: 900px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0.9em;
+    }
+
+    /* Staan appart, omdat hij anders ook in de footer dingen veranderd */
+    nav ul:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    nav ul:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        padding: 0 1em;
+    }
+
+    nav button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        color: var(--grijze-text);
+        font-size: 1em;
+        font-weight: 590;
+        transition: color 150ms ease-in-out;
+    }
+
+    nav button:hover {
+        color: var(--rood);
+    }
+
+    /* Code weg : Button 2 en 3 weer TERUG  */
+    nav button svg {
+        height: 0.4em;
+        padding-left: 0.2em;
+    }
+
+
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg {
+        color: var(--nos-logo-grijs);
+        width: auto;
+        height: 1.4em;
+        transition: 150ms ease-in-out;
+    }
+
+    nav ul:nth-of-type(1) li:nth-of-type(1) svg:hover {
+        scale: 1.05;
+    }
+
+    /* Alle svg's in de 2e lijst */
+    nav ul:nth-of-type(2) svg {
+        color: var(--grijze-text);
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    /* 3 puntjes rechtop zetten */
+    nav ul:nth-of-type(2) li:nth-of-type(2) {
+        rotate: 90deg;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    /* Zodat de knop niet fout staat */
+    nav ul:nth-of-type(2) li:nth-of-type(2) button {
+        padding: 0;
+    }
+
+    /* Zodat de knop niet fout staat */
+    nav ul:nth-of-type(2) li:nth-of-type(2) svg {
+        padding: 0;
+    }
+
+
+
+     /* Ook hier code wg, omdat svg nu zichtbaar zijn */
+
+    nav ul:nth-of-type(n+ 3) {
+        position: absolute;
+        top: -999em;
+        background-color: var(--background-color);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+        width: 11em;
+    }
+
+    nav ul:nth-of-type(n+ 3) li {
+        padding: 1em;
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    nav ul:nth-of-type(n+ 3) li a {
+        font-weight: 500;
+        font-size: 0.875em;
+        line-height: 1.2em;
+        color: var(--grijze-text);
+        text-decoration: none;
+        transition: 150ms ease-in-out;
+    }
+
+    nav ul:nth-of-type(n+ 3) li a:hover {
+        color: var(--rood);
+        text-decoration: underline;
+    }
+
+
+    nav ul:nth-of-type(3).lijstjeLatenZien {
+        position: absolute;
+        top: 4em;
+        left: 6em;
+    }
+
+    nav ul:nth-of-type(4).lijstLatenZien {
+        position: absolute;
+        top: 4em;
+        left: 12em;
+    }
+
+    nav ul:nth-of-type(5).lijstLatenZien3 {
+        position: absolute;
+        top: 4em;
+        right: 4em;
+    }
+
+
+
+
+    /**********/
+    /* FOOTER */
+    /**********/
+
+    footer {
+        margin: 0 1em;
+        padding-top: 4em;
+        border-top: 1px solid var(--border-lijn);
+    }
+
+    /**************************/
+    /* Feedback en extra info */
+    /**************************/
+    footer section:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) {
+        grid-column-start: 4;
+        margin-bottom: 1em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) li {
+        display: grid;
+        grid-template-columns: 3.8em 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1em;
+        border-bottom: 1px solid var(--border-lijn);
+        letter-spacing: 0.01875em;
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(1) {
+        padding: 0 1em 1em 1em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) h2 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        justify-self: start;
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.875em;
+        padding-top: 0.25em;
+        color: var(--grijze-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        justify-self: start;
+        align-self: end;
+        margin: 0;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1.2em;
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) a:hover {
+        color: var(--rood);
+        text-decoration: underline;
+    }
+
+    /* Grijze achtergrond voor de iconen */
+    footer section:nth-of-type(1) ul:nth-of-type(1) div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3em;
+        height: 3em;
+        grid-row: 1 / 3;
+        grid-column-start: 1;
+        justify-self: start;
+        align-self: center;
+        margin: 0;
+        border-radius: 50%;
+        background-color: var(--grijze-achtergrond);
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(1) svg {
+        color: var(--rood);
+    }
+
+
+    /******************/
+    /* Nos informatie */
+    /******************/
+    footer section:nth-of-type(1) h2 {
+        color: var(--rood);
+        font-size: 1.125em;
+        margin: 0 0.9em;
+    }
+
+    footer section:nth-of-type(1) h2:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) h2:nth-of-type(2) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) h2:nth-of-type(3) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) {
+        margin: 2.5em 1em 2em 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) li {
+        margin-bottom: 1em;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a {
+        text-decoration: none;
+        letter-spacing: 0.01875em;
+        font-weight: 500;
+        color: var(--grijze-text);
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(n+ 2) a:hover {
+        color: var(--rood);
+        text-decoration: underline;
+    }
+
+
+    footer section:nth-of-type(1) ul:nth-of-type(2) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(3) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(4) {
+        padding-bottom: 2em;
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+
+    /***************************************************/
+    /* Nos logo social media  EN  Copyright en cookies */
+    /***************************************************/
+    footer section:nth-of-type(2) {
+        padding: 1em;
+        display: flex;
+        max-width: 75em;
+        border-bottom: 1px solid var(--border-lijn);
+        border-top: 1px solid var(--border-lijn);
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    footer section:nth-of-type(2) ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Omdat de SVG in een Ul staan moet ik deze vervangen */
+    footer section:nth-of-type(2)>svg {
+        height: 1.75em;
+        color: var(--nos-logo-grijs);
+        position: absolute;
+        left: -999em;
+    }
+
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        color: var(--wit-vulling);
+        flex: 0 0 auto;
+        margin: 0.625em;
+        background-color: var(--rood);
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li a:hover {
+        scale: 1.1;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(1) li svg {
+        color: var(--wit-vulling);
+        width: 1.2em;
+    }
+
+
+    /************************/
+    /* Copyright en cookies */
+    /************************/
+    footer section:nth-of-type(2) ul:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        font-size: 0.9em;
+        color: var(--grijze-text);
+        font-weight: 400;
+    }
+
+    /* 2e SVG in de lijst zelf */
+    footer section:nth-of-type(2) ul:nth-of-type(2) svg {
+        height: 1.75em;
+        color: var(--nos-logo-grijs);
+        transition: 150ms ease-in-out;
+        padding-right: 1em;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) svg:hover {
+        scale: 1.05;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) a {
+        color: var(--grijze-text);
+        transition: 150ms ease-in-out;
+    }
+
+    footer section:nth-of-type(2) ul:nth-of-type(2) a:hover {
+        color: var(--rood);
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* voor groot scherm */
+/* nav ul{
         gap:2em
     } */
 
-    /* Voor footer section op groot scherm */
-    /* padding-top: 2.5em;
+/* Voor footer section op groot scherm */
+/* padding-top: 2.5em;
     border-top: 1px solid var(--border-lijn); */
 
 /* Voor het verstoppen van tekst BEHALVE VOOR SCREENREADERS */
 .visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 /* Voor het maken van een skip link van de header naar het menu */
@@ -833,75 +1248,13 @@ header{
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
-
-  .skip:focus {
-  position: static;
-  width: auto;
-  height: auto;
 }
 
-
-
-
-/* Voor de footer svg 2 en 3 */
-/*text-size-adjust: 100%;
--webkit-tap-highlight-color: transparent;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizelegibility;
-font-feature-settings: "liga", "kern";
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size: 1rem;
-overflow-wrap: anywhere;
-font-weight: 500;
-line-height: 1.14;
-width: 24;
-height: 24;
-box-sizing: border-box;
-margin: 0px;
-padding: 0px;
-overflow-clip-margin: 1px;
-color: rgb(230, 30, 20);*/
-
-
-/* Footer NOS logo */
-/*     line-height: 1.15;
-    text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    font-feature-settings: "liga", "kern";
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    overflow-clip-margin: 1px;
-    height: 1.75rem;
-    color: rgb(148, 148, 148); */
-
-
-	/* Social media logos */
-	/*     line-height: 1.15;
-    text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    font-feature-settings: "liga", "kern";
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-    width: 24;
-    height: 24;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    overflow-clip-margin: 1px;
-    transform: scale(0.8); */
-
-
-
-	
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
 
 
 
