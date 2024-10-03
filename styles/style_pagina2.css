@@ -339,14 +339,14 @@ main section:nth-of-type(2) section:nth-of-type(3) a img{
 }  
  
  /* Reclame */
-main section:nth-of-type(7)/* Voor nu!!! */{
+main section:nth-of-type(3) section:nth-of-type(1){
     background-color: var(--grijze-achtergrond);
     display: block;
     margin-top: 2em;
     margin-bottom: 2em;
 }   
 
-main section:nth-of-type(7) h2{
+main section:nth-of-type(3) section:nth-of-type(1) h2{
     font-size: 0.9em;
     margin: 0.7em 0;
     text-transform: uppercase;
@@ -354,11 +354,11 @@ main section:nth-of-type(7) h2{
     color: var(--grijze-text);
 }   
 
-main section:nth-of-type(7) a{
+main section:nth-of-type(3) section:nth-of-type(1) a{
     color: var(--grijze-text);
 }   
 
-main section:nth-of-type(7) ul {
+main section:nth-of-type(3) section:nth-of-type(1) ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -366,8 +366,6 @@ main section:nth-of-type(7) ul {
 }
 
 
-
-/* Podcast widht:8.5em: */
 
 
 
