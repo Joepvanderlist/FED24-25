@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style_homepagina.css">
+    <script src="scripts/script.js" defer></script>
     <title>NOS Homepagina</title>
     <link href="https://static.nos.nl/img/favicon/favicon.ico" rel="shortcut icon">
+    <!-- Favicon van de NOS zelf -->
 </head>
 
 <body>
     <header>
+        <a href="#main" class="skip">Skip naar main content</a>
+        <!-- Bron van "skiplink" https://www.w3schools.com/accessibility/accessibility_skip_links.php -->
         <h1 class="visually-hidden">NOS</h1>
         <nav>
             <ul>
@@ -24,92 +28,226 @@
                 <li>
                     <button>Sport<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" aria-hidden="true" class="sc-9d1a94f4-7 gypnLR"><path fill="currentColor" d="M4.179 4.865a.45.45 0 0 0 .606.034l.037-.034 3.045-3.08a.464.464 0 0 0 0-.65.45.45 0 0 0-.606-.034l-.037.034L4.5 3.89 1.776 1.135A.45.45 0 0 0 1.17 1.1l-.037.034a.464.464 0 0 0-.033.613l.033.037z"></path></svg></button>
                 </li>
+                <li>
+                    <button>Live</button>
+                </li>
+                <li>
+                    <button>Programma's</button>
+                </li>
             </ul>
 
             <ul>
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="sc-9d1a94f4-6 clptQJ"><path fill="currentColor" d="M3.13 8.87a3.13 3.13 0 1 1 0 6.26 3.13 3.13 0 0 1 0-6.26m8.87 0a3.13 3.13 0 1 1 0 6.26 3.13 3.13 0 0 1 0-6.26m8.87 0a3.13 3.13 0 1 1 0 6.26 3.13 3.13 0 0 1 0-6.26m-17.74 1.8a1.33 1.33 0 1 0 0 2.66 1.33 1.33 0 0 0 0-2.66m8.87 0a1.33 1.33 0 1 0 0 2.66 1.33 1.33 0 0 0 0-2.66m8.87 0a1.33 1.33 0 1 0 0 2.66 1.33 1.33 0 0 0 0-2.66"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18" aria-hidden="true" class="sc-84663880-8 kwGkRw"><path fill="currentColor" d="M24 14.52c0 1.8-1.45 3.25-3.25 3.25-.57 0-2 0-5.94.03l-5.95.04A3.25 3.25 0 0 1 8 11.47a3.25 3.25 0 0 1 4-2.93 5.07 5.07 0 0 1 9.7 2.87c1.33.4 2.3 1.65 2.3 3.11m-3.28-1.74a.75.75 0 0 1-.7-1.04 3.57 3.57 0 1 0-6.8-2.05c-.1.5-.67.76-1.11.5a1.7 1.7 0 0 0-.88-.24 1.75 1.75 0 0 0-1.72 2.03.75.75 0 0 1-.7.87 1.74 1.74 0 0 0 .05 3.49l5.94-.04 5.95-.03a1.75 1.75 0 0 0 .03-3.5h-.06zm-9.4-7.41a.75.75 0 1 1-.72 1.31 2.86 2.86 0 0 0-4.07 3.5.75.75 0 1 1-1.41.5 4.37 4.37 0 0 1 6.2-5.31m-1.38-3a.75.75 0 1 1-1.5 0V.75a.75.75 0 0 1 1.5 0zM.75 9.94a.75.75 0 0 1 0-1.5h1.62a.75.75 0 1 1 0 1.5zm1.94-6.19A.75.75 0 1 1 3.75 2.7L4.9 3.84a.75.75 0 0 1-1.07 1.05L2.7 3.75z"></path></svg>
+                </li>
+                <li>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="sc-9d1a94f4-6 clptQJ"><path fill="currentColor" d="M3.13 8.87a3.13 3.13 0 1 1 0 6.26 3.13 3.13 0 0 1 0-6.26m8.87 0a3.13 3.13 0 1 1 0 6.26 3.13 3.13 0 0 1 0-6.26m8.87 0a3.13 3.13 0 1 1 0 6.26 3.13 3.13 0 0 1 0-6.26m-17.74 1.8a1.33 1.33 0 1 0 0 2.66 1.33 1.33 0 0 0 0-2.66m8.87 0a1.33 1.33 0 1 0 0 2.66 1.33 1.33 0 0 0 0-2.66m8.87 0a1.33 1.33 0 1 0 0 2.66 1.33 1.33 0 0 0 0-2.66"></path></svg></button>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="48" viewBox="0 0 72 48" aria-hidden="true" class="sc-84663880-10 bknfGk"><g fill="none" fill-rule="evenodd"><path fill="#D7D8D6" d="m46.65 27.04-19.3 19.29c-1.94 1.94-4.16 1.94-6.1 0l-19.3-19.3c-1.94-1.93-1.94-4.16 0-6.1l19.3-19.29c1.94-1.94 4.16-1.94 6.1 0l19.3 19.29c1.94 1.94 1.94 4.17 0 6.1z"></path><path fill="#FF6D00" d="m19.18 15.49-1.41-1.41c-.59-.58-1.13-.57-1.8.09l-1.22 1.23c-.66.66-.67 1.2-.1 1.79l1.42 1.4c.58.6 1.13.58 1.79-.08l1.23-1.23c.65-.65.67-1.2.09-1.79M20.72 14c1.45 1.46 1.48 3.2-.15 4.83l-1.24 1.24c-.43.42-.79.65-1.08.71l1.08 1.08c.54.54.47 1.14.05 1.56-.42.41-1.03.5-1.57-.05l-4.7-4.69c-1.45-1.46-1.47-3.2.16-4.83l1.16-1.16c1.63-1.63 3.37-1.6 4.82-.15zm5.8-5.84L25.1 6.75c-.6-.59-1.14-.57-1.8.09l-1.23 1.23c-.65.65-.67 1.2-.08 1.78l1.4 1.41c.59.59 1.14.57 1.8-.08l1.22-1.24c.66-.65.68-1.2.1-1.78zm1.53-1.5c1.46 1.46 1.48 3.2-.15 4.84l-1.16 1.16c-1.63 1.63-3.37 1.6-4.82.14l-1.47-1.46c-1.45-1.45-1.48-3.2.16-4.82l1.16-1.16c1.62-1.63 3.37-1.6 4.82-.15l1.47 1.46zM14.9 23.13c.54.54.46 1.15.04 1.57-.41.41-1.02.48-1.56-.06l-3.08-3.08c-.58-.59-1.14-.57-1.79.09l-1.23 1.23c-.66.66-.67 1.2-.1 1.79l3.09 3.08c.54.54.47 1.15.06 1.57-.42.4-1.03.49-1.57-.05l-3.11-3.11c-1.45-1.46-1.48-3.2.15-4.83l1.16-1.16c1.63-1.63 3.38-1.6 4.83-.15l3.1 3.1zm10.5-2.2c-1.94 1.95-1.94 4.18 0 6.12l19.3 19.29c1.94 1.94 4.16 1.94 6.1 0l19.3-19.3c1.94-1.93 1.94-4.16 0-6.1L50.8 1.64c-1.94-1.94-4.16-1.94-6.1 0z"></path><path fill="#FFFFFE" d="M35.23 23.03c-.91-.21-1.2-.3-1.2-.7 0-.54.77-.62 1.23-.62.42 0 .94.1 1.4.26.12.04.24.08.36.08.33 0 .48-.25.58-.5l.08-.17a1 1 0 0 0 .07-.34c0-.27-.17-.5-.47-.6a5.8 5.8 0 0 0-1.98-.33c-2 0-3.14.85-3.14 2.33 0 1.64 1.36 1.94 2.8 2.26H35c.8.19 1.19.3 1.19.73 0 .16 0 .64-1.33.64-.53 0-1.08-.1-1.69-.32a1.1 1.1 0 0 0-.35-.07c-.33 0-.48.25-.58.5l-.1.2a1 1 0 0 0-.07.34c0 .27.18.49.47.6.6.23 1.38.35 2.3.35 2.08 0 3.22-.83 3.22-2.34 0-1.64-1.37-1.96-2.82-2.3zm15.86.33-4.78-3a.6.6 0 0 0-.92.51v6c0 .47.52.76.92.5l4.78-2.99a.6.6 0 0 0 0-1.02m-6.97 3.05c-.07-.3-.23-.44-.5-.44-.07 0-.2.01-.29.03-.14.02-.26.02-.36.02-.73 0-1.18-.22-1.18-1.36v-2.78h1.63c.49 0 .71-.23.71-.72v-.2c0-.48-.22-.71-.71-.71h-1.64V19.2c0-.49-.22-.72-.71-.72h-.45c-.5 0-.72.23-.72.72v1.05h-.41c-.5 0-.72.23-.72.72v.2c0 .48.23.71.72.71h.41v2.95c0 1.91.92 2.84 2.82 2.84.36 0 .7-.05.95-.1.36-.06.55-.27.55-.59l-.04-.3zm18.95.27-.05-.27c-.07-.3-.23-.44-.51-.44-.06 0-.2.01-.28.03l-.36.03c-.73 0-1.19-.23-1.19-1.37v-2.78h1.64c.49 0 .71-.23.71-.72v-.2c0-.48-.22-.71-.71-.71h-1.64V19.2c0-.49-.22-.71-.72-.71h-.44c-.5 0-.72.22-.72.71v1.05h-.42c-.49 0-.72.23-.72.72v.2c0 .48.23.71.72.71h.42v2.95c0 1.91.92 2.84 2.81 2.84.37 0 .7-.05.96-.1.35-.06.55-.27.55-.59 0-.07-.02-.18-.05-.3m-6.2-5.88-.04.28-.02.14c-.1.41-.22.65-.64.65l-.32-.02a4.5 4.5 0 0 0-1.64.08v4.88c0 .5-.23.72-.72.72h-.45c-.49 0-.72-.23-.72-.72V21.3c0-.47.21-.75.67-.87a8.5 8.5 0 0 1 3.25-.25c.4.04.62.27.62.63z"></path></g></svg>
                 </li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="sc-9d1a94f4-5 hIPBis"><path fill="currentColor" fill-rule="nonzero" d="M10.04 0c5.545 0 10.04 4.495 10.04 10.04a10 10 0 0 1-2.333 6.435l5.99 5.992a.9.9 0 0 1-1.205 1.334l-.068-.061-5.992-5.99a10 10 0 0 1-6.432 2.33C4.495 20.08 0 15.585 0 10.04S4.495 0 10.04 0m0 1.8a8.241 8.241 0 0 0 0 16.48 8.241 8.241 0 0 0 0-16.48"></path></svg>
                 </li>
             </ul>
+
+             <ul>
+                <li>
+                    <a href="#">Voorpagina</a> 
+                </li>
+                <li>
+                    <a href="#">Laatste nieuws</a> 
+                </li>
+                <li>
+                    <a href="#">Video's</a>
+                </li>
+                <li>
+                    <a href="#">Binnenland</a>
+                </li>
+                <li>
+                    <a href="#">Buitenland</a>
+                </li>
+                <li>
+                    <a href="#">Regionaal nieuws</a>
+                </li>
+                <li>
+                    <a href="#">Politiek</a> 
+                </li>
+                <li>
+                    <a href="#">Economie</a>
+                </li>
+                <li>
+                    <a href="#">Koningshuis</a>
+                </li>
+                <li>
+                    <a href="#">Tech</a>
+                </li>
+                <li>
+                    <a href="#">Cultuur & media</a>
+                </li>
+                <li>
+                    <a href="#">Opmerkelijk</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Voorpagina</a> 
+                </li>
+                <li>
+                    <a href="#">Laatste nieuws</a> 
+                </li>
+                <li>
+                    <a href="#">Video's</a>
+                </li>
+                <li>
+                    <a href="#">Voetbal</a>
+                </li>
+                <li>
+                    <a href="#">Formule 1</a>
+                </li>
+                <li>
+                    <a href="#">Wielrennen</a>
+                </li>
+                <li>
+                    <a href="#">Schaatsen</a> 
+                </li>
+                <li>
+                    <a href="#">Tennis</a>
+                </li>
+                <li>
+                    <a href="#">Atletiek</a>
+                </li>
+                <li>
+                    <a href="#">Hockey</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Live</a>
+                </li>
+                <li>
+                    <a href="#">Programma's</a>
+                </li>
+                <li>
+                    <a href="#">Weer</a>
+                </li>
+            </ul>
         </nav>
     </header>
-    <main>
 
+    <main id="main">
+        <!-- De bovenste 2 fotos VOOR GROOT SCHERM -->
         <section>
-            <h2>Rijksmuseum gesloten vanwege blokkade Extinction Rebellion</h2>
-            <img src="images/rijksmuseum_nos.jpg" alt="Rijksmuseum gelsoten door Extinction Rebellion">
-        </section>
+            <li>
+                <h2>Rijksmuseum gesloten vanwege blokkade Extinction Rebellion</h2>
+                <img src="images/rijksmuseum_kleiner_nos.jpg" alt="Rijksmuseum gelsoten door Extinction Rebellion">
+            </li>
 
-        <section>
-            <article>
+            <li>
                 <h2>Wilders ontmoet Zalensky: 'Corruptie besproken'</h2>
                 <img src="images/geertw_zelensky_kleiner.jpg" alt="Wilders samen met Zalensky">
-            </article>
-            <article>
-                <h2>Gijzelaars belangrijker dan controle over corridor, zegt oud-veiligheidschef Israël</h2>
-                <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path fill="currentColor" d="M13 1a7 7 0 0 1 1.17 13.9v10.6h-2.34V14.9A7 7 0 0 1 13 1"></path></svg>Midden-oostenblog</p>
-                <img src="images/macron_nos.jpg" alt="oud-veiligheidschef Israël bij kaart van Gaza">
-            </article>
+            </li>
+
         </section>
 
+        <!-- Alle artikelen -->
         <section>
-            <h2 class="visually-hidden">Articles</h2>
             <ul>
+                <!-- deel 1 -->
+                <li>
+                    <h2>Rijksmuseum gesloten vanwege blokkade Extinction Rebellion</h2>
+                    <img src="images/rijksmuseum_nos.jpg" alt="Rijksmuseum gelsoten door Extinction Rebellion">
+                </li>
+
+
+                <!-- deel 2 -->
+                <li>
+                    <h2>Wilders ontmoet Zalensky: 'Corruptie besproken'</h2>
+                    <img src="images/geertw_zelensky_kleiner.jpg" alt="Wilders samen met Zalensky">
+                </li>
+
+                <li>
+                    <h2>Gijzelaars belangrijker dan controle over corridor, zegt oud-veiligheidschef Israël</h2>
+                    <p>Er zijn veel zorgen over ongelukken met de fatbike, maar een overzicht van hoeveel het er echt zijn, ontbreekt tot nu toe.</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path fill="currentColor" d="M13 1a7 7 0 0 1 1.17 13.9v10.6h-2.34V14.9A7 7 0 0 1 13 1"></path></svg>Midden-Oostenblog</p>
+                    <img src="images/macron_nos.jpg" alt="oud-veiligheidschef Israël bij kaart van Gaza">
+                </li>
+                
+                
+                <!-- deel 3 -->
                 <li>
                     <h2>Een kunstenaar als Medunjanin heeft Oranje-opponent Bosnië niet meer</h2>
+                    <p>Blaak werd in 2023 uitgeroepen tot beste keeper ter wereld en pakte deze zomer olympisch goud met Oranje in Parijs.</p>
                     <img src="images/medunjanin_bosnie_nos.jpg" alt="Een foto van kunstenaar Medujanin"> 
                 </li>
+
                 <li>
                     <h2>Met de Russische invasie in Oekraïne brak ook een cultuuroorlog uit</h2>
+                    <p>De staking, bij alle havens aan de oostkust, kan behoorlijke impact hebben op de wereldwijde scheepvaarthandel.</p>
                     <img src="images/rus_oek_nos.jpg" alt="Een foto van 2 mensen die boeken lezen" >
                 </li>
+
                 <li>
                     <h2>Honderden evacuaties vanwege bosbrand op berg in Duitsland</h2>
+                    <p>In de eerste week worden zo'n 50 mensen opgevangen. Er kunnen maximaal 150 mensen verblijven in de opvang.</p>
                     <img src="images/bosbrand_du_nos.jpg" alt="hoge vlammen van de bosbrand" >
                 </li>
+
                 <li>
                     <h2>IJsvorming mogelijk oorzaak vliegtuigongeluk Brazilië</h2>
+                    <p>Blaak werd in 2023 uitgeroepen tot beste keeper ter wereld en pakte deze zomer olympisch goud met Oranje in Parijs.</p>
                     <img src="images/vliegtuig_bra_nos.jpg" alt="Een kapot huis door het neerstorten van een vliegtuig">
                 </li>
+
                 <li>
                     <h2>Loodzware voorlaatste Vuelta-rit met zeven bergen • Roglic gestart in rode trui</h2>
+                    <p>De 20-jarige Niklas Behrens werd afgelopen vrijdag wereldkampioen bij de beloften in Zürich.</p>
                     <img src="images/vuelta_rit_nos.jpg" alt="Roglic in de rode trui">
                 </li>
-
-            </ul>
-        </section>
-        
-
-        <section>
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M17.8 1a3.2 3.2 0 0 1 3.17 3.23v.29l.16-.02h.98c1.6 0 2.89 1.33 2.89 2.95v13.9A3.6 3.6 0 0 1 21.43 25H7.93a2.92 2.92 0 0 1-2.9-2.95v-.55h-.87A3.2 3.2 0 0 1 1 18.27V4.23A3.2 3.2 0 0 1 4.16 1zm3.17 5.21v12.06a3.2 3.2 0 0 1-3.17 3.23H6.76v.55c0 .68.53 1.22 1.16 1.22h13.51c1.02 0 1.85-.86 1.85-1.92V7.45a1.2 1.2 0 0 0-1.17-1.22h-.98a1 1 0 0 1-.16-.01zM17.8 2.73H4.16c-.79 0-1.43.67-1.43 1.5v14.04c0 .83.64 1.5 1.43 1.5H17.8c.8 0 1.44-.67 1.44-1.5V4.23c0-.83-.65-1.5-1.44-1.5"></path></svg>
-        <h2>collectie Paralympische Spelen 2024</h2>
-        <img src="images/collectie_parspelen_nos.jpg" alt="3 Paralympischesporters met de nederlandse vlag">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" class="sc-6fed55-6 kpAysC"><path fill="currentColor" d="M12.495.894 19.78 8.45a.8.8 0 0 1 0 1.1l-7.285 7.555a.73.73 0 0 1-1.06 0 .8.8 0 0 1 0-1.1l6.004-6.227H.75C.336 9.778 0 9.429 0 9s.336-.778.75-.778h16.689l-6.004-6.228a.8.8 0 0 1 0-1.1.73.73 0 0 1 1.06 0"></path></svg>
-        </section>
-
-
-        <section>
-            <h2 class="visually-hidden">Articles</h2>
-            <ul>
+            
                 <li>
                     <h2>Plat doet op vierde Spelen ook mee aan marathon: 'Was op zoek naar nieuwe prikkel'</h2>
+                    <p>Dit jaar kwam de hulporganisatie bij tachtig rampen in actie, in heel vorig jaar waren dat er zestig.</p>
                     <img src="images/plat_parspelen_nos.jpg" alt="Plat tijdens zijn marathon">
                 </li>
+
                 <li>
                     <h2>Regisseur Pim de la Parra (Blue Movie, Wan Pipel) overleden</h2>
+                    <p>In de eerste week worden zo'n 50 mensen opgevangen. Er kunnen maximaal 150 mensen verblijven in de opvang.</p>
                     <img src="images/pim_de_la_parra_nos.jpg" alt="een foto van regisseur Pim de la Parra">
                 </li>
+
                 <li>
                     <h2>Oud-vicepresident Cheney stemt niet op partijgenoot Trump: 'Grote bedreiging'</h2>
+                    <p>De staking, bij alle havens aan de oostkust, kan behoorlijke impact hebben op de wereldwijde scheepvaarthandel.</p>
                     <img src="images/vicepresident_nos.jpg" alt="Oud-vicepresident Cheney">
                 </li>
             </ul>
-         </section>
+        </section>
 
+        <!-- Laatste Nieuws -->
+        <section>
+            <h2>Laatste nieuws</h2>
+            <ul>
+                <li>
+                    <a href="#"><h3>Vrachtwagen stort 60 meter van viaduct in VK</h3></a>
+                    <p>07:31</p>
+                </li>
+                
+                <li>
+                    <a href="#"><h3>120 extra aantijgingen van seksueel geweld Diddy, ook van minderjarigen</h3></a>
+                    <p>07:39</p>
+                </li>
+                
+                <li>
+                    <a href="#"><h3>Meer dan 1000 kilometer file door ongelukken en regen</h3></a>
+                    <p>08:00</p>
+                </li>
 
+            </ul>
+        </section>
+
+        <!-- Video's -->
         <section>
             <h2>Kijken</h2>
             <ul>
@@ -126,21 +264,27 @@
                 <li>
                     <h2>Vuurhoos</h2>
                     <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M22.3 11.76 5.34 1.23C4.33.61 3 1.31 3 2.47v21.06c0 1.16 1.33 1.86 2.33 1.24L22.3 14.24c.93-.58.93-1.9 0-2.47"></path></svg>0:14</p>
-                    <img src="images/vid3_vuurhoos_nos.jpg" alt="vuurhoos">
+                    <img src="images/vid3_vuurhoos_nos.jpg" alt="Vuurhoos">
                 </li>
                 <li>
                     <h2>Oplegger tegen bord</h2>
                     <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M22.3 11.76 5.34 1.23C4.33.61 3 1.31 3 2.47v21.06c0 1.16 1.33 1.86 2.33 1.24L22.3 14.24c.93-.58.93-1.9 0-2.47"></path></svg>0:19</p>
-                    <img src="images/vid4_tegen_bord_nos.jpg" alt="gecrashde oplegger">
+                    <img src="images/vid4_tegen_bord_nos.jpg" alt="Gecrashde oplegger">
                 </li>
                 <li>
                     <h2>Schildpad uit ei</h2>
                     <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M22.3 11.76 5.34 1.23C4.33.61 3 1.31 3 2.47v21.06c0 1.16 1.33 1.86 2.33 1.24L22.3 14.24c.93-.58.93-1.9 0-2.47"></path></svg>0:21</p>
                     <img src="images/vid5_schildpad_ei_nos.jpg" alt="Schildpad eieren op het strand">
                 </li>  
+                <li>
+                    <h2>Gemorst</h2>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" aria-hidden="true"><path fill="currentColor" d="M22.3 11.76 5.34 1.23C4.33.61 3 1.31 3 2.47v21.06c0 1.16 1.33 1.86 2.33 1.24L22.3 14.24c.93-.58.93-1.9 0-2.47"></path></svg>0:27</p>
+                    <img src="images/vid6_gemorst.jpg" alt="Meneer die water uit een kan drinkt">
+                </li>  
             </ul>
         </section>
-        
+
+        <!-- Live bij de NOS -->
         <section>
             <h2>Live bij de NOS</h2>
             <ul>
@@ -163,6 +307,7 @@
             </ul>
         </section>
 
+        <!-- Reclame -->
         <section>
             <ul>
                 <li>
@@ -174,6 +319,7 @@
             </ul>
         </section>
 
+        <!-- Ander NOS nieuws -->
         <section>
             <ul>
                 <li>   
@@ -203,6 +349,7 @@
     </main>
 
     <footer>
+        <!-- Feedback en extra info EN Nos informatie -->
         <section>
             <ul>
                 <li>
@@ -228,9 +375,7 @@
                     <a href="#">Publieksvoorlichting</a> 
                 </li>
             </ul>
-        </section>
 
-        <section>
             <h2>NOS informatie</h2>
             <ul>
                 <li>
@@ -258,8 +403,88 @@
                     <a href="#">Privacy</a>
                 </li>
             </ul>
+
+
+            <h2>Nieuws</h2>
+            <ul>
+                <li>
+                    <a href="#">Voorpagina</a> 
+                </li>
+                <li>
+                    <a href="#">Laatste nieuws</a> 
+                </li>
+                <li>
+                    <a href="#">Video's</a>
+                </li>
+                <li>
+                    <a href="#">Binnenland</a>
+                </li>
+                <li>
+                    <a href="#">Buitenland</a>
+                </li>
+                <li>
+                    <a href="#">Regionaal nieuws</a>
+                </li>
+                <li>
+                    <a href="#">Politiek</a> 
+                </li>
+                <li>
+                    <a href="#">Economie</a>
+                </li>
+                <li>
+                    <a href="#">Koningshuis</a>
+                </li>
+                <li>
+                    <a href="#">Tech</a>
+                </li>
+                <li>
+                    <a href="#">Cultuur & media</a>
+                </li>
+                <li>
+                    <a href="#">Opmerkelijk</a>
+                </li>
+            </ul>
+
+
+            <h2>Sport</h2>
+            <ul>
+                <li>
+                    <a href="#">Voorpagina</a> 
+                </li>
+                <li>
+                    <a href="#">Laatste nieuws</a> 
+                </li>
+                <li>
+                    <a href="#">Video's</a>
+                </li>
+                <li>
+                    <a href="#">Voetbal</a>
+                </li>
+                <li>
+                    <a href="#">Formule 1</a>
+                </li>
+                <li>
+                    <a href="#">Wielrennen</a>
+                </li>
+                <li>
+                    <a href="#">Schaatsen</a> 
+                </li>
+                <li>
+                    <a href="#">Tennis</a>
+                </li>
+                <li>
+                    <a href="#">Atletiek</a>
+                </li>
+                <li>
+                    <a href="#">Hockey</a>
+                </li>
+            </ul>
+
+
         </section>
 
+
+        <!-- Nos logo, social media en Copyright en cookies -->
         <section>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 28" aria-label="Link naar de homepage"><g fill="none" fill-rule="evenodd"><path fill="currentColor" d="M78.94 18.93c0-5.31-2.57-6.91-9.32-8.54-3.46-.8-4.41-1.27-4.41-2.28 0-.96.53-1.66 2.76-1.66 2.72 0 5.1.93 7.48 2.55 0 0 3.15-5.01 3.49-5.87C76.2 1.12 72.92 0 68.35 0c-6.48 0-10.58 3.44-10.58 8.54 0 5.4 3.1 7.19 9.58 8.7 3.6.84 4.57 1.46 4.57 2.47 0 1.27-.85 1.74-3.5 1.74-2.49 0-5.9-1.36-7.85-2.71l-3.6 5.87a21.3 21.3 0 0 0 11.3 3.29c6.45 0 10.67-2.33 10.67-8.73"></path><path fill="#E61E14" d="M27 13.95C27 6.25 33.32 0 41.12 0s14.13 6.25 14.13 13.95S48.92 27.9 41.12 27.9 27 21.65 27 13.95m7.2 0c0-3.78 3.1-6.84 6.92-6.84 3.83 0 6.93 3.06 6.93 6.84s-3.1 6.84-6.93 6.84a6.89 6.89 0 0 1-6.93-6.84"></path><path fill="currentColor" d="M23.67 27.9V0h-7.33v14.35S6.88 0 6.82 0H.36v27.9h7.32V13.55l9.63 14.35z"></path></g></svg>
     
@@ -277,12 +502,21 @@
                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.249 12.484-6.855 3.787c-.485.269-1.07-.097-1.07-.67V8.399c0-.558.56-.926 1.043-.685l6.854 3.416c.54.268.556 1.062.028 1.354M22.08 2.478s-2.152-.513-10.093-.476c-8.779.04-10.067.476-10.067.476C.86 2.478 0 3.331 0 4.382V19.62c0 1.05.86 1.904 1.92 1.904 0 0 2.565.481 10.067.476 7.862-.005 10.093-.476 10.093-.476 1.06 0 1.92-.853 1.92-1.904V4.382c0-1.051-.86-1.904-1.92-1.904"></path></svg></a>
                 </li>
             </ul>
-        </section>
-        
-        <section>
-            <p>© NOS 2024</p> 
-            <a href="#">Cookies</a> 
-            <a href="#">Voorwaarden</a>
+
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 28" aria-label="Link naar de homepage"><g fill="none" fill-rule="evenodd"><path fill="currentColor" d="M78.94 18.93c0-5.31-2.57-6.91-9.32-8.54-3.46-.8-4.41-1.27-4.41-2.28 0-.96.53-1.66 2.76-1.66 2.72 0 5.1.93 7.48 2.55 0 0 3.15-5.01 3.49-5.87C76.2 1.12 72.92 0 68.35 0c-6.48 0-10.58 3.44-10.58 8.54 0 5.4 3.1 7.19 9.58 8.7 3.6.84 4.57 1.46 4.57 2.47 0 1.27-.85 1.74-3.5 1.74-2.49 0-5.9-1.36-7.85-2.71l-3.6 5.87a21.3 21.3 0 0 0 11.3 3.29c6.45 0 10.67-2.33 10.67-8.73"></path><path fill="#E61E14" d="M27 13.95C27 6.25 33.32 0 41.12 0s14.13 6.25 14.13 13.95S48.92 27.9 41.12 27.9 27 21.65 27 13.95m7.2 0c0-3.78 3.1-6.84 6.92-6.84 3.83 0 6.93 3.06 6.93 6.84s-3.1 6.84-6.93 6.84a6.89 6.89 0 0 1-6.93-6.84"></path><path fill="currentColor" d="M23.67 27.9V0h-7.33v14.35S6.88 0 6.82 0H.36v27.9h7.32V13.55l9.63 14.35z"></path></g></svg>
+                </li>
+                <li>
+                    <p>© NOS 2024</p> 
+                </li>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+                <li>
+                    <a href="#">Voorwaarden</a>
+                </li>
+            </ul>
         </section>
 
     </footer>
