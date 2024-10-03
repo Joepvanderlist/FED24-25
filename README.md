@@ -227,9 +227,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  (Voor nu) is het mij niet geulukt om de 2e pagina voledig responsive te maken. Voor dignen zoals high contrast mode en animaties     heb ik geen tijd gehad. Iets wat lastig was, was de layout van pagina 1. Deze heb ik meerdere keren moeten veranderen en ook aan het eind nog een hele section moeten verplaatsten met position absolute (dit mocht van de docent). 
+ Het mij niet geulukt om de 2e pagina het hele scherm te laten vullen dus nu zit er nog wat witruimte tussen. Het in artikelen stoppen van alles lukte mij niet en ben ik dus eerst op de andere dingen (zoals responsiveness en alles in links zetten gaan foccusen), daarom heb ik hier uiteindelijk ook geen tijd meer voor gehad. Er was nog 1 stuk, namelijk het "live bij de NOS" stuk waar ik van de h3 geen goede link kon maken (ik weet nog steeds niet waarom). Voor dignen zoals high contrast mode en animaties heb ik geen tijd gehad. Iets wat lastig was, was de layout van pagina 1. Deze heb ik meerdere keren moeten veranderen en ook aan het eind nog een hele section moeten verplaatsten met position absolute (dit mocht van de docent). 
 
-  <img src="readme-images/Scherm­afbeelding 2024-10-02 om 20.17.18.png" width="375px" alt="bummer">
+  <img src="readme-images/Scherm­afbeelding 2024-10-03 om 17.05.18" width="375px" alt="bummer">
   
 </details>
 
