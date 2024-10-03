@@ -191,7 +191,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		position: absolute;
 		left: -999em;
@@ -322,7 +322,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
@@ -436,7 +436,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
@@ -624,7 +624,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		position: absolute;
 		left: -999em;
@@ -762,7 +762,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 0.25rem;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
@@ -885,7 +885,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	
@@ -1117,11 +1117,8 @@ main section:nth-of-type(2) li img {
 	/* Laatste nieuws */
 	/******************/
 	main section:nth-of-type(3){
-		/* margin-top: 2em; */
-		/* margin-bottom: 2em; */
-		/* Margin bottom en top kunnen weg HEB IK NU */
 		border-radius: 0.25rem;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		grid-row-start: 2;
         grid-column-start: 2;
@@ -1260,7 +1257,7 @@ main section:nth-of-type(2) li img {
 		/* margin-top: 2em; */
 		/* margin-bottom: 2em; */
 		border-radius: 0.25rem;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 		grid-row-start: 2;
         grid-column-start: 2;
@@ -1393,7 +1390,7 @@ main section:nth-of-type(2) li img {
 		margin-top: 2em;
 		margin-bottom: 2.5em;
 		border-radius: 0.25em;
-		background-color: var(--background-color);
+		background-color: var(--background-vulling);
 		box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
 	}
 	

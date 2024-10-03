@@ -28,17 +28,17 @@
 
     --color-text: light-dark(#202020, #d6d6d6);
     --grijze-text: light-dark(#666666, #949494);
-    --grijze-achtergrond: #F3F3F0;
+    --grijze-achtergrond: light-dark(#F3F3F0, #373737);
     --nos-logo-grijs: #949494;
-    --border-lijn: #eeeeee;
+    --border-lijn:light-dark(#eeeeee,#666666 ) ;
     --div-zwart: #2222224D;
-    --drop-shadow: #0000001a;
+    --drop-shadow:#0000001a;
     --background-color: light-dark(#ffffff, #202020);
+    --background-vulling: light-dark(#ffffff, #373737);
     --wit-vulling: #ffffff;
     --rood: light-dark(#E61E14, #e22f26);
     --font-body-family: "EffraBold"
 } 
-
 
 
 
@@ -60,7 +60,7 @@ header {
     height: 4.375em;
     width: 100%;
     padding: 0.5em;
-    background-color: var(--background-color);
+    background-color: var(--background-vulling);
     position: sticky;
     top: 0%;
     z-index: 10;
@@ -146,7 +146,7 @@ header {
 
     /* 3 puntjes rechtop zetten */
     nav ul:nth-of-type(2) li:nth-of-type(2) {
-        rotate: 90deg;
+        transform: rotate(90deg);
         width: 1.5em;
         height: 1.5em;
     }
@@ -175,7 +175,7 @@ header {
     nav ul:nth-of-type(n+ 3) {
         position: absolute;
         top: -999em;
-        background-color: var(--background-color);
+        background-color: var(--background-vulling);
         box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
         width: 11em;
     }
@@ -490,7 +490,7 @@ header {
 
     /* 3 puntjes rechtop zetten */
     nav ul:nth-of-type(2) li:nth-of-type(2) {
-        rotate: 90deg;
+        transform: rotate(90deg);
         width: 1.5em;
         height: 1.5em;
     }
@@ -524,7 +524,7 @@ header {
     nav ul:nth-of-type(n+ 3) {
         position: absolute;
         top: -999em;
-        background-color: var(--background-color);
+        background-color: var(--background-vulling);
         box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
         width: 11em;
     }
@@ -730,7 +730,6 @@ header {
     footer section:nth-of-type(2) {
         padding: 1em;
         display: flex;
-        max-width: 75em;
         border-bottom: 1px solid var(--border-lijn);
         border-top: 1px solid var(--border-lijn);
         justify-content: space-between;
@@ -897,7 +896,7 @@ header {
 
     /* 3 puntjes rechtop zetten */
     nav ul:nth-of-type(2) li:nth-of-type(2) {
-        rotate: 90deg;
+        transform: rotate(90deg);
         width: 1.5em;
         height: 1.5em;
     }
@@ -919,7 +918,7 @@ header {
     nav ul:nth-of-type(n+ 3) {
         position: absolute;
         top: -999em;
-        background-color: var(--background-color);
+        background-color: var(--background-vulling);
         box-shadow: var(--drop-shadow) 0px 2px 8px 0px;
         width: 11em;
     }
@@ -1125,7 +1124,6 @@ header {
     footer section:nth-of-type(2) {
         padding: 1em;
         display: flex;
-        max-width: 75em;
         border-bottom: 1px solid var(--border-lijn);
         border-top: 1px solid var(--border-lijn);
         justify-content: space-between;
